@@ -1,0 +1,7 @@
+/image
+N ::1
+Violeta ::2
+Cavalo ::4 ::5
+# ::3
+5 ::3
+--v 5.1
