@@ -1,0 +1,1 @@
+/image\nB ::1\nC ::2\nLilás ::4\nPêssego ::4\nDourado ::2\nPrateado ::2\nCão ::3\nBaleia ::3\nPato ::2\nGato ::3 ::5\nCavalo ::3\nLeão ::4\nTigre ::4\nGolfinho ::2\nHamster ::1\n2 ::2\n4 ::1\n! ::1\n% ::1\n$ ::1\n@ ::4\n& ::2\n--v 5.1

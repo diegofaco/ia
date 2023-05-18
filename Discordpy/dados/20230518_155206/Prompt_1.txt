@@ -1,0 +1,1 @@
+/image\n5 ::3\n1 ::1\n6 ::2 ::5\n2 ::1\n! ::3\n# ::1\n@ ::2\n% ::2\n& ::4\n$ ::1\n¨ ::2\nBaleia ::1\nM ::1\nB ::1\nK ::3\nVerde ::1\nVioleta ::4\n--v 5.1

@@ -1,0 +1,1 @@
+/image\nPato ::1\nGolfinho ::3\nLeão ::1\n% ::4\n! ::1\n# ::5\n9 ::1\n7 ::3\nPreto ::2\nLaranja ::1\nC ::3\nN ::2\n--v 5.1

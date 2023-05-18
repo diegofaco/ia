@@ -1,0 +1,1 @@
+/image\n@ ::1\n! ::2\n$ ::1\n2 ::2\n6 ::2\n5 ::2\n4 ::5\n7 ::1\nCão ::4\nBaleia ::5\nPato ::2\nTigre ::2\nE ::4\nO ::3\nJ ::3\nI ::1\nVermelho ::1\nBranco ::2\n--v 5.1

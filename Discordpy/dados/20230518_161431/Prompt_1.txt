@@ -1,0 +1,1 @@
+/image\nCavalo ::1\nTigre ::3\nPato ::2\nGolfinho ::4\nCão ::2\n6 ::3\n2 ::2\n3 ::2\n9 ::1\n5 ::1\n! ::1\n& ::4\n% ::2\n$ ::1 ::5\n¨ ::1\n# ::3\nOcre ::4\nBege ::1\nH ::3\nF ::2\nA ::1\nJ ::3\n--v 5.1

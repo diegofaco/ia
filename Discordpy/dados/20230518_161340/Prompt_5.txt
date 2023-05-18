@@ -1,0 +1,1 @@
+/image\nLilás ::1\nCoral ::5\nOcre ::2\n¨ ::5\n! ::3\nK ::2\nL ::2\nB ::4\nC ::3\nPato ::3\nGolfinho ::1\nTigre ::3\nGato ::5\nBaleia ::2\nHamster ::4\n3 ::4\n6 ::3\n5 ::2\n8 ::1\n--v 5.1

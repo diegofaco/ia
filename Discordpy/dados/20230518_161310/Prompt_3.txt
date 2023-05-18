@@ -1,0 +1,1 @@
+/image\n9 ::3\n8 ::3\n4 ::1\n3 ::1\n2 ::5\n@ ::3\n# ::1\n! ::1\n% ::1\n& ::4\n$ ::4\nD ::3\nO ::3\nN ::2\nA ::1\nCarmesim ::1\nTurquesa ::3\nAmarelo ::2\nBaleia ::4\nGato ::2\nPato ::3\nLeão ::5\nGolfinho ::5\nCão ::1\nCavalo ::3\nTigre ::1\nHamster ::2\n--v 5.1

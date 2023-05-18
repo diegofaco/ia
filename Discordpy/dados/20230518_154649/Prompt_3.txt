@@ -1,0 +1,1 @@
+/image\n9 ::1\n7 ::1\n$ ::5\n@ ::2\n! ::5\n& ::3\nCavalo ::1\nPreto ::3\nÁgua-marinha ::1\nA ::2\nE ::3\n--v 5.1

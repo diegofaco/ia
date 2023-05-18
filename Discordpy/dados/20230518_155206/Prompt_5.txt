@@ -1,0 +1,1 @@
+/image\n@ ::4\n! ::3\n¨ ::3\n% ::2\n3 ::2\n4 ::4\n9 ::1\n2 ::3\nN ::1\nC ::2\nI ::1\nH ::2\nAmeixa ::1\nPrateado ::2\nCavalo ::1\nLeão ::4\nCão ::2\nBaleia ::3\nGolfinho ::3 ::5\n--v 5.1

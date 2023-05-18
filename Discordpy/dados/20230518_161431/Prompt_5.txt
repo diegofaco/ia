@@ -1,0 +1,1 @@
+/image\nPato ::2\nGato ::3\nBaleia ::1\nCão ::2\n8 ::1\n3 ::4 ::5\nPêssego ::2\nCiano ::1\n& ::2\n% ::1\nB ::4\nF ::1\nA ::1\n--v 5.1
