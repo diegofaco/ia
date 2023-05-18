@@ -1,0 +1,1 @@
+/image\nD ::2\nN ::2\nK ::1\nAmarelo ::1\n5 ::1\n1 ::2\n4 ::4\n9 ::1\n8 ::1\nCavalo ::3\nTigre ::2\nGato ::4\nCão ::1\nLeão ::3\n! ::2 ::5\n--v 5.1

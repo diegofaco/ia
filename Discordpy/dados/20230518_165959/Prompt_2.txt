@@ -1,0 +1,1 @@
+/image\nN ::4\nG ::4\nJ ::2\nM ::3\n3 ::2\n9 ::1\n8 ::3\n@ ::2\n# ::1\n$ ::1\n! ::5\n& ::1\n¨ ::3\n% ::3\nÍndigo ::3\nAçafrão ::1\nCoral ::1\nAzul ::3\nGolfinho ::3\nLeão ::4\nPato ::2\nHamster ::1\n--v 5.1
