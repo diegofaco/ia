@@ -27,7 +27,6 @@ class FileGenerator:
 
     # CB: 2.2 - File reading method
     def read_file(self, file_path):
-
         # CB: 2.2.1 - File reading with error handling
         try:
             with open(file_path, 'r', encoding='utf-8', errors='ignore') as file:
@@ -87,7 +86,7 @@ class FileGenerator:
         self.ensure_required_parameters(items)
 
         # CB: 2.6.5 - Content creation
-        content = "/image\n" + '\n'.join(items) + "\n--v 5.1"
+        content = "/image\\n" + '\\n'.join(items) + "\\n--v 5.1"
 
         # CB: 2.6.6 - File writing with error handling
         try:
@@ -97,7 +96,6 @@ class FileGenerator:
         except PermissionError:
             logging.error(f"Permission denied for file {file_path}.")
             return
-
 
     # CB: 2.7 - File processing method
     def process_file(self, random_file, items):
@@ -114,27 +112,27 @@ class FileGenerator:
             return
 
         # CB: 2.7.3 - Random item selection
-        num_items = min(max_num_items, len(lines))
+        num_items = random.randint(1, min(max_num_items, len(lines)))
         selected_items = random.sample(lines, num_items)
 
         # CB: 2.7.4 - Parameter sequence checking and item addition
         for item in selected_items:
             num_parameters = sum(item.count(param) for param in self.parameters)
-        if num_parameters == 0:
-            logging.info(f"Adding random parameter to item: {item}")
-            item += self.get_random_parameter()
-            logging.info(f"Item after adding parameter: {item}")
-        elif num_parameters > 1:
-            logging.error(f"Two or more parameters together in {item}.")
-            raise ValueError(f"Two or more parameters together in {item}.")
-        items.append(item)
+            if num_parameters == 0:
+                logging.info(f"Adding random parameter to item: {item}")
+                item += self.get_random_parameter()
+                logging.info(f"Item after adding parameter: {item}")
+            elif num_parameters > 1:
+                logging.error(f"Two or more parameters together in {item}.")
+                raise ValueError(f"Two or more parameters together in {item}.")
+            items.append(item)
 
 # CB: 3.0 - Main execution
 if __name__ == "__main__":
     # CB: 3.1 - Configuration setup
     config = ConfigParser()
     config.read('config.ini')
-    folder_path = Path(config.get('DEFAULT', 'folder_path'))
+    folder_path = Path('C:/github/ia/Discordpy/Pool')  # Directly specify the folder path here
     num_files = config.getint('DEFAULT', 'num_files')
     current_time = datetime.now().strftime("%Y%m%d_%H%M%S")
     output_folder = Path.cwd() / "dados" / current_time  # Update the output folder path
@@ -152,8 +150,7 @@ if __name__ == "__main__":
 
     # CB: 3.4 - File generation
     try:
-        file_generator = FileGenerator(folder_path, output_folder, num_files,
-                                       parameters, probabilities)
+        file_generator = FileGenerator(folder_path, output_folder, num_files, parameters, probabilities)
         logging.info("FileGenerator instance created successfully.")
         file_generator.generate_files()
         logging.info("File generation process started.")
