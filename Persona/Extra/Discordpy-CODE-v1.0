@@ -1,3 +1,6 @@
+# CODE
+
+```python
 # CB: 1.0 - Importing necessary libraries
 import os
 import random
@@ -159,3 +162,4 @@ if __name__ == "__main__":
         logging.info("File generation process started.")
     except Exception as e:
         logging.error(f"Error in file generation process: {e}")
+```
