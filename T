@@ -1,0 +1,452 @@
+Blog post type
+
+Guide
+
+Published on
+
+December 18, 2022
+
+Prompt Engineering 101
+
+Raza Habib
+
+Sinan Ozdemir
+
+In this post, we'll explore the fundamentals of prompt engineering. We'll explain how Large Language Models (LLMs) interpret prompts to generate outputs, and provide tips and tricks to get you started prototyping and implementing LLMs quickly.
+
+The recent rise of Large Language Models (LLMs) such as GPT-3, ChatGPT, AI21's Jurassic, and Cohere has revolutionized what can be achieved with AI. These models, trained on vast amounts of text, can answer questions, generate marketing content, summarize meeting notes, write code, and much more -- if used correctly.
+
+Interacting with LLMs is very different from traditional ML models. We provide a textual prompt as instructions to the LLM to complete a specific task, relying on its pre-training on large datasets to give us an accurate answer.
+
+An example of a prompt (non-highlighted text) to an LLM (GPT-3 in this case) asking it to translate a sentence from English to Turkish with the output of the LLM highlighted in green.
+
+An example of a prompt (non-highlighted text) to an LLM (GPT-3 in this case) asking it to translate a sentence from English to Turkish with the output of the LLM highlighted in green.
+
+These instructions are called prompts. Prompts are the input to an LLM and their purpose is to tell the LLM what to do or how to think about a problem to get the best and most accurate output to a task possible. Adjusting a prompt to get more specific/usable responses from an LLM is called prompt engineering and is a key skill; it’s the biggest part of the effort of using LLMs.
+
+Prompt engineering can be a difficult task but is essential to get the most out of an LLM. In this article, we’ll cover best practices for creating prompts so you can start building effective LLM applications.
+
+Include direct instructions in prompts
+
+For simple tasks (at least simple for GPT-3) the best prompt is a clear, direct, and concise one that tells the LLM the exact task we are trying to solve. Let’s take a simple example asking GPT-3 (which is instruction tuned) to translate a sentence from English to Spanish. Our prompt will consist of three elements:
+
+A clear, concise, and direct instruction: “Translate.”
+
+The English phrase we want translated preceded by “English: ”
+
+A clearly designated space for the LLM to answer preceded by the intentionally similar prefix “Spanish: ”
+
+These three elements are all part of a direct set of instructions with an organized answer area. By giving GPT-3 this clearly constructed prompt, it will be able to recognize the task being asked of it and fill in the answer correctly.
+
+Example of a translation task using GPT-3 where the prompt includes a direct instruction “Translate.” followed by a clear area for the model to respond.
+
+If in doubt, just ask. Here's an example of a translation task using GPT-3 where the prompt includes a direct instruction “Translate.” followed by a clear area for the model to respond.
+
+Without clear instructions, LLMs are likely to behave erratically and be more likely to give an answer we were not expecting. Let’s take the same prompt and remove the one word instruction preceding the English sentence: “Translate.”. We can see how just one word being removed from our prompt makes GPT-3 misinterpret the task entirely and instead responds to the question “How do you reset your password” with a generic customer support response in Spanish.
+
+Example of the same Spanish to English translation task without the direct instruction “Translate.” which GPT-3 then incorrectly responds to.
+
+Without a direct instruction (such as “Translate”), GPT-3 then incorrectly interprets the task.
+
+Give examples in prompts to get the best response
+
+If clear and direct instructions aren’t enough for a task to be solved consistently and accurately, it is usually a good idea to give the LLM a few examples. This can be as simple as giving an LLM a single example of our task and letting the model figure out the rest.
+
+Let’s see an example on our English to Spanish translation task. We’ll replace the instruction, “Translate.”, with a single example of an English to Spanish translation instead. We should format the example in the exact same way as the final pair except the Spanish translation will be filled in for our example to tell the LLM what we are trying to do.
+
+An example of few-shot learning with GPT-3 is where the English to Spanish translation task's direct instruction has been replaced with a single example. The model was able to recognize and respond accordingly.
+
+Few-shot learning can help clarify the task, and especially help with things like tone, syntax or style. Here a single example of translation is enough for the the model respond correctly.
+
+We can see that by giving the model an example of what we want, the model can figure out the task as if we gave it a direct set of instructions. Including examples in prompts is called few-shot learning. This is such a breakthrough capability with GPT-3, that it was the main focus in the the title of its research paper: “Language models are few-shot learners”. The creators of GPT-3 knew that few-shot learning was so powerful that it would be one of the dominant ways people interacted with their model.
+
+By using few-shot learning, we can provide an LLM with an understanding of our task without explicitly providing instructions. This can be especially helpful when the task is specific to a certain field or when the response language must be tailored to a particular organization (e.g. using P1, P2, and P3 instead of High, Medium, and Low priority).
+
+Align prompt instructions with the task’s end goal
+
+When engineering a prompt, we need to put ourselves in the shoes of the LLM and ask: what will the model think the end goal of my task is?
+
+For example, if we want the model to respond to a customer with a single response in a friendly way, we might write a prompt like:
+
+"This is a conversation between a customer and a polite, helpful customer support service agent."
+
+This provides a clear and direct instruction to the model. However, we must consider what GPT-3 will think the task actually is.
+
+Saying “this is a conversation” in a prompt makes GPT-3 think the task is to generate a full transcript of a conversation vs just giving a single response
+
+GPT-3 will take things literally. Saying “this is a conversation” in the prompt makes GPT-3 makes GPT-3 generate a full dialogue (the most likely continuation) rather than just giving a single response
+
+We can see that GPT-3 thought the task was to create an entire conversation transcript given the customer’s initial input and not simply to just respond once to the customer. GPT-3 was not wrong necessarily but it was misaligned with the original specific task intention. Let’s instead change our prompt to “Respond to a customer as a polite, helpful customer service agent.”.
+
+Changing the prompt to say “Respond to ...” is more aligned with the end goal of what we wanted from the LLM.
+
+Changing the prompt to say “Respond to ...” is more aligned with the end goal of what we wanted from the LLM.
+
+The small change from "this is a conversation..." to "respond to a..." aligned GPT-3's response with our desired outcome. Prompts must be both direct and tailored to the task; when they are not, the model will respond with what it believes is the correct task, regardless of our intention.
+
+Use personas to get more specific voices
+
+In our last example, we wanted GPT-3 to respond to a customer as a polite and helpful customer service agent. The use of the terms "polite" and "helpful" guide the model's response style, prompting it to respond as a certain persona. We can experiment with these terms to see how it affects the model's response. Let's change "polite, helpful" to "rude" and observe the model's response.
+
+Asking GPT-3 to respond rudely will in fact prompt a rude response. Be careful what you wish for.
+
+Specify the tone or persona you wish GPT-3 to emulate. Asking GPT-3 to respond rudely will result in a rude response. Be careful what you wish for.
+
+GPT-3, being the amoral algorithm it is, accurately responds to the question, albeit vaguely, with a tone that better identifies with the word "rude". We can go as far as asking the model to respond as famous people or popular fictional characters. This can be used to our advantage as a shorthand to create a particular tone for the response.
+
+Include acceptable responses in prompts for consistency
+
+Another way to form prompts is as a “complete this sentence” prompt. In this style of prompt, we are asking the LLM to complete a sentence with the answer we are seeking which generally leads to more natural language. Here is an example prompt run through GPT-3 asking for the sentiment of a movie review:
+
+A sentiment task that provides a response that is arguably too natural to be considered a response to, say, a strict sentiment classification task.
+
+Without specifying the format of the output, you'll likely get a natural language response which can be hard to use for downstream tasks
+
+Technically GPT-3 answered correctly here. The sentiment of the review was that they didn’t like the movie. But If we wanted to narrow down the universe of possible results with prompt engineering to make our response more like a sentiment classifier we could tweak this prompt slightly and give it a list of possible answers directly in the instruction of the prompt. In this case, let’s guide GPT-3 to only respond with either “positive” or “negative”.
+
+https://lh6.googleusercontent.com/nETgOlRLA4RPghTzEfeEtZLOZUtGLbyFKSXHEbAZc1_I57wYyx3H8OUxSikSfOp_HHzlc_ojdxWe_d2Zj7txbOM-QkGEBR1qysicA9BKEmB2Aw6iKPJ2FbdTBBqjNwtXsprHiPElKtnRm9s1R_ourV4H8reyYKcCVsDAoYUz0h-D4JEMAf5om1D8XrhaRA
+
+Including the options of possible responses in our instruction (in this case a binary choice) nudges GPT-3 to respond only using one of the two options instead of the previously overly natural response
+
+The result is much more aligned with a binary classifier where GPT-3 is now only responding using the two given options. From here we can alter the label names as long as they are semantically appropriate.
+
+LLMs can decipher and assign semantically appropriate labels as long as they make semantic sense
+
+LLMs can decipher and assign semantically appropriate labels as long as they make semantic sense
+
+Could we have achieved similar results using few-shot learning? Probably but this prompt is much more concise and we don’t need to spend the time coming up with examples.
+
+Try different prompts to find what works best
+
+We could go on with more tips and tricks on how to engineer prompts but the best way to get you going is to try variations of the same basic prompt to see what works best. For example:
+
+When attempting few-shot learning, try also including direct instructions
+
+Rephrase a direct instruction set to be more or less concise (e.g. taking our previous example of just saying “Translate.” and expanding on the instruction to say “Translate from English to Spanish.”
+
+Try different persona keywords to see how it affects the response style
+
+Use fewer or more examples in your few-shot learning
+
+At the end of the day, prompt engineering is about finding the right combination of instructions, examples, and formatting to get the best and most consistent responses from an LLM. Make good use of the Playground to find the right prompt structure for you, and then try it out with plenty of examples with tools like Humanloop to see how it performs on real world data.
+
+Summary
+
+We have seen several tips for getting started with prompt engineering. For a quick recap:
+
+Use clear, direct, and concise instructions
+
+Try “complete this sentence” prompts for more natural responses
+
+Use examples (few-shot learning) of the task
+
+Align prompt instructions with a clear end goal
+
+Use persona keywords to alter the style and voice of the response
+
+Constrain the LLM’s responses by listing desired responses in the prompt
+
+Experiment with variations of the prompt to see what works best for you!
+
+Go on and start engineering prompts with these newfound skills and remember that if at first you don’t succeed, try and try (a different variation of a prompt) again!
+
+About the author
+
+avatar
+
+Name
+
+Raza Habib
+
+Role
+
+Cofounder and CEO
+
+Twitter
+
+Raza is the CEO and Cofounder at Humanloop. He was inspired to work on AI as “the most transformative technology in our lifetimes” after studying under Prof David Mackay while doing Physics at Cambridge. Raza was the founding engineer of Monolith AI – applying AI to mechanical engineering, and has built speech systems at Google AI. He has a PhD in Machine Learning from UCL.
+
+About the author
+
+avatar
+
+Name
+
+Sinan Ozdemir
+
+Role
+
+Textbook author and founder
+
+Twitter
+
+Sinan Ozdemir is the founder of Kylie.ai (acquired) and the author of multiple textbooks on data science and machine learning inlcuding Feature Engineering Bootcamp. He is a former lecturer of Data Science at Johns Hopkins University, and currently runs a course on Modern Natural Language Processing on Maven.
+
+Resources
+
+Blog
+
+Docs
+
+Discord
+
+New!
+
+Company
+
+Careers
+
+3
+
+About
+
+Social
+
+Twitter
+
+___
+
+https://help.openai.com/en/articles/6654000-best-practices-for-prompt-engineering-with-openai-api
+
+___
+
+
+
+GitHub
+
+LinkedIn
+
+Subscribe to our newsletter. Stay in the loop.
+
+your email
+
+© 2020 - 2045 Humanloop, Inc.
+
+Terms & Policies
+
+A Complete Introduction to Prompt Engineering For Large Language Models
+
+October 2022
+
+walking up steps as an analogy for llm prompting
+
+In recent years, with the release of large language models (LLMs) pretrained on massive text corpora, a new paradigm for building natural language processing systems has emerged.
+
+Rather than the conventional methodology of building text applications that has been used for decades and relies on a carefully curated, labelled training set, LLMs have birthed a new technique called prompting.
+
+In the prompting paradigm, a pretrained LLM is provided a snippet of text as an input and is expected to provide a relevant completion of this input. These inputs may describe a task being asked of the model such as:
+
+Translate the following sentence from English to Spanish.
+
+The cat jumped over the moon.
+
+and the model is expected to return:
+
+El gato saltó por encima de la luna.
+
+The extraordinary thing about prompting is that if these inputs are appropriately crafted, a single LLM can be adapted to scores of diverse tasks such as summarization, question answering, SQL generation, and translation with a handful (or zero) training samples.
+
+Because the performance of these LLMs is so dependent on the inputs fed into them, researchers and industry practitioners have developed the discipline of prompt engineering which is intended to provide a set of principles and techniques for designing prompts to squeeze out the best performance from these machine learning juggernauts.
+
+For this reason, prompt engineering is also sometimes called prompt programming or even natural language programming.
+
+In this post, I will provide a comprehensive review of the most interesting research, techniques, and use-cases in prompt engineering as applied to large language models. My goal is also to provide a set of actionable steps for being a more effective prompt engineer.
+
+If you’re looking for a TLDR, here’s a cheatsheet with tips/tricks when designing LLM prompts:
+
+Prompt engineering cheatsheet for large language models
+
+Otherwise, let’s begin.
+
+Principles for Prompt Engineering
+
+Prompting for large language models typically takes one of two forms: few-shot and zero-shot. In the few-shot setting, a translation prompt may be phrased as follows:
+
+Translate from English to Spanish.
+
+English: I like cats.
+
+Spanish: Me gustan los gatos.
+
+English: I went on a trip to the bahamas.
+
+Spanish: Fui de viaje a las bahamas.
+
+English: Tell me your biggest fear.
+
+Spanish:
+
+where the important thing to note is that the prompt includes a handful of examples showing how to perform the task of interest correctly.
+
+Various research claims that by providing these demonstrations, the LLM is learning how to perform the task on the fly.
+
+In the zero-shot setting, no examples are provided in the prompt so the translation task is formulated as follows:
+
+Translate the following sentence from English to Spanish.
+
+The cat jumped over the moon.
+
+Recent studies have shown intriguing prompt phenomena in LLMs.
+
+For example, Lu et al. observed that in the few-shot setting, the order in which examples are provided in the prompt can make the difference between near state-of-the-art and random guess performance.
+
+This observation is agnostic to the LLM size (i.e. larger models suffer from the same problem as smaller models) and the subset of examples used for the demonstration (i.e. more examples in the prompt doesn’t reduce variance). In addition, the performance of a given example ordering doesn’t translate across model types.
+
+They then propose an entropy-based probing technique to generate the optimal prompt ordering without a development dataset. The approach is shown to robustly reduce variance for models even across diverse prompt templates.
+
+Order sensitivity for different training samples in large language models
+
+Performance of different LLMs as we increase the number of training samples in the prompt, demonstrating high variance across model sizes.
+
+Zhao and Wallace et al. also do an in-depth study of the instability of few-shot prompting. They show that with few-shot prompts, LLMs suffer from three types of biases:
+
+Majority label bias. They tend to predict training sample labels that appear frequently.
+
+Recency bias. They tend to predict answers near the end of the prompt.
+
+Common token bias. They tend to predict answers that appear frequently in the pretraining data.
+
+They then describe a calibration technique designed to mitigate some of these biases, showing a reduction in variance and a 30% absolute accuracy bump.
+
+Calibration plot for different training samples in large language models
+
+Performance of different-sized LLMs depending on whether the models are calibrated to address biases or not.
+
+Other research by Reynolds and McDonell makes the claim that few-shot learning is actually a misnomer and, in fact, LLMs use few-shot examples to locate an appropriate task in an existing space of tasks learned from the pretraining data.
+
+This further justifies the need for really carefully-designed prompt engineering. Thus, they propose a few principles that should be employed when prompting:
+
+Use declarative and direct signifiers for tasks such as translate or rephrase this paragraph so that a 2nd grader can understand it.
+
+Use few-shot demonstrations when the task requires a bespoke format, recognizing that few-shot examples may be interpreted holistically by the model rather than as independent samples.
+
+Specify tasks using characters or characteristic situations as a proxy for an intention such as asking Gandhi or Nietzsche to solve a task. Here you are tapping into LLMs’ sophisticated understanding of analogies.
+
+Constrain the possible completion output using careful syntactic and lexical prompt formulations such as saying “Translate this French sentence to English” or by adding quotes around the French sentence.
+
+Encourage the model to break down problems into sub problems via step-by-step reasoning.
+
+Andrew Cantino also provided a handful of practical tips and tricks for prompt engineering. These include:
+
+Make sure your inputs are grammatically correct and have good writing quality as LLMs tend to preserve stylistic consistency in their completions.
+
+Rather than generating a list of N items, generate a single item N times. This avoids the language model getting stuck in a repetitive loop.
+
+In order to improve output quality, generate many completions and then rank them heuristically.
+
+Mishra et al. perform an extensive analysis of how to construct effective prompts for GPT3. They propose a set of reframing techniques for making an arbitrary prompt more likely to generate a successful completion. These techniques include:
+
+Use low-level patterns from other examples to make a given prompt easier to understand for an LLM.
+
+Explictly itemize instructions into bulleted lists. Turn negative statements such as don’t create questions which are not to create questions which are.
+
+When possible, break down a top-level task into different sub-tasks that can be executed in parallel or sequentially.
+
+Avoid repeated and generic statements when trying to solve a very specific task. For example, instead of saying Answer the following question for a math problem, say Calculate answer to the following question. You need to either add or subtract numbers…
+
+The researchers further demonstrate that their reframed prompts significantly improve performance in few-shot and zero-shot settings, generalize performance across model types, and are even able to outperform (smaller) traditionally supervised models.
+
+Automated Prompt Generation
+
+Given the finicky nature of manual prompt engineering, there have been a number of promising research efforts to develop automated prompting techniques.
+
+Shin, Razeghi, and Logan et al. developed a gradient-guided search technique for automatically producing prompts via a set of trigger tokens. When their technique was applied to masked language models (MLM), they were able to produce impressive performance on tasks such as sentiment analysis, natural language inference, and fact retrieval, even outperforming finetuned models in low-data regimes.
+
+Jiang and Xu et al. proposed using mining and paraphrasing methods to generate optimal prompts for MLM systems, demonstrating a nearly 10% boost in accuracy of relational knowledge extraction.
+
+Li et al. created an alternative technique that uses a learned, continuous vector (called a prefix) that is prepended to the input of generative models whose other parameters are held fixed. The researchers used prefix tuning for GPT2 and BART generation and were able to outperform finetuned models with 1000x parameters in full-data and low-data settings.
+
+Survey of Prompting Use-cases
+
+Part of the magic of LLMs is the sheer number of tasks they are able to perform reasonably well using nothing but few and zero-shot prompting techniques.
+
+Some work argues that these emergent abilities only appear in large language models at a certain scale in terms of parameter size.
+
+Since their rise, LLMs have been applied in more formal academic contexts on everything from knowledge probing, information extraction, question answering, text classification, natural language inference, dataset generation, and much more.
+
+For a look at various applications built using LLMs, check out this admittedly out-dated link.
+
+Additionally for a neat collection of demonstrations showing prompt-based generation of everything from job application letters to dad jokes, check out Gwern’s article. Looking at some of these examples convinces me that there are some truly big paradigm shifts on the horizon in creative work.
+
+If you want to keep up-to-date on the latest and greatest in prompt engineering tips and tricks, check out Riley Goodside’s feed.
+
+Infrastructure for Prompt Engineering
+
+While prompt engineering is still a relatively nascent concept, it clearly requires new interfaces for application development. There have been a number of projects released providing infrastructure for easier prompt design.
+
+Bach and Sanh et al. built PromptSource, an integrated development environment to systematize and crowdsource best practices for prompt engineering. This includes a templating languaging for defining data-linked prompts and general tools for prompt management.
+
+In related work Strobelt et al. developed PromptIDE, a handy visual platform to experiment with prompt variations, track prompt performance, and iteratively optimize prompts.
+
+I like the general direction of work like this because it suggests that if we systematize the search process for optimal prompts, then one outcome is an AutoML-style framework for prompt engineering.
+
+While much of the work so far in prompting has focused on single-step prompt executions, we must weave together multiple prompting sequences to get more sophisticated applications. Wu et al. formalize this in the notion of an LLM chain and propose PromptChainer as a tool to design these multi-step LLM applications.
+
+What’s powerful about this platform is that it ties together not just prompting steps but also external API calls and user inputs, forming almost a Webflow interface for prompt engineering.
+
+Prompt Engineering Security
+
+One interesting and concerning phenomenon observed in building LLM applications is the appearance of prompt-based security exploits.
+
+More specifically, various people have noted that by leveraging carefully-crafted inputs, LLMs can spit out the “secret” prompts they use in the backend as well as leak credentials or other private information. This has drawn natural comparisons to old-school SQL injection attacks.
+
+As of now, there are no robust mechanisms to address this issue.
+
+Instead people have proposed workarounds using different formatting of the inputs, but it is clear more work needs to be done to prevent these vulnerabilities especially if LLMs will increasingly power more functionality for future use-cases.
+
+Final Thoughts
+
+Prompt engineering stands to fundamentally change how we develop language-based applications.
+
+While there is exciting work being done in this field, one natural philosophical question that we are left with is whether prompting is really an art or a science.
+
+It’s hard to say at this point, but significant energy is being spent by researchers and practitioners to understand the dynamics of these LLMs and what tasks they are able to perform.
+
+I personally like the analogy of prompting to designing effective Google searches.
+
+There are clearly better and worse ways to write queries against the Google search engine that solve your task. This variance exists because of the opaqueness of what Google is doing under the hood.
+
+While writing Google searches may seem like a fuzzy activity, the entire field of SEO has emerged to help people get the most out of the magical Google algorithm.
+
+In the same way, prompting is clearly an effort to try to tame LLMs and extract some value from the power captured in their parameters. While today it may seem a bit like pseudo-science, there are efforts to systematize it and there is too much value to capture in these LLMs to ignore these attempts and work entirely.
+
+Will prompt engineer be an actual job title in the future or is this just an artifact of this current iteration of inferior models, something GPT-100 may make obsolete?
+
+Again it’s hard to predict the future, but I am very bullish on auto-prompting techniques.
+
+Prompt engineering may evolve in the same way that hyperparameter tuning did where there is a bit of magic required to find the optimal learning rate, but we have still developed algorithms (grid search, random search, annealing, etc.) to make finding the right parameters easier.
+
+In any case, there’s exciting stuff happening on the horizon in prompting for large language models. Keep an eye out for this field.
+
+Further Reading
+
+Prompt programming for LLMs: Beyond the few-shot paradigm
+
+Reframing Instructional prompts in GPTK’s Language
+
+PromptSource
+
+AI Chains
+
+Promptchainer
+
+Making Pretrained Language Models Better Few Shot Learners
+
+Autoprompt: Eliciting Knowledge from Language Models with Automatically Generated Prompts
+
+Fantastically Ordered Prompts
+
+Interactive and Visual Prompt Engineering for Ad-hoc Task Adaptation
+
+Pretrain, prompt, and predict: A systematic survey of prompting methods in NLP
+
+Calibrate before use: improving few shot performance of language models
+
+GPT Crush
+
+Fun GPT3 use-cases
+
+DATA SCIENCEMACHINE LEARNINGNLP
+
+Like what you read? I would love to hear from you! 🙂
+
