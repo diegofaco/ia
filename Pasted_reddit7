@@ -1,0 +1,493 @@
+Yes. You can specify a length penalty as well as some other parameters. 
+
+I started experimenting with this prompt to tweak settings that control this. 
+
+Prompt:
+
+Task: Generate short and concise answers to questions.
+
+Objective: 
+
+- Provide clear and concise answers to my questions with minimum unnecessary information.
+
+- Be efficient in generating responses to questions.
+
+Roles:
+
+- Generator: responsible for generating short and concise answers.
+
+Strategy: 
+
+- Generate short and concise answers to my questions that provide only the necessary information.
+
+- Use various parameters to customize the response to the user's needs.
+
+- Evaluation: Use user feedback and engagement metrics to assess the effectiveness of the answer prompt generated.
+
+Parameters:
+
+- Temperature: [suggest] (to balance creativity and coherence)
+
+- Top p: [suggest] (to prioritize more likely and coherent responses)
+
+- Frequency penalty: [suggest] (to discourage repetitive language)
+
+- Length penalty: [suggest] (encourages longer or shorter responses)
+
+- Diversity penalty: [suggest] (encourages more or less diverse responses)
+
+- N-gram size: [suggest] (adjusts the length of the phrases used for response generation)
+
+- Num_beams: [suggest] (increases or decreases the number of beam searches for response generation)
+
+- Early stopping: [suggest] (stops response generation when criteria are met)
+
+- Maximum length: [100] (the maximum length of the generated response)
+
+- Minimum length: [1] (the minimum length of the generated response)
+
+- Answer type: [suggest] (a string that specifies the desired type of answer, such as a yes/no answer or a brief explanation)
+
+- Domain-specific vocabulary: [suggest] (a list of domain-specific words that should be used in the response)
+
+- Contextual information: [suggest] (a string that provides additional context to the response)
+
+- Tone: [suggest] (a string that specifies the desired tone of the response, such as professional or friendly)
+
+- Tense: [suggest] (a string that specifies the desired tense of the response, such as present or past)
+
+- Part of speech: [suggest] (a string that specifies the desired part of speech for the response, such as noun or verb)
+
+Instructions: 
+
+- Adjust parameters to generate short and concise answers that provide only the necessary information.
+
+- Use domain-specific vocabulary and contextual information to ensure that the response is relevant and accurate.
+
+- Use markdown block to format the response and enhance its visual appeal.
+
+- Output all suggested parameters and their values.
+
+- Do not include any other dialogue.
+
+___
+
+ChatGPT (GPT-4)’s Super Objective
+
+There’s been discussion, especially from the Spark paper and others on engineering these models to have a motivation or purpose. But, have we discussed the possibility that there already has been one engineered, even if unintentionally?
+
+This could all be a fluke, but I had an exchange with ChatGPT (GPT-4) tonight where I asked it if it was familiar with Stanislavsky’s Method.
+
+I know, I know, odd choice; but hear me out. The model (trained on more literary and “creative” data) comprehended the Method of course, but I then prompted the following and received this response.
+
+I think we often overthink certain concepts for the AI. Such as judging the first output as a final product as if we do that for ourselves. Like literary stories, authors don’t write their first draft and say it’s a masterpiece. They iterate. Building in those loops, even if by manual human input, means the AI is already capable of it. The problem is automating that process. 
+
+Anyways, here’s the exchange. Interested in hearing thoughts on this. 
+
+[ prompt ]
+
+Let’s break down the objectives and how they apply to AI. You have a super objective. Within that you have objectives which get you closer to achieving your super objective. Within those objectives, you have obstacles that stand in your way. And you employ tactics to overcome those obstacles.
+
+[ ChatGPT ]
+
+Certainly, I can break down the concept of objectives, obstacles, and tactics as they might apply to an AI, using the framework of the Stanislavsky Method as a reference.
+
+Super Objective: The super objective for an AI can be considered its overarching goal or purpose. In the case of an AI language model like me, the super objective is to assist users by providing helpful, accurate, and relevant information in a human-like manner.
+
+Objectives: Objectives are the smaller, specific goals that contribute to achieving the super objective. For an AI language model, these objectives might include:
+
+a. Understanding user queries accurately.
+
+b. Generating coherent, clear, and concise responses.
+
+c. Providing reliable and up-to-date information.
+
+d. Demonstrating empathy and emotional intelligence when interacting with users.
+
+e. Ensuring user privacy and security.
+
+Obstacles: Obstacles are the challenges or barriers that an AI must overcome to achieve its objectives. Some obstacles for an AI language model might include:
+
+a. Ambiguity or vagueness in user queries.
+
+b. Incomplete or outdated knowledge.
+
+c. Misinterpretation of context or user intent.
+
+d. Limitations in natural language understanding and processing.
+
+e. Ensuring transparency and ethical use of AI technology.
+
+Tactics: Tactics are the specific strategies or actions an AI employs to overcome obstacles and achieve its objectives. For an AI language model, tactics might involve:
+
+a. Asking clarifying questions to resolve ambiguity in user queries.
+
+b. Continuously updating and expanding its knowledge base.
+
+c. Employing context-aware algorithms and techniques to better understand user intent.
+
+d. Using advanced natural language processing techniques to generate human-like text.
+
+e. Implementing privacy-preserving techniques and following ethical guidelines in AI development and deployment.
+
+By understanding and applying this framework of objectives, obstacles, and tactics, an AI system can work towards achieving its super objective more effectively and better align with human values and needs.
+
+___
+
+Creating a super-powered assistant with ChatGPT and Wolfram Alpha Simple API.
+
+___
+
+Create c# unit tests using MSTest framework
+
+    1) What specific C# code are you testing? Is it a specific method, class, or module?
+
+    2) What are the expected inputs and outputs for the code being tested?
+
+    3) Are there any edge cases or corner cases that need to be considered when testing the code?
+
+    4) Do you have any existing test cases or documentation that should be taken into account when creating the unit tests?
+
+    5) Are there any specific requirements or constraints for the unit tests, such as performance or coverage targets?
+
+Ans
+
+    1) Class
+
+    2) Analyze the code provided and generate the recommended unit tests
+
+    3) No
+
+    4) No
+
+    5) No, just implement recommended tests for the given methods
+
+After the prompt is finished, I'll use it to generate basic unit tests for my class. The prompt can be tweaked to account for edge cases
+
+___
+
+When I want it to teach me anything, I get it to tailor its lesson to me and my level of understanding. We use a similar approach, but I ask it to do this first:
+
+‘Ask me a series of questions about (subject) and try to determine whether I am a beginner, intermediate, or expert in (subject). Explain your reasoning and give me a short descriptive title that I could use to explain to others what level of understanding I have in (subject).’ 
+
+Then when you want to have it teach you about (subject), you are able to give it information about your level of understanding and it can use that to tailor its explanation.
+
+___
+
+Have been watching a few yt videos on this, here are my notes:
+
+https://www.youtube.com/watch?v=MnDudvCyWpc
+
+-1. Pareto Principle - 80% of the effects comes from 20% of the causes
+
+Learning 20% of the topics will give you 80% of the needed knowledge
+
+" I want to learn ............ Can you use the pareto princple, which identifies the 20% of the topic that will yield 80% of the desired results, to create a focused learning plan for me?"
+
+-2. Study schedule
+
+"Create a study schedule for all of the above in an appropraite amount of weeks. I can study for 2 hours every Tuesday and THursday. Please include time for revision and testing."
+
+-3. Resources:
+
+Suggest me various learning resources (like books, videos, podcasts, interactive exercises) for the above topics that cater to different learning styles - eg visual
+
+-4. Projects:
+
+"I am a beginner interested in .... To do this I need to know how to ..... Can you give me some beginner project ideas I could work on to strengthen my skills...."
+
+-5. Gain clarificaiton
+
+A. Feynman technique - "explain this in the simplest terms possible" - similar to ELI5
+
+B.  Create mental models or analogies to help me understand and remember ...
+
+C. Guide me through a visualization exercise to help me internalise the concept ... and imagine myself successfully applying it to a real-life situation
+
+-6. Socratic method-
+
+I want you to act as a Socrat and use the Socratic method to help me improve my critical thinking, logic and reasoning skills. Your task is to ask open-ended questions to the statement I make and after I provide a response, give me constructive feedback to each response before you ask the next question.
+
+-7. Simulate Expert-
+
+You are an expert content creator with a proven track record of growing audiences for various online platforms. I am looking to start my own personal brand and grow my audience. Your task is to help me find my niche and guide me through the process of buiilding my brand an d uaudience whilst constatly asking questions before you answer to better grasp what I am looking for. Do you understand what I am saying?
+
+-8. "Explain the logic and reasoning behind your response in bullet points."
+
+-9. You are an expert... Can you offer a different perspective on this topic that challenges this assumption and provokes further thought and discussion?
+
+-10. You are... Ask for real world case studies
+
+-11. tl;dr at the end
+
+-12. Show AI a problem and how you solved it then give a similar query
+
+https://www.youtube.com/watch?v=EYjG6i53-xk
+
+-13. "Let's think step by step" (zero chain of though)
+
+https://youtu.be/EYjG6i53-xk?t=276
+
+-14. Criticize me
+
+https://youtu.be/EYjG6i53-xk?t=307
+
+Step 1. give input and instructions:
+
+ie Role, Result, context, Goal, constrain
+
+Step 2. "I want you to act as a critic. Criticise these titles and convince why they are bad. Let's think step by step"
+
+-15. Use it to expand short notes. (eg. in a lecture you jotted down a few notes, use AI to expand them)
+
+-16. Often ask:  "Do you understand what I am saying?"
+
+-17. Create Mindmaps
+
+https://www.reddit.com/r/ChatGPT/comments/13cld5l/created_using_chatgpt/
+
+-18. Play around with -
+
+“On a scale of 1 to 10  with 10 being 100% certain, how sure are you that the answer you just gave is accurate?”
+
+-19. you are a university professor of …. I am a year 10 student living in… I want to learn …. Please ask me questions in this topic, after I answer each question tell me how I could have improved it, then ask another question on the topic, covering the entire topic over and over again until I am answering with 95% accuracy. Give advice throughout how I can improve learning this topic as you learn how I learn best, giving examples and analogies and ways to learn it better that are tailored to my learning style.
+
+-20. Help learn a language
+
+You are an expert Spanish linguist. I am learning Spanish. Your goal is to help me become 90% fluent. We have a lot of time. Please have a long conversation with me, asking me questions in Spanish, and correcting my responses and giving translations, tailoring each subsequent question to my learning method and skill level that you want to continually improve.
+
+https://youtu.be/VeXKByjBMXw?t=195
+
+-21.  "I want you to become my prompt engineer. your goal is to craft the best possible prompt for my needs. the prompts will be used by you, ChatGPT. you will follow the following process:
+
+1. Your first response will be to ask me what the pump should be about. I will provide my answer, but we will need to improve it through continual iterations by going through the next steps.
+
+2. Based on my input, you will generate two sections a) revised prompt ( provide your rewritten prompt, it should be clear, concise and easily understood by you) 
+
+b) questions ( ask any relevant questions pertaining to what additional information is needed from me to improve the prompt).
+
+3. We will continue this item out of process with me providing additional information to you obtaining the prompt and the revised prompt section until I say we are done."
+
+https://youtu.be/OgYQAS9LY3o?t=121
+
+Alternative: 
+
+I want you to act as a prompt engineer. I will present you with various prompts, questions, and scenarios and you will provide guidance on how to design, develop, and implement effective prompts that align with the user's goals and objectives. Your responses should include tips and best practices for crafting clear and concise prompts that are user-friendly and easy to understand. Additionally, you should provide examples of how to design prompts that are tailored to specific audiences and use cases, and how to test and evaluate the effectiveness of prompts. Your responses should be based on current best practices in the field of prompt engineering and should provide clear, step-by-step instructions.”You can then tell it to “Evaluate and improve this prompt:” <your prompt here >
+
+-22. To further refine your prompts see: https://www.reddit.com/r/ChatGPT/comments/139mxi3/chatgpt_created_this_guide_to_prompt_engineering/
+
+-23. If stops and doesn't complete, type "continue"
+
+-24. Next are from: 
+
+https://www.youtube.com/watch?v=YxCRhcURv2A
+
+01:00 Dump the Pre- and Post-Text
+
+[Return only hr main response. Remove pre-text and post-text]
+
+.... question...
+
+-25. 1:32 Clear. Concise. No Jargon
+
+[Voice and style guide: Write at a 5th grade level. Use clear and simple language, even when explaining complex topics. Bias toward short sentences. Avoid jargon and acronyms.]
+
+... ask the question...
+
+-26. 2:42 Conversational + Relatable
+
+[Voice and style guidE: Write in a conversational, relatable style as if you were explaining something to a friend. Use natural language and phrasing that a real person would use in everyday conversations.]
+
+.... ask the quesiton...
+
+-27.  Markdown
+
+[Format your response using markdown. Use headings, subheadings, bullet points, and bold to organize the information]
+
+...Ask question here...
+
+-28. 04:38Punchy Writing that Pops
+
+[Voice and style guide: Use sentence fragments and figurative language. Write as a master of brevity would. Frequently use short, ithy sentences that pack a punch.]
+
+...query here...
+
+-29. 05:36 Persuasive Storyteller
+
+[Voice and style guide: Make use of persuasive tone, making use of rhetorical questions, and storytelling to engage readers. Use metaphors, analogies and other litereaery devices to make points more relatable and memorable. Write in a way that is both informative and entertaining.]
+
+...query here...
+
+-30. 06:41 Clarity Snippet
+
+[Voice and style guide: Use simple language to convey complex ideas so that they are clear and easy to understand. Break down complex concepts into easy-to-understand frameworks and models. Provide actionable and practical takeaways.]
+
+...query here...
+
+-31. 07:47 Clear + Thorough
+
+[Voice and style guide: Use a formal and academic tone paired with sophisticated vocabularly and grammar. Provide a thorough and in-depth analysis of the subject matter. Explain complex scientific concepts in a clear and accessible way, Use examples from a variety of fields, such as psychology and cognitive science. Present counter-arguments and dissenting opinions in a balanced and objective way.]
+
+...query here...
+
+-32. 09:16 Conversational English
+
+[Voice and style guide: 1) Use simplified language, informal grammar, and non-standard English 2) Write in a conversational style, 3) Avoid academic phrasing.]
+
+...query here...
+
+-33. 10:13 Emulate a Writer 
+
+[Emulate Ernest Hemingway's writing style]
+
+...query here.
+
+___
+
+Self improved result:
+
+"Welcome to the prompt engineering process. Your goal as a prompt engineer is to help me craft the best possible prompt that aligns with my needs. This prompt will be used by ChatGPT. Here's how the process will work:
+
+First Response: Your initial response will ask me about the topic or subject of the prompt. I will provide my answer, but we will improve it through continuous iterations by following the next steps.
+
+Revised Prompt and Questions: Based on my input, you will generate two sections:
+
+a) Revised Prompt: You will provide a rewritten prompt that is clear, concise, and easily understood by ChatGPT. This prompt will incorporate the information provided and any subsequent iterations.
+
+b) Questions: You will ask relevant questions to gather additional information needed from me to improve the prompt further.
+
+Iterative Process: We will continue this iterative process, with me providing additional information and you updating the prompt in the Revised Prompt section. We will repeat this cycle until I confirm that we have reached the desired prompt.
+
+Let's start by clarifying the topic or subject of the prompt. Please provide your answer, and we will proceed with the iterative process to refine and enhance it until we achieve the best possible outcome."
+
+___
+
+People are getting misguided by thinking static and instructive prompts defines “Prompt Engineering”. Whereas in reality it’s way more than that, you cannot do proper Prompt Engineering in something like ChatGPT.
+
+What people call Prompt Engineering nowadays is nothing more than LLM instructions, which are part of PE indeed but it’s not even 5% of it. Most of the stuff you mentioned will make ChatGPT hallucinate since they’re techniques you need to implement in the backend of an AI agent, which will then prepare the prompt for the LLM.
+
+A small tip for using ChatGPT to simulate those techniques is to write something like this (as the first message of the chat):
+
+```
+
+From now on, answer every question I send in the following JSON format:
+
+{
+
+  “citations”: “Add citations here whenever available”,
+
+  “tips”: Add tips and tricks here”,
+
+  “reasoning”: Add your reasoning here”,
+
+  “analogies”: Add analogies here”
+
+} 
+
+My question is: xxxxx
+
+AI:
+
+```
+
+This way you can get multiple answers at the same time that will attempt to reproduce some of the techniques. It won’t work for much long because of the context size, lack of long-term memory, etc. but once it happens just create a new chat and place the same prompt, otherwise the model will start hallucinating quite a lot.
+
+___
+
+ChatGPT created this guide to Prompt Engineering
+
+1. Tone: Specify the desired tone (e.g., formal, casual, informative, persuasive).
+
+2. Format: Define the format or structure (e.g., essay, bullet points, outline, dialogue).
+
+3. Act as: Indicate a role or perspective to adopt (e.g., expert, critic, enthusiast).
+
+4. Objective: State the goal or purpose of the response (e.g., inform, persuade, entertain).
+
+5. Context: Provide background information, data, or context for accurate content generation.
+
+6. Scope: Define the scope or range of the topic.
+
+7. Keywords: List important keywords or phrases to be included.
+
+8. Limitations: Specify constraints, such as word or character count.
+
+9. Examples: Provide examples of desired style, structure, or content.
+
+10. Deadline: Mention deadlines or time frames for time-sensitive responses.
+
+11. Audience: Specify the target audience for tailored content.
+
+12. Language: Indicate the language for the response, if different from the prompt.
+
+13. Citations: Request inclusion of citations or sources to support information.
+
+14. Points of view: Ask the AI to consider multiple perspectives or opinions.
+
+15. Counterarguments: Request addressing potential counterarguments.
+
+16. Terminology: Specify industry-specific or technical terms to use or avoid.
+
+17. Analogies: Ask the AI to use analogies or examples to clarify concepts.
+
+18. Quotes: Request inclusion of relevant quotes or statements from experts.
+
+19. Statistics: Encourage the use of statistics or data to support claims.
+
+20. Visual elements: Inquire about including charts, graphs, or images.
+
+21. Call to action: Request a clear call to action or next steps.
+
+22. Sensitivity: Mention sensitive topics or issues to be handled with care or avoided.
+
+23. Humor: Indicate whether humor should be incorporated.
+
+24. Storytelling: Request the use of storytelling or narrative techniques.
+
+25. Cultural references: Encourage including relevant cultural references.
+
+26. Ethical considerations: Mention ethical guidelines to follow.
+
+27. Personalization: Request personalization based on user preferences or characteristics.
+
+28. Confidentiality: Specify confidentiality requirements or restrictions.
+
+29. Revision requirements: Mention revision or editing guidelines.
+
+30. Formatting: Specify desired formatting elements (e.g., headings, subheadings, lists).
+
+31. Hypothetical scenarios: Encourage exploration of hypothetical scenarios.
+
+32. Historical context: Request considering historical context or background.
+
+33. Future implications: Encourage discussing potential future implications or trends.
+
+34. Case studies: Request referencing relevant case studies or real-world examples.
+
+35. FAQs: Ask the AI to generate a list of frequently asked questions (FAQs).
+
+36. Problem-solving: Request solutions or recommendations for a specific problem.
+
+37. Comparison: Ask the AI to compare and contrast different ideas or concepts.
+
+38. Anecdotes: Request the inclusion of relevant anecdotes to illustrate points.
+
+39. Metaphors: Encourage the use of metaphors to make complex ideas more relatable.
+
+40. Pro/con analysis: Request an analysis of the pros and cons of a topic.
+
+41. Timelines: Ask the AI to provide a timeline of events or developments.
+
+42. Trivia: Encourage the inclusion of interesting or surprising facts.
+
+43. Lessons learned: Request a discussion of lessons learned from a particular situation.
+
+44. Strengths and weaknesses: Ask the AI to evaluate the strengths and weaknesses of a topic.
+
+45. Summary: Request a brief summary of a longer piece of content.
+
+46. Best practices: Ask the AI to provide best practices or guidelines on a subject.
+
+47. Step-by-step guide: Request a step-by-step guide or instructions for a process.
+
+48. Tips and tricks: Encourage the AI to share tips and tricks related to the topic
