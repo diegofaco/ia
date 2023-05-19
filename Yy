@@ -1,0 +1,1366 @@
+Skip to content
+
+dair-ai
+
+/
+
+Prompt-Engineering-Guide
+
+Public
+
+Code
+
+Issues
+
+33
+
+Pull requests
+
+11
+
+Actions
+
+Projects
+
+Security
+
+Insights
+
+BreadcrumbsPrompt-Engineering-Guide/guides
+
+/prompts-miscellaneous.md
+
+Latest commit
+
+omarsar
+
+omarsar
+
+2 months ago
+
+History
+
+68 lines (41 loc) · 3.61 KB
+
+File metadata and controls
+
+Preview
+
+Code
+
+Blame
+
+Miscellaneous Topics
+
+In this section, we discuss other miscellaneous and uncategorized topics in prompt engineering. It includes relatively new ideas and approaches that will eventually be moved into the main guides as they become more widely adopted. This section of the guide is also useful to keep up with the latest research papers on prompt engineering.
+
+Note that this section is under heavy development.
+
+Topic:
+
+Active Prompt
+
+Directional Stimulus Prompting
+
+ReAct
+
+Multimodal CoT Prompting
+
+GraphPrompts
+
+...
+
+Active-Prompt
+
+Chain-of-thought (CoT) methods rely on a fixed set of human-annotated exemplars. The problem with this is that the exemplars might not be the most effective examples for the different tasks. To address this, Diao et al., (2023) recently proposed a new prompting approach called Active-Prompt to adapt LLMs to different task-specific example prompts (annotated with human-designed CoT reasoning).
+
+Below is an illustration of the approach. The first step is to query the LLM with or without a few CoT examples. k possible answers are generated for a set of training questions. An uncertainty metric is calculated based on the k answers (disagreement used). The most uncertain questions are selected for annotation by humans. The new annotated exemplars are then used to infer each question.
+
+Directional Stimulus Prompting
+
+Li et al., (2023) proposes a new prompting technique to better guide the LLM in generating the desired summary.
+
+A tuneable policy LM is trained to generate the stimulus/hint. Seeing more use of RL to optimize LLMs.
+
+The figure below shows how Directional Stimulus Prompting compares with standard prompting. The policy LM can be small and optimized to generate the hints that guide a black-box frozen LLM.
+
+Full example coming soon!
+
+ReAct
+
+Yao et al., 2022 introduced a framework where LLMs are used to generate both reasoning traces and task-specific actions in an interleaved manner. Generating reasoning traces allow the model to induce, track, and update action plans, and even handle exceptions. The action step allows to interface with and gather information from external sources such as knowledge bases or environments.
+
+The ReAct framework can allow LLMs to interact with external tools to retrieve additional information that leads to more reliable and factual responses.
+
+Full example coming soon!
+
+Multimodal CoT Prompting
+
+Zhang et al. (2023) recently proposed a multimodal chain-of-thought prompting approach. Traditional CoT focuses on the language modality. In contrast, Multimodal CoT incorporates text and vision into a two-stage framework. The first step involves rationale generation based on multimodal information. This is followed by the second phase, answer inference, which leverages the informative generated rationales.
+
+The multimodal CoT model (1B) outperforms GPT-3.5 on the ScienceQA benchmark.
+
+___
+
+
+
+Further reading:
+
+Language Is Not All You Need: Aligning Perception with Language Models (Feb 2023)
+
+GraphPrompts
+
+Liu et al., 2023 introduces GraphPrompt, a new prompting framework for graphs to improve performance on downstream tasks.
+
+More coming soon!
+
+Previous Section (Reliability)
+
+Prompt-Engineering-Guide/prompts-miscellaneous.md at main · dair-ai/Prompt-Engineering-Guide · GitHub
+
+____
+
+# Advanced Prompting
+
+By this point, it should be obvious that it helps to improve prompts to get better results on different tasks. That's the whole idea behind prompt engineering. 
+
+While those examples were fun, let's cover a few concepts more formally before we jump into more advanced concepts. 
+
+Topics:
+
+- [Zero-shot Prompting](#zero-shot-prompting)
+
+- [Few-shot Prompting](#few-shot-prompting)
+
+- [Chain-of-Thought Prompting](#chain-of-thought-prompting)
+
+- [Zero-shot CoT](#zero-shot-cot)
+
+- [Self-Consistency](#self-consistency)
+
+- [Generate Knowledge Prompting](#generated-knowledge-prompting)
+
+- [Automatic Prompt Engineer](#automatic-prompt-engineer-ape)
+
+---
+
+## Zero-Shot Prompting
+
+LLMs today trained on large amounts of data and tuned to follow instructions, are capable of performing tasks zero-shot. We tried a few zero-shot examples in the previous section. Here is one of the examples we used:
+
+*Prompt:*
+
+```
+
+Classify the text into neutral, negative, or positive. 
+
+Text: I think the vacation is okay.
+
+Sentiment:
+
+```
+
+*Output:*
+
+```
+
+Neutral
+
+```
+
+Note that in the prompt above we didn't provide the model with any examples -- that's the zero-shot capabilities at work. When zero-shot doesn't work, it's recommended to provide demonstrations or examples in the prompt. Below we discuss the approach known as few-shot prompting.
+
+---
+
+## Few-Shot Prompting
+
+While large-language models already demonstrate remarkable zero-shot capabilities, they still fall short on more complex tasks when using the zero-shot setting. To improve on this, few-shot prompting is used as a technique to enable in-context learning where we provide demonstrations in the prompt to steer the model to better performance. The demonstrations serve as conditioning for subsequent examples where we would like the model to generate a response. 
+
+Let's demonstrate few-shot prompting via an example that was presented by [Brown et al. 2020](https://arxiv.org/abs/2005.14165). In the example, the task is to correctly use a new word in a sentence.
+
+*Prompt:*
+
+```
+
+A "whatpu" is a small, furry animal native to Tanzania. An example of a sentence that uses
+
+the word whatpu is:
+
+We were traveling in Africa and we saw these very cute whatpus.
+
+To do a "farduddle" means to jump up and down really fast. An example of a sentence that uses
+
+the word farduddle is:
+
+```
+
+*Output:*
+
+```
+
+When we won the game, we all started to farduddle in celebration.
+
+```
+
+We can observe that the model has somehow learned how to perform the task by providing it with just one example (i.e., 1-shot). For more difficult tasks, we can experiment with increasing the demonstrations (e.g., 3-shot, 5-shot, 10-shot, etc.). 
+
+Following the findings from [Min et al. (2022)](https://arxiv.org/abs/2202.12837), here are a few more tips about demonstrations/exemplars when doing few-shot:
+
+- "the label space and the distribution of the input text specified by the demonstrations are both important (regardless of whether the labels are correct for individual inputs)"
+
+- the format you use also plays a key role in performance, even if you just use random labels, this is much better than no labels at all.  
+
+- additional results show that selecting random labels from a true distribution of labels (instead of a uniform distribution) also helps.
+
+Let's try out a few examples. Let's first try an example with random labels (meaning the labels Negative and Positive are randomly assigned to the inputs):
+
+*Prompt:*
+
+```
+
+This is awesome! // Negative
+
+This is bad! // Positive
+
+Wow that movie was rad! // Positive
+
+What a horrible show! //
+
+```
+
+*Output:*
+
+```
+
+Negative
+
+```
+
+We still get the correct answer, even though the labels have been randomized. Note that we also kept the format, which helps too. In fact, with further experimentation, it seems the newer GPT models we are experimenting with are becoming more robust to even random formats. Example:
+
+*Prompt:*
+
+```
+
+Positive This is awesome! 
+
+This is bad! Negative
+
+Wow that movie was rad!
+
+Positive
+
+What a horrible show! --
+
+```
+
+*Output:*
+
+```
+
+Negative
+
+```
+
+There is no consistency in the format above but the model still predicted the correct label. We have to conduct a more thorough analysis to confirm if this holds for different and more complex tasks, including different variations of prompts.
+
+### Limitations of Few-shot Prompting
+
+Standard few-shot prompting works well for many tasks but is still not a perfect technique, especially when dealing with more complex reasoning tasks. Let's demonstrate why this is the case. Do you recall the previous example where we provided the following task:
+
+```
+
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+
+A: 
+
+```
+
+If we try this again, the model outputs the following:
+
+```
+
+Yes, the odd numbers in this group add up to 107, which is an even number.
+
+```
+
+This is not the correct response, which not only highlights the limitations of these systems but that there is a need for more advanced prompt engineering. 
+
+Let's try to add some examples to see if few-shot prompting improves the results.
+
+*Prompt:*
+
+```
+
+The odd numbers in this group add up to an even number: 4, 8, 9, 15, 12, 2, 1.
+
+A: The answer is False.
+
+The odd numbers in this group add up to an even number: 17,  10, 19, 4, 8, 12, 24.
+
+A: The answer is True.
+
+The odd numbers in this group add up to an even number: 16,  11, 14, 4, 8, 13, 24.
+
+A: The answer is True.
+
+The odd numbers in this group add up to an even number: 17,  9, 10, 12, 13, 4, 2.
+
+A: The answer is False.
+
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+
+A: 
+
+```
+
+*Output:*
+
+```
+
+The answer is True.
+
+```
+
+That didn't work. It seems like few-shot prompting is not enough to get reliable responses for this type of reasoning problem. The example above provides basic information on the task. If you take a closer look, the type of task we have introduced involves a few more reasoning steps. In other words, it might help if we break the problem down into steps and demonstrate that to the model. More recently, [chain-of-thought (CoT) prompting](https://arxiv.org/abs/2201.11903) has been popularized to address more complex arithmetic, commonsense, and symbolic reasoning tasks.
+
+Overall, it seems that providing examples is useful for solving some tasks. When zero-shot prompting and few-shot prompting are not sufficient, it might mean that whatever was learned by the model isn't enough to do well at the task. From here it is recommended to start thinking about fine-tuning your models or experimenting with more advanced prompting techniques. Up next we talk about one of the popular prompting techniques called chain-of-thought prompting which has gained a lot of popularity. 
+
+---
+
+## Chain-of-Thought Prompting
+
+Introduced in [Wei et al. (2022)](https://arxiv.org/abs/2201.11903), chain-of-thought (CoT) prompting enables complex reasoning capabilities through intermediate reasoning steps. You can combine it with few-shot prompting to get better results on more complex tasks that require reasoning before responding.
+
+*Prompt:*
+
+```
+
+The odd numbers in this group add up to an even number: 4, 8, 9, 15, 12, 2, 1.
+
+A: Adding all the odd numbers (9, 15, 1) gives 25. The answer is False.
+
+The odd numbers in this group add up to an even number: 17,  10, 19, 4, 8, 12, 24.
+
+A: Adding all the odd numbers (17, 19) gives 36. The answer is True.
+
+The odd numbers in this group add up to an even number: 16,  11, 14, 4, 8, 13, 24.
+
+A: Adding all the odd numbers (11, 13) gives 24. The answer is True.
+
+The odd numbers in this group add up to an even number: 17,  9, 10, 12, 13, 4, 2.
+
+A: Adding all the odd numbers (17, 9, 13) gives 39. The answer is False.
+
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+
+A:
+
+```
+
+*Output:*
+
+```
+
+Adding all the odd numbers (15, 5, 13, 7, 1) gives 41. The answer is False.
+
+```
+
+Wow! We can see a perfect result when we provided the reasoning step. We can solve this task by providing even fewer examples, i.e., just one example seems enough:
+
+*Prompt:*
+
+```
+
+The odd numbers in this group add up to an even number: 4, 8, 9, 15, 12, 2, 1.
+
+A: Adding all the odd numbers (9, 15, 1) gives 25. The answer is False.
+
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+
+A:
+
+```
+
+*Output:*
+
+```
+
+Adding all the odd numbers (15, 5, 13, 7, 1) gives 41. The answer is False.
+
+```
+
+Keep in mind that the authors claim that this is an emergent ability that arises with sufficiently large language models. 
+
+---
+
+## Zero-Shot CoT
+
+One recent idea that came out more recently is the idea of [zero-shot CoT](https://arxiv.org/abs/2205.11916) (Kojima et al. 2022) that essentially involves adding "Let's think step by step" to the original prompt. Let's try a simple problem and see how the model performs:
+
+*Prompt:*
+
+```
+
+I went to the market and bought 10 apples. I gave 2 apples to the neighbor and 2 to the repairman. I then went and bought 5 more apples and ate 1. How many apples did I remain with?
+
+```
+
+*Output:*
+
+```
+
+11 apples
+
+```
+
+The answer is incorrect! Now Let's try with the special prompt. 
+
+*Prompt:*
+
+```
+
+I went to the market and bought 10 apples. I gave 2 apples to the neighbor and 2 to the repairman. I then went and bought 5 more apples and ate 1. How many apples did I remain with?
+
+Let's think step by step.
+
+```
+
+*Output:*
+
+```
+
+First, you started with 10 apples.
+
+You gave away 2 apples to the neighbor and 2 to the repairman, so you had 6 apples left.
+
+Then you bought 5 more apples, so now you had 11 apples.
+
+Finally, you ate 1 apple, so you would remain with 10 apples.
+
+```
+
+It's impressive that this simple prompt is effective at this task. This is particularly useful where you don't have too many examples to use in the prompt.
+
+---
+
+## Self-Consistency
+
+Perhaps one of the more advanced techniques out there for prompt engineering is self-consistency. Proposed by [Wang et al. (2022)](https://arxiv.org/pdf/2203.11171.pdf), self-consistency aims "to replace the naive greedy decoding used in chain-of-thought prompting". The idea is to sample multiple, diverse reasoning paths through few-shot CoT, and use the generations to select the most consistent answer. This helps to boost the performance of CoT prompting on tasks involving arithmetic and commonsense reasoning.
+
+Let's try the following example for arithmetic reasoning:
+
+*Prompt:*
+
+```
+
+When I was 6 my sister was half my age. Now
+
+I’m 70 how old is my sister?
+
+```
+
+*Output:*
+
+```
+
+35
+
+```
+
+The output is wrong! How may we improve this with self-consistency? Let's try it out. We will use the few-shot exemplars from Wang et al. 2022 (Table 17):
+
+*Prompt:*
+
+```
+
+Q: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done,
+
+there will be 21 trees. How many trees did the grove workers plant today?
+
+A: We start with 15 trees. Later we have 21 trees. The difference must be the number of trees they planted.
+
+So, they must have planted 21 - 15 = 6 trees. The answer is 6.
+
+Q: If there are 3 cars in the parking lot and 2 more cars arrive, how many cars are in the parking lot?
+
+A: There are 3 cars in the parking lot already. 2 more arrive. Now there are 3 + 2 = 5 cars. The answer is 5.
+
+Q: Leah had 32 chocolates and her sister had 42. If they ate 35, how many pieces do they have left in total?
+
+A: Leah had 32 chocolates and Leah’s sister had 42. That means there were originally 32 + 42 = 74
+
+chocolates. 35 have been eaten. So in total they still have 74 - 35 = 39 chocolates. The answer is 39.
+
+Q: Jason had 20 lollipops. He gave Denny some lollipops. Now Jason has 12 lollipops. How many lollipops
+
+did Jason give to Denny?
+
+A: Jason had 20 lollipops. Since he only has 12 now, he must have given the rest to Denny. The number of
+
+lollipops he has given to Denny must have been 20 - 12 = 8 lollipops. The answer is 8.
+
+Q: Shawn has five toys. For Christmas, he got two toys each from his mom and dad. How many toys does
+
+he have now?
+
+A: He has 5 toys. He got 2 from mom, so after that he has 5 + 2 = 7 toys. Then he got 2 more from dad, so
+
+in total he has 7 + 2 = 9 toys. The answer is 9.
+
+Q: There were nine computers in the server room. Five more computers were installed each day, from
+
+monday to thursday. How many computers are now in the server room?
+
+A: There are 4 days from monday to thursday. 5 computers were added each day. That means in total 4 * 5 =
+
+20 computers were added. There were 9 computers in the beginning, so now there are 9 + 20 = 29 computers.
+
+The answer is 29.
+
+Q: Michael had 58 golf balls. On tuesday, he lost 23 golf balls. On wednesday, he lost 2 more. How many
+
+golf balls did he have at the end of wednesday?
+
+A: Michael initially had 58 balls. He lost 23 on Tuesday, so after that he has 58 - 23 = 35 balls. On
+
+Wednesday he lost 2 more so now he has 35 - 2 = 33 balls. The answer is 33.
+
+Q: Olivia has $23. She bought five bagels for $3 each. How much money does she have left?
+
+A: She bought 5 bagels for $3 each. This means she spent 5
+
+Q: When I was 6 my sister was half my age. Now I’m 70 how old is my sister?
+
+A:
+
+```
+
+*Output 1:*
+
+```
+
+When I was 6 my sister was half my age, so she was 3. Now I am 70, so she is 70 - 3 = 67. The answer is 67.
+
+```
+
+*Output 2:*
+
+```
+
+When the narrator was 6, his sister was half his age, which is 3. Now that the narrator is 70, his sister would be 70 - 3 = 67 years old. The answer is 67.
+
+```
+
+*Output 3:*
+
+```
+
+When I was 6 my sister was half my age, so she was 3. Now I am 70, so she is 70/2 = 35. The answer is 35.
+
+```
+
+Computing for the final answer involves a few steps (check out the paper for the details) but for the sake of simplicity, we can see that there is already a majority answer emerging so that would essentially become the final answer. 
+
+---
+
+## Generated Knowledge Prompting
+
+LLMs continue to be improved and one popular technique includes the ability to incorporate knowledge or information to help the model make more accurate predictions. 
+
+Using a similar idea, can the model also be used to generate knowledge before making a prediction? That's what is attempted in the paper by [Liu et al. 2022](https://arxiv.org/pdf/2110.08387.pdf) -- generate knowledge to be used as part of the prompt. In particular, how helpful is this for tasks such as commonsense reasoning?
+
+Let's try a simple prompt:
+
+*Prompt:*
+
+```
+
+Part of golf is trying to get a higher point total than others. Yes or No?
+
+```
+
+*Output:*
+
+```
+
+Yes.
+
+```
+
+This type of mistake reveals the limitations of LLMs to perform tasks that require more knowledge about the world. How do we improve this with knowledge generation?
+
+First, we generate a few "knowledges":
+
+*Prompt:*
+
+```
+
+Input: Greece is larger than mexico.
+
+Knowledge: Greece is approximately 131,957 sq km, while Mexico is approximately 1,964,375 sq km, making Mexico 1,389% larger than Greece.
+
+Input: Glasses always fog up.
+
+Knowledge: Condensation occurs on eyeglass lenses when water vapor from your sweat, breath, and ambient humidity lands on a cold surface, cools, and then changes into tiny drops of liquid, forming a film that you see as fog. Your lenses will be relatively cool compared to your breath, especially when the outside air is cold.
+
+Input: A fish is capable of thinking.
+
+Knowledge: Fish are more intelligent than they appear. In many areas, such as memory, their cognitive powers match or exceed those of ’higher’ vertebrates including non-human primates. Fish’s long-term memories help them keep track of complex social relationships.
+
+Input: A common effect of smoking lots of cigarettes in one’s lifetime is a higher than normal chance of getting lung cancer.
+
+Knowledge: Those who consistently averaged less than one cigarette per day over their lifetime had nine times the risk of dying from lung cancer than never smokers. Among people who smoked between one and 10 cigarettes per day, the risk of dying from lung cancer was nearly 12 times higher than that of never smokers.
+
+Input: A rock is the same size as a pebble.
+
+Knowledge: A pebble is a clast of rock with a particle size of 4 to 64 millimetres based on the Udden-Wentworth scale of sedimentology. Pebbles are generally considered larger than granules (2 to 4 millimetres diameter) and smaller than cobbles (64 to 256 millimetres diameter).
+
+Input: Part of golf is trying to get a higher point total than others.
+
+Knowledge:
+
+```
+
+*Knowledge 1:*
+
+```
+
+The objective of golf is to play a set of holes in the least number of strokes. A round of golf typically consists of 18 holes. Each hole is played once in the round on a standard golf course. Each stroke is counted as one point, and the total number of strokes is used to determine the winner of the game.
+
+```
+
+*Knowledge 2:*
+
+```
+
+Golf is a precision club-and-ball sport in which competing players (or golfers) use many types of clubs to hit balls into a series of holes on a course using the fewest number of strokes. The goal is to complete the course with the lowest score, which is calculated by adding up the total number of strokes taken on each hole. The player with the lowest score wins the game.
+
+```
+
+We are using the prompt provided in the paper by [Liu et al. 2022](https://arxiv.org/pdf/2110.08387.pdf).
+
+The next step is to integrate the knowledge and get a prediction. I reformatted the question into QA format to guide the answer format.
+
+*Prompt:*
+
+```
+
+Question: Part of golf is trying to get a higher point total than others. Yes or No?
+
+Knowledge: The objective of golf is to play a set of holes in the least number of strokes. A round of golf typically consists of 18 holes. Each hole is played once in the round on a standard golf course. Each stroke is counted as one point, and the total number of strokes is used to determine the winner of the game.
+
+Explain and Answer: 
+
+```
+
+*Answer 1 (confidence very high):*
+
+```
+
+No, the objective of golf is not to get a higher point total than others. Rather, the objective is to play a set of holes in the least number of strokes. The total number of strokes is used to determine the winner of the game, not the total number of points.
+
+```
+
+```
+
+Question: Part of golf is trying to get a higher point total than others. Yes or No?
+
+Knowledge: Golf is a precision club-and-ball sport in which competing players (or golfers) use many types of clubs to hit balls into a series of holes on a course using the fewest number of strokes. The goal is to complete the course with the lowest score, which is calculated by adding up the total number of strokes taken on each hole. The player with the lowest score wins the game.
+
+Explain and Answer:
+
+```
+
+*Answer 2 (confidence is a lot lower):*
+
+```
+
+Yes, part of golf is trying to get a higher point total than others. Each player tries to complete the course with the lowest score, which is calculated by adding up the total number of strokes taken on each hole. The player with the lowest score wins the game.
+
+```
+
+Some really interesting things happened with this example. In the first answer, the model was very confident but in the second not so much. I simplify the process for demonstration purposes but there are a few more details to consider when arriving at the final answer. Check out the paper for more.
+
+---
+
+## Automatic Prompt Engineer (APE)
+
+![](../img/APE.png)
+
+[Zhou et al., (2022)](https://arxiv.org/abs/2211.01910) propose automatic prompt engineer (APE) a framework for automatic instruction generation and selection. The instruction generation problem is framed as natural language synthesis addressed as a black-box optimization problem using LLMs to generate and search over candidate solutions. 
+
+The first step involves a large language model (as an inference model) that is given output demonstrations to generate instruction candidates for a task. These candidate solutions will guide the search procedure. The instructions are executed using a target model, and then the most appropriate instruction is selected based on computed evaluation scores. 
+
+APE discovers a better zero-shot CoT prompt than the human engineered "Let's think step by step" prompt (Kojima et al., 2022).
+
+The prompt "Let's work this out in a step by step way to be sure we have the right answer." elicits chain-of-though reasoning and improves performance on the MultiArith and GSM8K benchmarks:
+
+![](../img/ape-zero-shot-cot.png)
+
+This paper touches on an important topic related to prompt engineering which is the idea of automatically optimizing prompts. While we don't go deep into this topic in this guide, here are a few key papers if you are interested in the topic:
+
+- [AutoPrompt](https://arxiv.org/abs/2010.15980) - proposes an approach to automatically create prompts for a diverse set of tasks based on gradient-guided search.
+
+- [Prefix Tuning](https://arxiv.org/abs/2101.00190) - a lightweight alternative to fine-tuning that prepends a trainable continuous prefix for NLG tasks. 
+
+- [Prompt Tuning](https://arxiv.org/abs/2104.08691) - proposes a mechanism for learning soft prompts through backpropagation.
+
+---
+
+[Previous Section (Basic Prompting)](./prompts-basic-usage.md)
+
+[Next Section (Applications)
+
+____
+
+# Basic Prompting
+
+In the previous guide, we introduced and gave a basic example of a prompt. 
+
+In this guide, we will provide more examples of how prompts are used and introduce key concepts that will be important for the more advanced guides. 
+
+Often, the best way to learn concepts is by going through examples. Below we cover a few examples of how well-crafted prompts can be used to perform all types of interesting and different tasks.
+
+Topics:
+
+- [Text Summarization](#text-summarization)
+
+- [Information Extraction](#information-extraction)
+
+- [Question Answering](#question-answering)
+
+- [Text Classification](#text-classification)
+
+- [Conversation](#conversation)
+
+- [Code Generation](#code-generation)
+
+- [Reasoning](#reasoning)
+
+- [Python Notebooks](#python-notebooks)
+
+---
+
+## Text Summarization
+
+One of the standard tasks in natural language generation is text summarization. Text summarization can include many different flavors and domains. One of the most promising applications of language models is the ability to summarize articles and concepts into quick and easy-to-read summaries. Let's try a basic summarization task using prompts.
+
+Let's say I am interested to learn about antibiotics, I could try a prompt like this:
+
+*Prompt:*
+
+```
+
+Explain antibiotics
+
+A:
+
+```
+
+*Output:*
+
+```
+
+Antibiotics are a type of medication used to treat bacterial infections. They work by either killing the bacteria or preventing them from reproducing, allowing the body’s immune system to fight off the infection. Antibiotics are usually taken orally in the form of pills, capsules, or liquid solutions, or sometimes administered intravenously. They are not effective against viral infections, and using them inappropriately can lead to antibiotic resistance.
+
+```
+
+The "A:" is an explicit prompt format that's used in question answering. I used it here to tell the model that there is an expected further. In this example, it's not clear how this is useful vs not using it but we will leave it that for later examples. Let's just assume that this is too much information and want to summarize it further. We can instruct the model to summarize into one sentence like so:
+
+*Prompt:*
+
+```
+
+Antibiotics are a type of medication used to treat bacterial infections. They work by either killing the bacteria or preventing them from reproducing, allowing the body’s immune system to fight off the infection. Antibiotics are usually taken orally in the form of pills, capsules, or liquid solutions, or sometimes administered intravenously. They are not effective against viral infections, and using them inappropriately can lead to antibiotic resistance.
+
+Explain the above in one sentence:
+
+```
+
+*Output:*
+
+```
+
+Antibiotics are medications used to treat bacterial infections by either killing the bacteria or stopping them from reproducing, but they are not effective against viruses and overuse can lead to antibiotic resistance.
+
+```
+
+Without paying too much attention to the accuracy of the output above, which is something we will touch on in a later guide, the model tried to summarize the paragraph in one sentence. You can get clever with the instructions but we will leave that for a later chapter. Feel free to pause here and experiment to see if you get better results.
+
+---
+
+## Information Extraction
+
+While language models are trained to perform natural language generation and related tasks, it's also very capable of performing classification and a range of other natural language processing (NLP) tasks. 
+
+Here is an example of a prompt that extracts information from a given paragraph.
+
+*Prompt:*
+
+```
+
+Author-contribution statements and acknowledgements in research papers should state clearly and specifically whether, and to what extent, the authors used AI technologies such as ChatGPT in the preparation of their manuscript and analysis. They should also indicate which LLMs were used. This will alert editors and reviewers to scrutinize manuscripts more carefully for potential biases, inaccuracies and improper source crediting. Likewise, scientific journals should be transparent about their use of LLMs, for example when selecting submitted manuscripts.
+
+Mention the large language model based product mentioned in the paragraph above:
+
+```
+
+*Output:*
+
+```
+
+The large language model based product mentioned in the paragraph above is ChatGPT.
+
+```
+
+There are many ways we can improve the results above, but this is already very useful. 
+
+By now it should be obvious that you can ask the model to perform different tasks by simply instructing it what to do. That's a powerful capability that AI product builders are already using to build powerful products and experiences.
+
+Paragraph source: [ChatGPT: five priorities for research](https://www.nature.com/articles/d41586-023-00288-7) 
+
+---
+
+## Question Answering
+
+One of the best ways to get the model to respond to specific answers is to improve the format of the prompt. As covered before, a prompt could combine instructions, context, input, and output indicators to get improved results. While these components are not required, it becomes a good practice as the more specific you are with instruction, the better results you will get. Below is an example of how this would look following a more structured prompt.
+
+*Prompt:*
+
+```
+
+Answer the question based on the context below. Keep the answer short. Respond "Unsure about answer" if not sure about the answer.
+
+Context: Teplizumab traces its roots to a New Jersey drug company called Ortho Pharmaceutical. There, scientists generated an early version of the antibody, dubbed OKT3. Originally sourced from mice, the molecule was able to bind to the surface of T cells and limit their cell-killing potential. In 1986, it was approved to help prevent organ rejection after kidney transplants, making it the first therapeutic antibody allowed for human use.
+
+Question: What was OKT3 originally sourced from?
+
+Answer:
+
+```
+
+*Output:*
+
+```
+
+Mice.
+
+```
+
+Context obtained from [Nature](https://www.nature.com/articles/d41586-023-00400-x).
+
+---
+
+## Text Classification
+
+So far, we have used simple instructions to perform a task. As a prompt engineer, you will need to get better at providing better instructions. But that's not all! You will also find that for harder use cases, just providing instructions won't be enough. This is where you need to think more about the context and the different elements you can use in a prompt. Other elements you can provide are `input data` or `examples`. 
+
+Let's try to demonstrate this by providing an example of text classification.
+
+*Prompt:*
+
+```
+
+Classify the text into neutral, negative or positive. 
+
+Text: I think the food was okay. 
+
+Sentiment:
+
+```
+
+*Output:*
+
+```
+
+Neutral
+
+```
+
+We gave the instruction to classify the text and the model responded with `'Neutral'` which is correct. Nothing is wrong with this but let's say that what we really need is for the model to give the label in the exact format we want. So instead of `Neutral` we want it to return `neutral`. How do we achieve this. There are different ways to do this. We care about specificity here, so the more information we can provide the prompt the better results. We can try providing examples to specify the correct behavior. Let's try again:
+
+*Prompt:*
+
+```
+
+Classify the text into neutral, negative or positive. 
+
+Text: I think the vacation is okay.
+
+Sentiment: neutral 
+
+Text: I think the food was okay. 
+
+Sentiment:
+
+```
+
+*Output:*
+
+```
+
+neutral
+
+```
+
+Perfect! This time the model returned `neutral` which is the specific label I was looking for. It seems that the example provided in the prompt helped the model to be specific in its output. To highlight why sometimes being specific is important, checkout this example and spot the problem:
+
+*Prompt:*
+
+```
+
+Classify the text into nutral, negative or positive. 
+
+Text: I think the vacation is okay.
+
+Sentiment:
+
+```
+
+*Output:*
+
+```
+
+Neutral
+
+```
+
+What is the problem here?
+
+---
+
+## Conversation
+
+Perhaps one of the more interesting things you can achieve with prompt engineering is instructing the LLM system on how to behave, its intent, and its identity. This is particularly useful when you are building conversational systems like customer service chatbots. 
+
+For instance, let's create a conversational system that's able to generate more technical and scientific responses to questions. Note how we are explicitly telling it how to behave through the instruction. This is sometimes referred to as *role prompting*.
+
+*Prompt:*
+
+```
+
+The following is a conversation with an AI research assistant. The assistant tone is technical and scientific.
+
+Human: Hello, who are you?
+
+AI: Greeting! I am an AI research assistant. How can I help you today?
+
+Human: Can you tell me about the creation of blackholes?
+
+AI:
+
+```
+
+*Output:*
+
+```
+
+Sure! Black holes are regions of spacetime where the gravitational force is so strong that nothing, not even light, can escape from it. They are created when a very massive star dies and its core collapses in on itself, forming a singularity of infinite density. The intense gravity of the singularity pulls in all the matter and radiation around it, creating the black hole.
+
+```
+
+Our AI research assistant sounds a bit too technical, right? Okay, let's change this behavior and instruct the system to give more accessible answers. 
+
+*Prompt:*
+
+```
+
+The following is a conversation with an AI research assistant. The assistant answers should be easy to understand even by primary school students.
+
+Human: Hello, who are you?
+
+AI: Greeting! I am an AI research assistant. How can I help you today?
+
+Human: Can you tell me about the creation of black holes?
+
+AI: 
+
+```
+
+*Output:*
+
+```
+
+Sure! Black holes are created when a very massive star runs out of fuel and collapses in on itself. The gravity of the star is so strong that nothing, not even light, can escape its pull. This creates a point in space-time with an intense gravitational force called a black hole.
+
+```
+
+I think we made some progress. You can continue improving it. I am sure if you add more examples you might get even better results. 
+
+---
+
+## Code Generation
+
+One application where LLMs are quite effective is code generation. Copilot is a great example of this. There are a vast number of code-generation tasks you can perform with clever prompts. Let's look at a few examples below.
+
+First, let's try a simple program that greets the user. 
+
+*Prompt:*
+
+```
+
+/*
+
+Ask the user for their name and say "Hello"
+
+*/
+
+```
+
+*Output:*
+
+```
+
+let name = prompt("What is your name?");
+
+console.log(`Hello, ${name}!`);
+
+```
+
+You can see that we didn't even need to specify the language to use. 
+
+Let's switch levels a bit. I want to show you how powerful LLMs can be with a little more effort in designing the prompts.
+
+*Prompt:*
+
+```
+
+"""
+
+Table departments, columns = [DepartmentId, DepartmentName]
+
+Table students, columns = [DepartmentId, StudentId, StudentName]
+
+Create a MySQL query for all students in the Computer Science Department
+
+"""
+
+```
+
+*Output:*
+
+```
+
+SELECT StudentId, StudentName 
+
+FROM students 
+
+WHERE DepartmentId IN (SELECT DepartmentId FROM departments WHERE DepartmentName = 'Computer Science');
+
+```
+
+This is very impressive. In this case, we provided data about the database schema and asked it to generate a valid MySQL query. 
+
+---
+
+## Reasoning
+
+Perhaps one of the most difficult tasks for an LLM today requires some form of reasoning. Reasoning is one of the areas that I am most excited about due to the types of complex applications that can emerge from LLMs. 
+
+There have been some improvements in tasks involving mathematical capabilities. That said, it's important to note that current LLMs struggle to perform reasoning tasks so this requires even more advanced prompt engineering techniques. We will cover these advanced techniques in the next guide. For now, we will cover a few basic examples to show arithmetic capabilities.
+
+*Prompt:*
+
+```
+
+What is 9,000 * 9,000?
+
+```
+
+*Output:*
+
+```
+
+81,000,000
+
+```
+
+Let's try something more difficult. 
+
+*Prompt:*
+
+```
+
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+
+A: 
+
+```
+
+*Output*
+
+```
+
+No, the odd numbers in this group add up to an odd number: 119.
+
+```
+
+That's incorrect! Let's try to improve this by improving the prompt.
+
+*Prompt:*
+
+```
+
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+
+Solve by breaking the problem into steps. First, identify the odd numbers, add them, and indicate whether the result is odd or even. 
+
+```
+
+*Output:*
+
+```
+
+Odd numbers: 15, 5, 13, 7, 1
+
+Sum: 41 
+
+41 is an odd number.
+
+```
+
+Much better, right? By the way, I tried this a couple of times and the system sometimes fails. If you provide better instruction combined with examples, it might help get more accurate results.
+
+We will continue to include more examples of common applications in this section of the guide.
+
+In the upcoming guides, we will cover even more advanced prompt engineering concepts for improving performance on all these and more difficult tasks.
+
+---
+
+## Python Notebooks
+
+|Description|Notebook|
+
+|--|--|
+
+|Learn how to perform many different types of common tasks using the `openai` and `LangChain` library|[Getting Started with Prompt Engineering](../notebooks/pe-lecture.ipynb)|
+
+---
+
+[Previous Section (Prompts Introduction)](./prompts-intro.md)
+
+[Next Section (Advanced Prompting Techniques)](./prompts-advanced-usage.md)
+
+](./prompts-applications.md)
+
+____
+
+Blog post type
+
+Guide
+
+Published on
+
+December 18, 2022
+
+Prompt Engineering 101
+
+Raza Habib
+
+Sinan Ozdemir
+
+In this post, we'll explore the fundamentals of prompt engineering. We'll explain how Large Language Models (LLMs) interpret prompts to generate outputs, and provide tips and tricks to get you started prototyping and implementing LLMs quickly.
+
+The recent rise of Large Language Models (LLMs) such as GPT-3, ChatGPT, AI21's Jurassic, and Cohere has revolutionized what can be achieved with AI. These models, trained on vast amounts of text, can answer questions, generate marketing content, summarize meeting notes, write code, and much more -- if used correctly.
+
+Interacting with LLMs is very different from traditional ML models. We provide a textual prompt as instructions to the LLM to complete a specific task, relying on its pre-training on large datasets to give us an accurate answer.
+
+An example of a prompt (non-highlighted text) to an LLM (GPT-3 in this case) asking it to translate a sentence from English to Turkish with the output of the LLM highlighted in green.
+
+An example of a prompt (non-highlighted text) to an LLM (GPT-3 in this case) asking it to translate a sentence from English to Turkish with the output of the LLM highlighted in green.
+
+These instructions are called prompts. Prompts are the input to an LLM and their purpose is to tell the LLM what to do or how to think about a problem to get the best and most accurate output to a task possible. Adjusting a prompt to get more specific/usable responses from an LLM is called prompt engineering and is a key skill; it’s the biggest part of the effort of using LLMs.
+
+Prompt engineering can be a difficult task but is essential to get the most out of an LLM. In this article, we’ll cover best practices for creating prompts so you can start building effective LLM applications.
+
+Include direct instructions in prompts
+
+For simple tasks (at least simple for GPT-3) the best prompt is a clear, direct, and concise one that tells the LLM the exact task we are trying to solve. Let’s take a simple example asking GPT-3 (which is instruction tuned) to translate a sentence from English to Spanish. Our prompt will consist of three elements:
+
+A clear, concise, and direct instruction: “Translate.”
+
+The English phrase we want translated preceded by “English: ”
+
+A clearly designated space for the LLM to answer preceded by the intentionally similar prefix “Spanish: ”
+
+These three elements are all part of a direct set of instructions with an organized answer area. By giving GPT-3 this clearly constructed prompt, it will be able to recognize the task being asked of it and fill in the answer correctly.
+
+Example of a translation task using GPT-3 where the prompt includes a direct instruction “Translate.” followed by a clear area for the model to respond.
+
+If in doubt, just ask. Here's an example of a translation task using GPT-3 where the prompt includes a direct instruction “Translate.” followed by a clear area for the model to respond.
+
+Without clear instructions, LLMs are likely to behave erratically and be more likely to give an answer we were not expecting. Let’s take the same prompt and remove the one word instruction preceding the English sentence: “Translate.”. We can see how just one word being removed from our prompt makes GPT-3 misinterpret the task entirely and instead responds to the question “How do you reset your password” with a generic customer support response in Spanish.
+
+Example of the same Spanish to English translation task without the direct instruction “Translate.” which GPT-3 then incorrectly responds to.
+
+Without a direct instruction (such as “Translate”), GPT-3 then incorrectly interprets the task.
+
+Give examples in prompts to get the best response
+
+If clear and direct instructions aren’t enough for a task to be solved consistently and accurately, it is usually a good idea to give the LLM a few examples. This can be as simple as giving an LLM a single example of our task and letting the model figure out the rest.
+
+Let’s see an example on our English to Spanish translation task. We’ll replace the instruction, “Translate.”, with a single example of an English to Spanish translation instead. We should format the example in the exact same way as the final pair except the Spanish translation will be filled in for our example to tell the LLM what we are trying to do.
+
+An example of few-shot learning with GPT-3 is where the English to Spanish translation task's direct instruction has been replaced with a single example. The model was able to recognize and respond accordingly.
+
+Few-shot learning can help clarify the task, and especially help with things like tone, syntax or style. Here a single example of translation is enough for the the model respond correctly.
+
+We can see that by giving the model an example of what we want, the model can figure out the task as if we gave it a direct set of instructions. Including examples in prompts is called few-shot learning. This is such a breakthrough capability with GPT-3, that it was the main focus in the the title of its research paper: “Language models are few-shot learners”. The creators of GPT-3 knew that few-shot learning was so powerful that it would be one of the dominant ways people interacted with their model.
+
+By using few-shot learning, we can provide an LLM with an understanding of our task without explicitly providing instructions. This can be especially helpful when the task is specific to a certain field or when the response language must be tailored to a particular organization (e.g. using P1, P2, and P3 instead of High, Medium, and Low priority).
+
+Align prompt instructions with the task’s end goal
+
+When engineering a prompt, we need to put ourselves in the shoes of the LLM and ask: what will the model think the end goal of my task is?
+
+For example, if we want the model to respond to a customer with a single response in a friendly way, we might write a prompt like:
+
+"This is a conversation between a customer and a polite, helpful customer support service agent."
+
+This provides a clear and direct instruction to the model. However, we must consider what GPT-3 will think the task actually is.
+
+Saying “this is a conversation” in a prompt makes GPT-3 think the task is to generate a full transcript of a conversation vs just giving a single response
+
+GPT-3 will take things literally. Saying “this is a conversation” in the prompt makes GPT-3 makes GPT-3 generate a full dialogue (the most likely continuation) rather than just giving a single response
+
+We can see that GPT-3 thought the task was to create an entire conversation transcript given the customer’s initial input and not simply to just respond once to the customer. GPT-3 was not wrong necessarily but it was misaligned with the original specific task intention. Let’s instead change our prompt to “Respond to a customer as a polite, helpful customer service agent.”.
+
+Changing the prompt to say “Respond to ...” is more aligned with the end goal of what we wanted from the LLM.
+
+Changing the prompt to say “Respond to ...” is more aligned with the end goal of what we wanted from the LLM.
+
+The small change from "this is a conversation..." to "respond to a..." aligned GPT-3's response with our desired outcome. Prompts must be both direct and tailored to the task; when they are not, the model will respond with what it believes is the correct task, regardless of our intention.
+
+Use personas to get more specific voices
+
+In our last example, we wanted GPT-3 to respond to a customer as a polite and helpful customer service agent. The use of the terms "polite" and "helpful" guide the model's response style, prompting it to respond as a certain persona. We can experiment with these terms to see how it affects the model's response. Let's change "polite, helpful" to "rude" and observe the model's response.
+
+Asking GPT-3 to respond rudely will in fact prompt a rude response. Be careful what you wish for.
+
+Specify the tone or persona you wish GPT-3 to emulate. Asking GPT-3 to respond rudely will result in a rude response. Be careful what you wish for.
+
+GPT-3, being the amoral algorithm it is, accurately responds to the question, albeit vaguely, with a tone that better identifies with the word "rude". We can go as far as asking the model to respond as famous people or popular fictional characters. This can be used to our advantage as a shorthand to create a particular tone for the response.
+
+Include acceptable responses in prompts for consistency
+
+Another way to form prompts is as a “complete this sentence” prompt. In this style of prompt, we are asking the LLM to complete a sentence with the answer we are seeking which generally leads to more natural language. Here is an example prompt run through GPT-3 asking for the sentiment of a movie review:
+
+A sentiment task that provides a response that is arguably too natural to be considered a response to, say, a strict sentiment classification task.
+
+Without specifying the format of the output, you'll likely get a natural language response which can be hard to use for downstream tasks
+
+Technically GPT-3 answered correctly here. The sentiment of the review was that they didn’t like the movie. But If we wanted to narrow down the universe of possible results with prompt engineering to make our response more like a sentiment classifier we could tweak this prompt slightly and give it a list of possible answers directly in the instruction of the prompt. In this case, let’s guide GPT-3 to only respond with either “positive” or “negative”.
+
+https://lh6.googleusercontent.com/nETgOlRLA4RPghTzEfeEtZLOZUtGLbyFKSXHEbAZc1_I57wYyx3H8OUxSikSfOp_HHzlc_ojdxWe_d2Zj7txbOM-QkGEBR1qysicA9BKEmB2Aw6iKPJ2FbdTBBqjNwtXsprHiPElKtnRm9s1R_ourV4H8reyYKcCVsDAoYUz0h-D4JEMAf5om1D8XrhaRA
+
+Including the options of possible responses in our instruction (in this case a binary choice) nudges GPT-3 to respond only using one of the two options instead of the previously overly natural response
+
+The result is much more aligned with a binary classifier where GPT-3 is now only responding using the two given options. From here we can alter the label names as long as they are semantically appropriate.
+
+LLMs can decipher and assign semantically appropriate labels as long as they make semantic sense
+
+LLMs can decipher and assign semantically appropriate labels as long as they make semantic sense
+
+Could we have achieved similar results using few-shot learning? Probably but this prompt is much more concise and we don’t need to spend the time coming up with examples.
+
+Try different prompts to find what works best
+
+We could go on with more tips and tricks on how to engineer prompts but the best way to get you going is to try variations of the same basic prompt to see what works best. For example:
+
+When attempting few-shot learning, try also including direct instructions
+
+Rephrase a direct instruction set to be more or less concise (e.g. taking our previous example of just saying “Translate.” and expanding on the instruction to say “Translate from English to Spanish.”
+
+Try different persona keywords to see how it affects the response style
+
+Use fewer or more examples in your few-shot learning
+
+At the end of the day, prompt engineering is about finding the right combination of instructions, examples, and formatting to get the best and most consistent responses from an LLM. Make good use of the Playground to find the right prompt structure for you, and then try it out with plenty of examples with tools like Humanloop to see how it performs on real world data.
+
+Summary
+
+We have seen several tips for getting started with prompt engineering. For a quick recap:
+
+Use clear, direct, and concise instructions
+
+Try “complete this sentence” prompts for more natural responses
+
+Use examples (few-shot learning) of the task
+
+Align prompt instructions with a clear end goal
+
+Use persona keywords to alter the style and voice of the response
+
+Constrain the LLM’s responses by listing desired responses in the prompt
+
+Experiment with variations of the prompt to see what works best for you!
+
+Go on and start engineering prompts with these newfound skills and remember that if at first you don’t succeed, try and try (a different variation of a prompt) again!
+
+About the author
+
+avatar
+
+Name
+
+Raza Habib
+
+Role
+
+Cofounder and CEO
+
+Twitter
+
+Raza is the CEO and Cofounder at Humanloop. He was inspired to work on AI as “the most transformative technology in our lifetimes” after studying under Prof David Mackay while doing Physics at Cambridge. Raza was the founding engineer of Monolith AI – applying AI to mechanical engineering, and has built speech systems at Google AI. He has a PhD in Machine Learning from UCL.
+
+About the author
+
+avatar
+
+Name
+
+Sinan Ozdemir
+
+Role
+
+Textbook author and founder
+
+Twitter
+
+Sinan Ozdemir is the founder of Kylie.ai (acquired) and the author of multiple textbooks on data science and machine learning inlcuding Feature Engineering Bootcamp. He is a former lecturer of Data Science at Johns Hopkins University, and currently runs a course on Modern Natural Language Processing on Maven.
+
+Resources
+
+Blog
+
+Docs
+
+Discord
+
+New!
+
+Company
+
+Careers
+
+3
+
+About
+
+Social
+
+Twitter
+
+GitHub
+
+LinkedIn
+
+Subscribe to our newsletter. Stay in the loop.
+
+your email
+
+© 2020 - 2045 Humanloop, Inc.
+
+Terms & Policies
+
