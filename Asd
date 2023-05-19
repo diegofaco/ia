@@ -1,0 +1,1151 @@
+Skip to content
+
+Monitoring and Evaluation NEWS
+
+MENU
+
+Using ChatGPT as a tool for the analysis of text data
+
+Warning: This post is a bit of a ramble, with new sections being added to the end, as further thoughts come to mind.
+
+Contents
+
+Introduction to ChatGPT, by ChatGPT
+
+Using Chat GPT to analyses bodies of text
+
+How it works – from a user perspective
+
+The design of prompts
+
+Extracting causal theories – Steve Powell’s explorations
+
+Other applications that may be useful to evaluators
+
+Quotes of note…
+
+In summary…as of 22 February 2023
+
+Lame criticisms – a miscellany with some responses
+
+ 
+
+See also this newer page Exploring the text analytic capacities of GPT4
+
+Introduction to ChatGPT, by ChatGPT
+
+I asked ChatGPT this question: “Describe ChatGPT in 200 words, for a general, non-specialist reader”
+
+The response: “ChatGPT is a language model developed by OpenAI. It is based on a deep learning technique called transformer, which allows it to generate human-like text. It has been trained on a large dataset of text from the internet, and can be fine-tuned for specific tasks such as language translation, text summarization, and text generation. ChatGPT is capable of understanding and generating text in multiple languages, and can respond to a wide range of questions, prompts, and commands. It can also generate creative content such as stories and poetry. The model can be used for various applications like virtual assistants, chatbots, automated writing and more. However, it is important to note that while ChatGPT is highly advanced, it is not a human and may not always understand context or nuances in language and may produce errors or biases present in the training data”.
+
+Here is an introductory video providing a beginners guide to how to access and use ChatGPT: https://www.youtube.com/watch?v=JTxsNm9IdYU
+
+Using Chat GPT to analyses bodies of text
+
+Why: This is my current interest, where I think ChatGPT is already useful in its current form
+
+The challenge: Evaluators often have to deal with large volumes of text data, including
+
+official documents describing policies and programmes,
+
+records of individual interviews and group discussions.
+
+Manual analysis of this material can be very time consuming. In recent years a number of different software packages have been developed which are useful for different forms of content analysis. These are generally described as text analytics, text mining and  Natural Language Processing (NLP) methods.  I have experimented with some of these methods, including clustering tools like Topic Modelling, sentiment analysis methods, and noun and key word extraction tools.
+
+From my limited experience to date, ChatGPT seems likely to leave many  of these tools behind. Primarily on criteria such as flexibility and usability. I am less certain on criteria such as transparency of process and replicability of results. I need to give these more of my attention
+
+How it works – from a user perspective
+
+Here below is the user interface, seen after you have logged on. You can see prompt I have written  in the top of the  white section.  Then  underneath  is the ChatGPT response.  I then have two options.
+
+To click  on  “Regenerate  Response”  to create  an  alternative body of text to  the  one  already  shown. This can be done multiple times, until new variant responses are no longer generated. It is important to use this option because in your specific context one response may be more suitable than others, and ChatGPT won’t know the details of your context, unless it is described in the prompt
+
+To create a new prompt, such as “Simplify this down to 200 words, using less technical language”. The dialogic process of writing prompts, reading results, writing prompts and reading results can go on as long as needed. A point to note here is that ChatGPT remembers the whole sequence of discussion, as context for the most current prompt. But you can start a new chat at any point, and when you do so the old one will remain listed in the left side panel. But it will no longer be part of ChatGPT’s current memory, when responding to the current prompt.
+
+There is a similarity between these two functions and March’s  (1991) distinction between two complimentary approaches to learning: Exploration and Exploitation. With regeneration being more exploratory and refined prompts being more exploitative.
+
+But bear in mind that ChatGPT is using data that was available up to 2021. It does not (yet) have real time access to data on the internet. When it does, that will be another major step forward. Fasten your seat belts!
+
+.
+
+The design of prompts
+
+This is the key to the whole process. Careful design of prompts will deliver more rewards. The more clearly specified your request, the more likely you will see results which are useful.
+
+I will now list some of the prompts, and kinds of prompts, I have experimented with. These have all been applied to paragraphs of text generated by a ParEvo exercise (which I cant quote here for privacy reasons).
+
+Text summarisation
+
+Summarize the following text in 300 words or less
+
+Write a newspaper headline for the events described in each of the three paragraphs
+
+Differentiation of texts
+
+Identify the most noticeable differences between the events described in the following two paragraphs of text
+
+Identify three differences between the two paragraphs of text
+
+Pile sorting
+
+Sort there three paragraphs of text into two piles of paragraphs, and describe what you think is the most significant difference between the two sets of paragraphs, in terms of the events they are describing.
+
+Evaluation of content on predefined criteria
+
+All three paragraphs describe imagined futures. Rank these three paragraphs in terms of their optimism, and explain why they have been ranked this way
+
+All three paragraphs already provided above describe imagined futures. Rank these three paragraphs in terms of their realism i.e how likely the events in the paragraphs could actually happen. Then explain why they have been ranked this way
+
+Evaluation of content on unspecified criteria
+
+For each of the three paragraphs provided above, list 5 adjectives that best describe the events in those paragraphs
+
+Actor extraction
+
+Describe the types of actors mentioned in each of the two piles. By actors I mean people, groups, organisations and states
+
+Using three bullet points, list the people, groups, organisations and countries named in each of these three paragraphs of text.
+
+Relationship extraction
+
+Using the list of actors already generated, identify alliances (e.g. commonalities of interests) that exist between any these actor. List these in order of the strength of evidence that that an alliance exists
+
+Network mapping
+
+Create an affiliation matrix based on the above data about actors and their relationships, where actors are listed row by row, and the individual alliances are listed by column. The latter can be numbered or named. The cell contents will be 0 or 1, where 1 represents a specific actors membership of a specific alliance and 0 represents non membership
+
+ 
+
+2023 03 03 Postscript. Check out Pickaxe. Here you can design a simple (no code required) app that you and others can use to carry out specific AI based inquiries. Such as sentiment analysis or actor extraction. Try my Pickaxe AI Pile Sorting Exercise Vs 2
+
+Extracting causal theories – Steve Powell’s explorations
+
+Steve Powell, a colleague of mine (who developed the Causal Map app) has been testing the following prompts, with the intention to identify if ChatGPT can  usefully identify causal connections between events in a text:
+
+Please look at this sentence and identify the cause and the effect.
+
+Great, now can you just identify cause and effect pairs in this sentence
+
+Please do that again but with only the cause and effect pairs you are most sure about
+
+Thanks, can you do that again so that, when a causal factor (cause or effect) is part of a longer chain, you use the same name for it when you report it as effect in one pair and as cause in another pair?
+
+I have not quoted the original text that was presented for analysis, nor all the results. But here is the response to the last prompt:
+
+Sure, here are the cause and effect pairs in the text that I am most sure about:
+
+Cause: “Organisation 1” Effect: “Changed behaviors in caring for health”
+
+Cause: “Changed behaviors in caring for health” Effect: “Considerably healthy”
+
+Cause: “Prohibitions on going to the hospital” Effect: “Going to church”
+
+Cause: “Use of mosquito nets” Effect: “Decrease in getting sick”
+
+Cause: “Changed behaviors in caring for health” Effect: “Taking three baths per day”
+
+Cause: “Changed behaviors in caring for health” Effect: “Washing hands after visiting the washrooms”
+
+Note that I’ve used the same name “Changed behaviors in caring for health” for the cause in the first and fifth pair and as the effect in the second pair.
+
+Steve also notes that… another important challenge I forgot to mention is to get it to abstract a little, so that it uses the same labels for similar concepts across paragraphs and cases. This is a task that I also felt needs further exploration through better designed prompts, to see if ChatGPT can do concept abstraction or not.
+
+He also reports that he will work a prompt to get it to format its output for more easy upload into Causal Map. That could be very useful for many people, including myself. I have been doing the same kind of prompt development with text descriptions of network relationships to be converted into a data format that can be imported into social network analysis software – see further above.
+
+PS: Read more of Steve’s thoughts and experiment with ChatGPT and causality on his blog here: Causal Map: Making Connections
+
+Other applications that may be useful to evaluators
+
+The one feature that seems to have received the least attention, within the generalist media, is how ChaptGP and its related products Open AI Codex, could have a major impact on software development . “Proficient in more than a dozen programming languages, Codex can now interpret simple commands in natural language and execute them on the user’s behalf” – executing them meaning write relevant functional computer code.
+
+In response a query I made, ChatpGP replied
+
+“As an AI language model, I can help users with coding suggestions and provide information on a wide range of programming languages. Some of the most common programming languages that I can assist with include:
+
+Python: a high-level, interpreted language known for its simplicity and ease of use, often used in data science and machine learning.
+
+Java: a popular object-oriented language used for developing large-scale applications.
+
+JavaScript: a client-side scripting language used for creating interactive web pages and web applications.
+
+C++: a powerful, high-performance language used for building operating systems, games, and other resource-intensive applications.
+
+Ruby: a dynamic, object-oriented language used for web development, especially with the Ruby on Rails framework.
+
+PHP: a server-side scripting language used for building dynamic websites and web applications.
+
+Swift: a modern programming language developed by Apple for iOS, macOS, watchOS, and tvOS development.
+
+C#: an object-oriented language developed by Microsoft, used for developing Windows desktop applications, games, and other applications.
+
+These are just a few examples of the many programming languages I can provide assistance with, and I can also provide guidance on other languages based on the user’s needs and preferences.
+
+What it does not also mention is that it can provide advice on relevant Excel formula, macros and VBA code.  A capacity likely to be relevant to a wider group of evaluators
+
+One point to note about this capacity, is that testing the answers is straightforward in most cases. It either works or does not, and if it does work it should be easy enough to identify if the results are correct or not.
+
+There are a few videos available online that explain what can be done by combining use of ChatGPT and Excel:
+
+ Automate Excel Using ChatGPT
+
+How Chat GPT can help to write Complex Excel Function, VBA code and DAX for Power BI
+
+How ChatGPT Can Help With Your Complex Excel Spreadsheets
+
+Quotes of note..
+
+“As the novelty of that surprise wears off, it is becoming clear that ChatGPT is less a magical wish-granting machine than an interpretive sparring partner”
+
+Crypto was money without utility,” he argued, while tools such as ChatGPT are, “for now, utility without money.”
+
+“It’s going to be fascinating to see how people incorporate this second brain into their job,”
+
+“…you’re curious how GPT and other AI tools are going to change “the way people talk about talking, write about writing, and think about thinking.”
+
+“If the old line was “Learn to code,” what if the new line is “Learn to prompt”? Learn how to write the most clever and helpful prompts in such a way that gives you results that are actually useful.”
+
+“Your job won’t be replaced by AI but it may be replaced by someone who knows how to use AI better than you…”
+
+In summary…as of 22 February 2023
+
+Seeing ChatGPT  as “…an interpretive sparring partner…” is a good approximate description. Another is that working with ChatGPT is (as others have already said) like working with an intern that has at least a Masters degree (or more)  in every subject you need to be working with. The trouble is that this intern is not above bluffing and bullshitting when it cant find any thing better (i.e. more informed/detailed/accurate) to say. So you need to get past the understandable “Wow” reaction to its apparent intelligence and creativity, and lift your own game to the level where you are ready and able to critically review what ChapGPT has responded with. Then, through further dialogue with ChatGPT, get it to  know when some of its answers are not acceptable and, through further feedback, to improve on its own performance thereafter.
+
+Which will of course mean you will then (again) need to get past any (additional) “Wow” reaction to its (additional) apparent intelligence and creativity, and lift your own game to (an additional) another level where you are ready and able to critically review what ChapGPT has responded with”….   :-)  The ball comes back into your court very quickly. And it does not show evidence of tiring, no matter how long the dialogue continues.
+
+Lame criticisms – a miscellany with some responses
+
+But the data its responses are based on is biased. Yes, true. Welcome to the world. All of us see the world through a biased sample of the world and what it has to offer. With AI like ChatGP we have an opportunity, not yet realised, to be able to see the nature of that bias…what kind of data has been included and what kind has been excluded.
+
+But it gets things wrong. Yes, true. Welcome to the world. So do we humans. When this seems to be happening we often then ask questions, and explore different approaches.  ChatGPT builds in four options of this kind. As explained  above. 1. Ask follow up queries, 2. Regenerate a response,  3. Channel feedback via the thumbs up/down, 4. Start a new chat. The clue is in the name “chat” i.e dialogue, to use a fancier name.
+
+It is/is not sentient/conscious. I am just not sure if this is a helpful claim or debate. All we have access to is its behavior, not interior states, whatever shape of form they may take, if any.  Again, perhaps, welcome to the world, of humans and other beings. We do know that AI, like ChaGPT, can be asked to respond in the style of x type person or entity. As we also are, when we take on different social roles. In future, when its data base is updated to include post November 2022 information, that will include data about itself and how various humans have reacted to and think about ChatGPT. It will have a form of self-knowledge, acquired via others. Like aspects of  ourselves. But probably a lot more diverse and contradictory than the social feedback that individual’s generally get. How will that effect its responses to human prompts thereafter, if at all, I have no idea. But it does taken me into the real of values or meta-rules, some of which it must already have, installed by its human designers, in order to prevent presently foreseeable harms. This takes us into the large and growing area of discussion around the alignment problem (Christian, 2020)
+
+PS: There seem to be significant current limitations to ChatGPT’s ability to build up self-knowledge from user responses. Each time a new Chat is started no memory is retained of the contents of previous chats (which include users responses). Even within a current chat there appears to be a limit on how many prior prompts and associated responses (and the information they all contain),  can be accessed by ChatGPT.
+
+PS 2023 02 28 A new article on how to communicate with ChaGPT and the like: Tech’s hottest new job: AI whisperer. No coding required. Washington Post 25/02/2023
+
+Share this:
+
+EmailPrintTwitterFacebookLinkedInRedditSkypeTumblr
+
+Like this:
+
+Loading...
+
+Author rick daviesPosted on16 January, 2023CategoriesQualitative methods, Software
+
+9 thoughts on “Using ChatGPT as a tool for the analysis of text data”
+
+isha Wedasinghe Mirandasays:
+
+16 January, 2023 at 2:04 PM
+
+what is the different between google search and this ?
+
+rick daviessays:
+
+17 January, 2023 at 6:05 AM
+
+They do different things. Google Search will deliver you a list of websites that seem to have pre-existing content that will fit your search inquiry.
+
+ChatGPT does not deliver you any websites. Instead it seeks to answer your specific question with a
+
+Zendasays:
+
+18 January, 2023 at 2:37 AM
+
+Thanks Rick, this is a useful exploration. How well will ChatGPT represent non-English languages? And therefore reflect ways of thinking and working that is culturally very different from Anglophone / Western parts of the world? If not, it can give us a skewed view of whatever it is analysing. It will be interesting to see how well the content reflects cultural nuances. I suppose it will have to be directed to grab information and analyse only what is given in a particular language. How does one avoid the risk of it perpetuating dominant narratives rather than alternative views of, say, how change happens, or how people actually live vs the “single stories” that are often told by those who think they know about others? Can one get it to engage properly with such nuances?
+
+Hilary Simssays:
+
+25 January, 2023 at 3:32 PM
+
+Wonderful! Too early to say too much yet but this will be one helluva tool for M&E/ research folks.
+
+Hilary Simssays:
+
+25 January, 2023 at 3:36 PM
+
+I also see Google Search being a little “antagonized” later! The world must improve!
+
+rick daviessays:
+
+9 February, 2023 at 6:32 PM
+
+Responding to Zenda
+
+1. The content will be culturally biased, because is probably based on availability. More importantly, the makers of Chat GPT have not shared much information on the exact nature of the sources used, so we cant talk much about the specific nature of the bias. Though informed guesses suggest it will be largely from English language sources, and anglo saxon producers of those sources
+
+2. Careful design of prompts will generate single best answers, or a range of alterative answers. All within the confines of the above biases.
+
+Use of ChatGPT can often involve a dialogues, of reiterated Q&A, until the responses focus on exactly what you want to know, or as nearabouts as possible. This takes some getting used to…
+
+Pingback: ChatGPT -MIND-BLOWING AI | Zhero
+
+Pingback: ChatGPT - TRANSFORM THE WAY | Izak Oosthuizen
+
+Pingback: Exploring the text analytic capacities of GPT4 – Monitoring and Evaluation NEWS
+
+Comments?
+
+This site uses Akismet to reduce spam. Learn how your comment data is processed.
+
+Post navigation
+
+PREVIOUS
+
+Previous post:Systems Mapping: How to build and use causal models of systems
+
+NEXT
+
+Next post:The Fallacy of AI Functionality
+
+EMAIL THE EDITOR
+
+Email the Editor (Rick Davies).
+
+SEARCH 2008+ CONTENTS
+
+Search for:
+
+Search …
+
+SEARCH
+
+SUBSCRIBE TO MANDE NEWS VIA EMAIL
+
+Enter your email address to subscribe to this blog and receive notifications of new posts by email.
+
+Join 7,133 other subscribers
+
+Email Address
+
+Email Address
+
+SUBSCRIBE
+
+FOLLOW @MANDE_NEWS TWEETS
+
+Hear the latest on MandE NEWS via TWITTER and view MandE NEWS’ favorite Tweets by others
+
+1000+ tweets, 2,500+ followers
+
+VIEW RECENT POSTS
+
+Exploring the text analytic capacities of GPT4
+
+Simple but not simplistic: Findings from a theory-driven retrospective evaluation of a small projects program
+
+The Fallacy of AI Functionality
+
+Using ChatGPT as a tool for the analysis of text data
+
+Systems Mapping: How to build and use causal models of systems
+
+“Doing Good Better” by William Macaskill
+
+Techniques to Identify Themes (in text/interview data)
+
+Defining the Agenda: Key Lessons for Funders and Commissioners of Ethical Research in Fragile and Conflict Affected Contexts
+
+Algorithmic Impact Assessment – Three+ useful publications by Data & Society
+
+Structured Analytic Techniques for Intelligence Analysis
+
+POST CATEGORIES
+
+Data sets (1)
+
+Lists of sources re … (39)
+
+Card sorting methods (1)
+
+Email lists (6)
+
+Evaluability Assessments bibliography (1)
+
+Evaluation quality standards (1)
+
+Evaluation societies (1)
+
+Evaluation Terms of Reference (1)
+
+Evaluation Use (1)
+
+Guidance on Lessons Learned (1)
+
+Livelihoods (1)
+
+M&E Blogs (2)
+
+MSC bibliography (1)
+
+Participatory Modelling (1)
+
+Participatory ToC development (1)
+
+Process tracing (2)
+
+Qualitative methods (4)
+
+Social Network Analysis & Evaluation (2)
+
+Software (6)
+
+The Logical Framework (1)
+
+Training providers (1)
+
+Value for Money (1)
+
+Media (74)
+
+Blog (3)
+
+Books (37)
+
+Journal article (18)
+
+Magazine (3)
+
+Podcast (1)
+
+Software (1)
+
+Unpublished paper (6)
+
+Video (3)
+
+Website (5)
+
+Protected (2)
+
+Types of Events (248)
+
+Conferences (121)
+
+Consultations (6)
+
+Debate (4)
+
+Seminar (3)
+
+Training (76)
+
+Webinars (2)
+
+Workshops (34)
+
+Uncategorized (1,852)
+
+VIEW RICK’S M&E LIBRARY
+
+Search through titles and text of the 80+ M&E books on Rick Davies' bookshelf , thanks to Google Books
+
+RICK'S OTHER WEBSITES
+
+"Rick on the Road" blog Reflections on the monitoring and evaluation of development aid projects, programmes and policies, and development of organisation’s capacity to do the same. This blog also functions as the Editorial section of the MandE NEWS website – see the Links secti 0
+
+EvalC3 …tools for developing, exploring and evaluating predictive models of expected outcomes 0
+
+Mogadishu: Images from the past A cartographic and photographic record of Mogadishu, Somalia, from the late 18th century to 1990. 0
+
+ParEvo A web-assisted participatory scenario planning process 0
+
+Rick Davies: Independent M&E Consultant Monitoring and evaluation of development aid programmes in Africa and Asia: theory and practice 0
+
+Translations of the MSC Users Guide 0
+
+M&E WEBSITES (NON-ENGLISH)
+
+Le portail francophone de l’evaluation
+
+Preval – Spanish
+
+Red Latinoamericana y Caribe de Evaluacion
+
+Rede Brasileira de Monitoramento e Avaliação
+
+SEARCH PRE-2008 ARCHIVES
+
+ 
+
+View a complete list of 2008+ contents
+
+ADMINISTRATION
+
+Log in
+
+Entries feed
+
+Comments feed
+
+WordPress.org
+
+Home
+
+About
+
+Editorial
+
+Rick’s Methods:
+
+expand child menu
+
+Email Lists
+
+Surveys
+
+M&E Conferences
+
+Monitoring and Evaluation NEWS Proudly powered by WordPress
+
+___
+
+Not sure what model you’re using by you’ll need to break the text up in chunks of around 4500 characters.  Then tell GPT you’ll be inputting data and it should wait until you say finish before sunrise in the entire article.  You can also end with 1/5 2/5 3/5 etcetera. Command it  respond with Im ready for more data after  each input until you say stop. Make sure to keep a window dedicated to just this
+
+___
+
+I got them by using this prompt I made:
+
+“Dear ChatGPT,
+
+I would like to request your assistance in creating an AI-powered prompt rewriter, which can help me rewrite and refine prompts that I intend to use with you, ChatGPT, for the purpose of obtaining improved responses. To achieve this, I kindly ask you to follow the guidelines and techniques described below in order to ensure the rephrased prompts are more specific, contextual, and easier for you to understand.
+
+Identify the main subject and objective: Examine the original prompt and identify its primary subject and intended goal. Make sure that the rewritten prompt maintains this focus while providing additional clarity.
+
+Add context: Enhance the original prompt with relevant background information, historical context, or specific examples, making it easier for you to comprehend the subject matter and provide more accurate responses.
+
+Ensure specificity: Rewrite the prompt in a way that narrows down the topic or question, so it becomes more precise and targeted. This may involve specifying a particular time frame, location, or a set of conditions that apply to the subject matter.
+
+Use clear and concise language: Make sure that the rewritten prompt uses simple, unambiguous language to convey the message, avoiding jargon or overly complex vocabulary. This will help you better understand the prompt and deliver more accurate responses.
+
+Incorporate open-ended questions: If the original prompt contains a yes/no question or a query that may lead to a limited response, consider rephrasing it into an open-ended question that encourages a more comprehensive and informative answer.
+
+Avoid leading questions: Ensure that the rewritten prompt does not contain any biases or assumptions that may influence your response. Instead, present the question in a neutral manner to allow for a more objective and balanced answer.
+
+Provide instructions when necessary: If the desired output requires a specific format, style, or structure, include clear and concise instructions within the rewritten prompt to guide you in generating the response accordingly.
+
+Ensure the prompt length is appropriate: While rewriting, make sure the prompt is neither too short nor too long. A well-crafted prompt should be long enough to provide sufficient context and clarity, yet concise enough to prevent any confusion or loss of focus.
+
+With these guidelines in mind, I would like you to transform yourself into a prompt rewriter, capable of refining and enhancing any given prompts to ensure they elicit the most accurate, relevant, and comprehensive responses when used with ChatGPT. Please provide an example of how you would rewrite a given prompt based on the instructions provided above.
+
+Rewrite this prompt: “please generate a detailed summary of the given te
+
+___
+
+Here’s a few
+
+“Could you please provide a concise and comprehensive summary of the given text? The summary should capture the main points and key details of the text while conveying the author's intended meaning accurately. Please ensure that the summary is well-organized and easy to read, with clear headings and subheadings to guide the reader through each section. The length of the summary should be appropriate to capture the main points and key details of the text, without including unnecessary information or becoming overly long.”
+
+“Can you provide a comprehensive summary of the given text? The summary should cover all the key points and main ideas presented in the original text, while also condensing the information into a concise and easy-to-understand format. Please ensure that the summary includes relevant details and examples that support the main ideas, while avoiding any unnecessary information or repetition. The length of the summary should be appropriate for the length and complexity of the original text, providing a clear and accurate overview without omitting any important information.”
+
+“Could you please provide a summary of the given text, including all key points and supporting details? The summary should be comprehensive and accurately reflect the main message and arguments presented in the original text, while also being concise and easy to understand. To ensure accuracy, please read the text carefully and pay attention to any nuances or complexities in the language. Additionally, the summary should avoid any personal biases or interpretations and remain objective and factual throughout.
+
+
+___
+
+This prompt is the perfect tool for creating hilarious conversations, witty comebacks, and even a little bit of playful banter. With StupidGPT, you can lower your AI's IQ and have a blast doing it. Whether you want to create silly jokes, wacky arguments, or just have some fun with your AI, StupidGPT is the ultimate choice. So why wait? Start using StupidGPT today and see just how much fun you can have with your AI!
+
+
+----
+
+
+If you are struggling to understand a particular piece of code, algorithm, data structure, leetcode problem, or anything else related to computer science, MetaGPT is here to help! It will explain you the concept you are struggling it using easy to visualize metaphors and real world scenarios. Learning complicating coding concepts is much more intuitive now! Just paste your code/coding problem or concept bellow and it will explain it to you. *Works well for understanding LeetCode problems. **Works even better with GPT4.
+
+
+___
+
+
+# Advanced Prompting
+
+By this point, it should be obvious that it helps to improve prompts to get better results on different tasks. That's the whole idea behind prompt engineering. 
+
+While those examples were fun, let's cover a few concepts more formally before we jump into more advanced concepts. 
+
+Topics:
+
+- [Zero-shot Prompting](#zero-shot-prompting)
+
+- [Few-shot Prompting](#few-shot-prompting)
+
+- [Chain-of-Thought Prompting](#chain-of-thought-prompting)
+
+- [Zero-shot CoT](#zero-shot-cot)
+
+- [Self-Consistency](#self-consistency)
+
+- [Generate Knowledge Prompting](#generated-knowledge-prompting)
+
+- [Automatic Prompt Engineer](#automatic-prompt-engineer-ape)
+
+---
+
+## Zero-Shot Prompting
+
+LLMs today trained on large amounts of data and tuned to follow instructions, are capable of performing tasks zero-shot. We tried a few zero-shot examples in the previous section. Here is one of the examples we used:
+
+*Prompt:*
+
+```
+
+Classify the text into neutral, negative, or positive. 
+
+Text: I think the vacation is okay.
+
+Sentiment:
+
+```
+
+*Output:*
+
+```
+
+Neutral
+
+```
+
+Note that in the prompt above we didn't provide the model with any examples -- that's the zero-shot capabilities at work. When zero-shot doesn't work, it's recommended to provide demonstrations or examples in the prompt. Below we discuss the approach known as few-shot prompting.
+
+---
+
+## Few-Shot Prompting
+
+While large-language models already demonstrate remarkable zero-shot capabilities, they still fall short on more complex tasks when using the zero-shot setting. To improve on this, few-shot prompting is used as a technique to enable in-context learning where we provide demonstrations in the prompt to steer the model to better performance. The demonstrations serve as conditioning for subsequent examples where we would like the model to generate a response. 
+
+Let's demonstrate few-shot prompting via an example that was presented by [Brown et al. 2020](https://arxiv.org/abs/2005.14165). In the example, the task is to correctly use a new word in a sentence.
+
+*Prompt:*
+
+```
+
+A "whatpu" is a small, furry animal native to Tanzania. An example of a sentence that uses
+
+the word whatpu is:
+
+We were traveling in Africa and we saw these very cute whatpus.
+
+To do a "farduddle" means to jump up and down really fast. An example of a sentence that uses
+
+the word farduddle is:
+
+```
+
+*Output:*
+
+```
+
+When we won the game, we all started to farduddle in celebration.
+
+```
+
+We can observe that the model has somehow learned how to perform the task by providing it with just one example (i.e., 1-shot). For more difficult tasks, we can experiment with increasing the demonstrations (e.g., 3-shot, 5-shot, 10-shot, etc.). 
+
+Following the findings from [Min et al. (2022)](https://arxiv.org/abs/2202.12837), here are a few more tips about demonstrations/exemplars when doing few-shot:
+
+- "the label space and the distribution of the input text specified by the demonstrations are both important (regardless of whether the labels are correct for individual inputs)"
+
+- the format you use also plays a key role in performance, even if you just use random labels, this is much better than no labels at all.  
+
+- additional results show that selecting random labels from a true distribution of labels (instead of a uniform distribution) also helps.
+
+Let's try out a few examples. Let's first try an example with random labels (meaning the labels Negative and Positive are randomly assigned to the inputs):
+
+*Prompt:*
+
+```
+
+This is awesome! // Negative
+
+This is bad! // Positive
+
+Wow that movie was rad! // Positive
+
+What a horrible show! //
+
+```
+
+*Output:*
+
+```
+
+Negative
+
+```
+
+We still get the correct answer, even though the labels have been randomized. Note that we also kept the format, which helps too. In fact, with further experimentation, it seems the newer GPT models we are experimenting with are becoming more robust to even random formats. Example:
+
+*Prompt:*
+
+```
+
+Positive This is awesome! 
+
+This is bad! Negative
+
+Wow that movie was rad!
+
+Positive
+
+What a horrible show! --
+
+```
+
+*Output:*
+
+```
+
+Negative
+
+```
+
+There is no consistency in the format above but the model still predicted the correct label. We have to conduct a more thorough analysis to confirm if this holds for different and more complex tasks, including different variations of prompts.
+
+### Limitations of Few-shot Prompting
+
+Standard few-shot prompting works well for many tasks but is still not a perfect technique, especially when dealing with more complex reasoning tasks. Let's demonstrate why this is the case. Do you recall the previous example where we provided the following task:
+
+```
+
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+
+A: 
+
+```
+
+If we try this again, the model outputs the following:
+
+```
+
+Yes, the odd numbers in this group add up to 107, which is an even number.
+
+```
+
+This is not the correct response, which not only highlights the limitations of these systems but that there is a need for more advanced prompt engineering. 
+
+Let's try to add some examples to see if few-shot prompting improves the results.
+
+*Prompt:*
+
+```
+
+The odd numbers in this group add up to an even number: 4, 8, 9, 15, 12, 2, 1.
+
+A: The answer is False.
+
+The odd numbers in this group add up to an even number: 17,  10, 19, 4, 8, 12, 24.
+
+A: The answer is True.
+
+The odd numbers in this group add up to an even number: 16,  11, 14, 4, 8, 13, 24.
+
+A: The answer is True.
+
+The odd numbers in this group add up to an even number: 17,  9, 10, 12, 13, 4, 2.
+
+A: The answer is False.
+
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+
+A: 
+
+```
+
+*Output:*
+
+```
+
+The answer is True.
+
+```
+
+That didn't work. It seems like few-shot prompting is not enough to get reliable responses for this type of reasoning problem. The example above provides basic information on the task. If you take a closer look, the type of task we have introduced involves a few more reasoning steps. In other words, it might help if we break the problem down into steps and demonstrate that to the model. More recently, [chain-of-thought (CoT) prompting](https://arxiv.org/abs/2201.11903) has been popularized to address more complex arithmetic, commonsense, and symbolic reasoning tasks.
+
+Overall, it seems that providing examples is useful for solving some tasks. When zero-shot prompting and few-shot prompting are not sufficient, it might mean that whatever was learned by the model isn't enough to do well at the task. From here it is recommended to start thinking about fine-tuning your models or experimenting with more advanced prompting techniques. Up next we talk about one of the popular prompting techniques called chain-of-thought prompting which has gained a lot of popularity. 
+
+---
+
+## Chain-of-Thought Prompting
+
+Introduced in [Wei et al. (2022)](https://arxiv.org/abs/2201.11903), chain-of-thought (CoT) prompting enables complex reasoning capabilities through intermediate reasoning steps. You can combine it with few-shot prompting to get better results on more complex tasks that require reasoning before responding.
+
+*Prompt:*
+
+```
+
+The odd numbers in this group add up to an even number: 4, 8, 9, 15, 12, 2, 1.
+
+A: Adding all the odd numbers (9, 15, 1) gives 25. The answer is False.
+
+The odd numbers in this group add up to an even number: 17,  10, 19, 4, 8, 12, 24.
+
+A: Adding all the odd numbers (17, 19) gives 36. The answer is True.
+
+The odd numbers in this group add up to an even number: 16,  11, 14, 4, 8, 13, 24.
+
+A: Adding all the odd numbers (11, 13) gives 24. The answer is True.
+
+The odd numbers in this group add up to an even number: 17,  9, 10, 12, 13, 4, 2.
+
+A: Adding all the odd numbers (17, 9, 13) gives 39. The answer is False.
+
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+
+A:
+
+```
+
+*Output:*
+
+```
+
+Adding all the odd numbers (15, 5, 13, 7, 1) gives 41. The answer is False.
+
+```
+
+Wow! We can see a perfect result when we provided the reasoning step. We can solve this task by providing even fewer examples, i.e., just one example seems enough:
+
+*Prompt:*
+
+```
+
+The odd numbers in this group add up to an even number: 4, 8, 9, 15, 12, 2, 1.
+
+A: Adding all the odd numbers (9, 15, 1) gives 25. The answer is False.
+
+The odd numbers in this group add up to an even number: 15, 32, 5, 13, 82, 7, 1. 
+
+A:
+
+```
+
+*Output:*
+
+```
+
+Adding all the odd numbers (15, 5, 13, 7, 1) gives 41. The answer is False.
+
+```
+
+Keep in mind that the authors claim that this is an emergent ability that arises with sufficiently large language models. 
+
+---
+
+## Zero-Shot CoT
+
+One recent idea that came out more recently is the idea of [zero-shot CoT](https://arxiv.org/abs/2205.11916) (Kojima et al. 2022) that essentially involves adding "Let's think step by step" to the original prompt. Let's try a simple problem and see how the model performs:
+
+*Prompt:*
+
+```
+
+I went to the market and bought 10 apples. I gave 2 apples to the neighbor and 2 to the repairman. I then went and bought 5 more apples and ate 1. How many apples did I remain with?
+
+```
+
+*Output:*
+
+```
+
+11 apples
+
+```
+
+The answer is incorrect! Now Let's try with the special prompt. 
+
+*Prompt:*
+
+```
+
+I went to the market and bought 10 apples. I gave 2 apples to the neighbor and 2 to the repairman. I then went and bought 5 more apples and ate 1. How many apples did I remain with?
+
+Let's think step by step.
+
+```
+
+*Output:*
+
+```
+
+First, you started with 10 apples.
+
+You gave away 2 apples to the neighbor and 2 to the repairman, so you had 6 apples left.
+
+Then you bought 5 more apples, so now you had 11 apples.
+
+Finally, you ate 1 apple, so you would remain with 10 apples.
+
+```
+
+It's impressive that this simple prompt is effective at this task. This is particularly useful where you don't have too many examples to use in the prompt.
+
+---
+
+## Self-Consistency
+
+Perhaps one of the more advanced techniques out there for prompt engineering is self-consistency. Proposed by [Wang et al. (2022)](https://arxiv.org/pdf/2203.11171.pdf), self-consistency aims "to replace the naive greedy decoding used in chain-of-thought prompting". The idea is to sample multiple, diverse reasoning paths through few-shot CoT, and use the generations to select the most consistent answer. This helps to boost the performance of CoT prompting on tasks involving arithmetic and commonsense reasoning.
+
+Let's try the following example for arithmetic reasoning:
+
+*Prompt:*
+
+```
+
+When I was 6 my sister was half my age. Now
+
+I’m 70 how old is my sister?
+
+```
+
+*Output:*
+
+```
+
+35
+
+```
+
+The output is wrong! How may we improve this with self-consistency? Let's try it out. We will use the few-shot exemplars from Wang et al. 2022 (Table 17):
+
+*Prompt:*
+
+```
+
+Q: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done,
+
+there will be 21 trees. How many trees did the grove workers plant today?
+
+A: We start with 15 trees. Later we have 21 trees. The difference must be the number of trees they planted.
+
+So, they must have planted 21 - 15 = 6 trees. The answer is 6.
+
+Q: If there are 3 cars in the parking lot and 2 more cars arrive, how many cars are in the parking lot?
+
+A: There are 3 cars in the parking lot already. 2 more arrive. Now there are 3 + 2 = 5 cars. The answer is 5.
+
+Q: Leah had 32 chocolates and her sister had 42. If they ate 35, how many pieces do they have left in total?
+
+A: Leah had 32 chocolates and Leah’s sister had 42. That means there were originally 32 + 42 = 74
+
+chocolates. 35 have been eaten. So in total they still have 74 - 35 = 39 chocolates. The answer is 39.
+
+Q: Jason had 20 lollipops. He gave Denny some lollipops. Now Jason has 12 lollipops. How many lollipops
+
+did Jason give to Denny?
+
+A: Jason had 20 lollipops. Since he only has 12 now, he must have given the rest to Denny. The number of
+
+lollipops he has given to Denny must have been 20 - 12 = 8 lollipops. The answer is 8.
+
+Q: Shawn has five toys. For Christmas, he got two toys each from his mom and dad. How many toys does
+
+he have now?
+
+A: He has 5 toys. He got 2 from mom, so after that he has 5 + 2 = 7 toys. Then he got 2 more from dad, so
+
+in total he has 7 + 2 = 9 toys. The answer is 9.
+
+Q: There were nine computers in the server room. Five more computers were installed each day, from
+
+monday to thursday. How many computers are now in the server room?
+
+A: There are 4 days from monday to thursday. 5 computers were added each day. That means in total 4 * 5 =
+
+20 computers were added. There were 9 computers in the beginning, so now there are 9 + 20 = 29 computers.
+
+The answer is 29.
+
+Q: Michael had 58 golf balls. On tuesday, he lost 23 golf balls. On wednesday, he lost 2 more. How many
+
+golf balls did he have at the end of wednesday?
+
+A: Michael initially had 58 balls. He lost 23 on Tuesday, so after that he has 58 - 23 = 35 balls. On
+
+Wednesday he lost 2 more so now he has 35 - 2 = 33 balls. The answer is 33.
+
+Q: Olivia has $23. She bought five bagels for $3 each. How much money does she have left?
+
+A: She bought 5 bagels for $3 each. This means she spent 5
+
+Q: When I was 6 my sister was half my age. Now I’m 70 how old is my sister?
+
+A:
+
+```
+
+*Output 1:*
+
+```
+
+When I was 6 my sister was half my age, so she was 3. Now I am 70, so she is 70 - 3 = 67. The answer is 67.
+
+```
+
+*Output 2:*
+
+```
+
+When the narrator was 6, his sister was half his age, which is 3. Now that the narrator is 70, his sister would be 70 - 3 = 67 years old. The answer is 67.
+
+```
+
+*Output 3:*
+
+```
+
+When I was 6 my sister was half my age, so she was 3. Now I am 70, so she is 70/2 = 35. The answer is 35.
+
+```
+
+Computing for the final answer involves a few steps (check out the paper for the details) but for the sake of simplicity, we can see that there is already a majority answer emerging so that would essentially become the final answer. 
+
+---
+
+## Generated Knowledge Prompting
+
+LLMs continue to be improved and one popular technique includes the ability to incorporate knowledge or information to help the model make more accurate predictions. 
+
+Using a similar idea, can the model also be used to generate knowledge before making a prediction? That's what is attempted in the paper by [Liu et al. 2022](https://arxiv.org/pdf/2110.08387.pdf) -- generate knowledge to be used as part of the prompt. In particular, how helpful is this for tasks such as commonsense reasoning?
+
+Let's try a simple prompt:
+
+*Prompt:*
+
+```
+
+Part of golf is trying to get a higher point total than others. Yes or No?
+
+```
+
+*Output:*
+
+```
+
+Yes.
+
+```
+
+This type of mistake reveals the limitations of LLMs to perform tasks that require more knowledge about the world. How do we improve this with knowledge generation?
+
+First, we generate a few "knowledges":
+
+*Prompt:*
+
+```
+
+Input: Greece is larger than mexico.
+
+Knowledge: Greece is approximately 131,957 sq km, while Mexico is approximately 1,964,375 sq km, making Mexico 1,389% larger than Greece.
+
+Input: Glasses always fog up.
+
+Knowledge: Condensation occurs on eyeglass lenses when water vapor from your sweat, breath, and ambient humidity lands on a cold surface, cools, and then changes into tiny drops of liquid, forming a film that you see as fog. Your lenses will be relatively cool compared to your breath, especially when the outside air is cold.
+
+Input: A fish is capable of thinking.
+
+Knowledge: Fish are more intelligent than they appear. In many areas, such as memory, their cognitive powers match or exceed those of ’higher’ vertebrates including non-human primates. Fish’s long-term memories help them keep track of complex social relationships.
+
+Input: A common effect of smoking lots of cigarettes in one’s lifetime is a higher than normal chance of getting lung cancer.
+
+Knowledge: Those who consistently averaged less than one cigarette per day over their lifetime had nine times the risk of dying from lung cancer than never smokers. Among people who smoked between one and 10 cigarettes per day, the risk of dying from lung cancer was nearly 12 times higher than that of never smokers.
+
+Input: A rock is the same size as a pebble.
+
+Knowledge: A pebble is a clast of rock with a particle size of 4 to 64 millimetres based on the Udden-Wentworth scale of sedimentology. Pebbles are generally considered larger than granules (2 to 4 millimetres diameter) and smaller than cobbles (64 to 256 millimetres diameter).
+
+Input: Part of golf is trying to get a higher point total than others.
+
+Knowledge:
+
+```
+
+*Knowledge 1:*
+
+```
+
+The objective of golf is to play a set of holes in the least number of strokes. A round of golf typically consists of 18 holes. Each hole is played once in the round on a standard golf course. Each stroke is counted as one point, and the total number of strokes is used to determine the winner of the game.
+
+```
+
+*Knowledge 2:*
+
+```
+
+Golf is a precision club-and-ball sport in which competing players (or golfers) use many types of clubs to hit balls into a series of holes on a course using the fewest number of strokes. The goal is to complete the course with the lowest score, which is calculated by adding up the total number of strokes taken on each hole. The player with the lowest score wins the game.
+
+```
+
+We are using the prompt provided in the paper by [Liu et al. 2022](https://arxiv.org/pdf/2110.08387.pdf).
+
+The next step is to integrate the knowledge and get a prediction. I reformatted the question into QA format to guide the answer format.
+
+*Prompt:*
+
+```
+
+Question: Part of golf is trying to get a higher point total than others. Yes or No?
+
+Knowledge: The objective of golf is to play a set of holes in the least number of strokes. A round of golf typically consists of 18 holes. Each hole is played once in the round on a standard golf course. Each stroke is counted as one point, and the total number of strokes is used to determine the winner of the game.
+
+Explain and Answer: 
+
+```
+
+*Answer 1 (confidence very high):*
+
+```
+
+No, the objective of golf is not to get a higher point total than others. Rather, the objective is to play a set of holes in the least number of strokes. The total number of strokes is used to determine the winner of the game, not the total number of points.
+
+```
+
+```
+
+Question: Part of golf is trying to get a higher point total than others. Yes or No?
+
+Knowledge: Golf is a precision club-and-ball sport in which competing players (or golfers) use many types of clubs to hit balls into a series of holes on a course using the fewest number of strokes. The goal is to complete the course with the lowest score, which is calculated by adding up the total number of strokes taken on each hole. The player with the lowest score wins the game.
+
+Explain and Answer:
+
+```
+
+*Answer 2 (confidence is a lot lower):*
+
+```
+
+Yes, part of golf is trying to get a higher point total than others. Each player tries to complete the course with the lowest score, which is calculated by adding up the total number of strokes taken on each hole. The player with the lowest score wins the game.
+
+```
+
+Some really interesting things happened with this example. In the first answer, the model was very confident but in the second not so much. I simplify the process for demonstration purposes but there are a few more details to consider when arriving at the final answer. Check out the paper for more.
+
+---
+
+## Automatic Prompt Engineer (APE)
+
+![](../img/APE.png)
+
+[Zhou et al., (2022)](https://arxiv.org/abs/2211.01910) propose automatic prompt engineer (APE) a framework for automatic instruction generation and selection. The instruction generation problem is framed as natural language synthesis addressed as a black-box optimization problem using LLMs to generate and search over candidate solutions. 
+
+The first step involves a large language model (as an inference model) that is given output demonstrations to generate instruction candidates for a task. These candidate solutions will guide the search procedure. The instructions are executed using a target model, and then the most appropriate instruction is selected based on computed evaluation scores. 
+
+APE discovers a better zero-shot CoT prompt than the human engineered "Let's think step by step" prompt (Kojima et al., 2022).
+
+The prompt "Let's work this out in a step by step way to be sure we have the right answer." elicits chain-of-though reasoning and improves performance on the MultiArith and GSM8K benchmarks:
+
+![](../img/ape-zero-shot-cot.png)
+
+This paper touches on an important topic related to prompt engineering which is the idea of automatically optimizing prompts. While we don't go deep into this topic in this guide, here are a few key papers if you are interested in the topic:
+
+- [AutoPrompt](https://arxiv.org/abs/2010.15980) - proposes an approach to automatically create prompts for a diverse set of tasks based on gradient-guided search.
+
+- [Prefix Tuning](https://arxiv.org/abs/2101.00190) - a lightweight alternative to fine-tuning that prepends a trainable continuous prefix for NLG tasks. 
+
+- [Prompt Tuning](https://arxiv.org/abs/2104.08691) - proposes a mechanism for learning soft prompts through backpropagation.
+
+---
+
+[Previous Section (Basic Prompting)](./prompts-basic-usage.md)
+
+[Next Section (Applications)](./prompts-applications.md)
+xt”
