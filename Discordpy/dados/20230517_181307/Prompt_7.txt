@@ -1,7 +1,0 @@
-/image
-Pato ::4
-Esmeralda ::1
-K ::4
-9 ::3
-% ::1 ::5
---v 5.1

@@ -1,1 +1,0 @@
-/image\nJ ::1\nPato ::2\nGolfinho ::1\nLilás ::3\nLaranja ::4\nVermelho ::2\n¨ ::5\n% ::1\n# ::3\n! ::4\n$ ::1\n@ ::1\n& ::1\n9 ::5\n8 ::2\n3 ::2\n--v 5.1

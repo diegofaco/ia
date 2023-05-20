@@ -1,1 +1,0 @@
-/image\n8 ::2\n7 ::2\nK ::2\nF ::4\nRosa ::1\nBranco ::2\nMagenta ::1\nAçafrão ::1\n$ ::1\n@ ::4\n% ::3\n# ::5\n! ::2\n& ::1\n¨ ::1\nCão ::3\nTigre ::5\n--v 5.1

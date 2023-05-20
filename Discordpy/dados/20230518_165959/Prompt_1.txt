@@ -1,1 +1,0 @@
-/image\n1 ::2\nJ ::5\n@ ::1\n# ::3\n% ::4\nBaleia ::2\nPato ::3\nGolfinho ::3\nHamster ::1\nCão ::4\nLeão ::1\nCiano ::2\nCarmesim ::1\nLaranja ::2\nAmarelo ::1\n--v 5.1

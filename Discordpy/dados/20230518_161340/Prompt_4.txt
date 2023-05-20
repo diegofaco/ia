@@ -1,1 +1,0 @@
-/image\nCão ::4\nGato ::4\nHamster ::3\nCavalo ::1\nLeão ::2\nGolfinho ::1\nBaleia ::5\nTigre ::4\nC ::3\nJ ::2\n@ ::3\n¨ ::5\n% ::1\n$ ::1\n& ::1\nRoxo ::3\nBege ::3\nOcre ::1\nAçafrão ::1\n6 ::2\n5 ::4\n7 ::1\n--v 5.1

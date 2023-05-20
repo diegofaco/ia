@@ -1,0 +1,25 @@
+Octane Render
+Cinematic
+Photorealistic
+3D
+Volumetric Light
+Filmic
+ZBrush
+Hyperrealistic
+Rendered in Cinema4D
+Unreal Engine
+Concept Art
+Micro Details
+Golden Ratio
+CGSociety
+Greyscale Color Grading with some Color Edits
+Subsurface Scattering
+Ambient Occlusion
+Procedural Generation
+Ray Tracing
+Displacement Mapping
+High Dynamic Range (HDR)
+Parallax Mapping
+Shaders
+Texture Baking
+Light Probe

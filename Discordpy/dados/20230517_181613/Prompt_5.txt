@@ -1,7 +1,0 @@
-/image
-O ::4
-Turquesa ::3
-Hamster ::3 ::5
-1 ::4
-@ ::1
---v 5.1

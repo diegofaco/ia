@@ -1,1 +1,0 @@
-/image\n9 ::1\n6 ::3\nPato ::3\nPêssego ::3\nCoral ::3\nMarrom ::4\n@ ::1\n! ::2\n& ::5\n% ::3\nJ ::1\nL ::2\nF ::5\nN ::2\n--v 5.1

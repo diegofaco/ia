@@ -1,1 +1,0 @@
-/image\n# ::1\n& ::2\nDourado ::1\nVioleta ::1\n8 ::1\nBaleia ::5\nO ::4\nH ::3\nC ::1\nL ::2\n--v 5.1

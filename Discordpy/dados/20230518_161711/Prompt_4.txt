@@ -1,1 +1,0 @@
-/image\n3 ::5\n4 ::2\n2 ::1\n9 ::5\n$ ::1\n¨ ::2\n@ ::3\n! ::1\n& ::2\n% ::1\n# ::3\nK ::3\nA ::1\nN ::4\nRoxo ::1\nLaranja ::4\nAmeixa ::1\nCão ::3\nTigre ::4\nBaleia ::2\nHamster ::1\nCavalo ::1\nPato ::5\nLeão ::2\n--v 5.1

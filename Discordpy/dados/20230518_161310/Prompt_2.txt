@@ -1,1 +1,0 @@
-/image\nE ::1\n6 ::5\n8 ::2\n2 ::4\nHamster ::2\nBaleia ::1\nLeão ::4\nGolfinho ::1\nCavalo ::1\nTigre ::1\nGato ::3\nPato ::5\n@ ::4\nPêssego ::1\nLilás ::1\n--v 5.1

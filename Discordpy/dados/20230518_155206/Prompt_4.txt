@@ -1,1 +1,0 @@
-/image\nOcre ::2\nDourado ::3\n& ::4\n% ::3\n# ::1\nI ::2\nE ::2\nG ::2\nGolfinho ::2\nCavalo ::1\nPato ::2\nGato ::1\nLeão ::3\nBaleia ::3 ::5\nCão ::2\n1 ::4\n6 ::1\n7 ::4\n8 ::1\n--v 5.1

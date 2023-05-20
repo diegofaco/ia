@@ -1,1 +1,0 @@
-/image\nH ::4\nD ::1\nB ::2\nA ::2\n9 ::2\n3 ::2\n7 ::1\n& ::1\n% ::5\n! ::4\n$ ::2\nGolfinho ::3\nBaleia ::3\nCão ::1\nCavalo ::5\nOcre ::4\nMarrom ::5\n--v 5.1

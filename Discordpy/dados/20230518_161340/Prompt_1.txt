@@ -1,1 +1,0 @@
-/image\n! ::2\n& ::2\nPêssego ::2\nOcre ::1\nMarrom ::2\nLilás ::3\nCão ::3\nGato ::1\nHamster ::4\nBaleia ::1\nLeão ::3\nN ::3\nI ::1\nM ::1\n4 ::3\n9 ::3 ::5\n1 ::2\n6 ::2\n7 ::1\n--v 5.1

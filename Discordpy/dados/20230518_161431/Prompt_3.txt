@@ -1,1 +1,0 @@
-/image\n9 ::4\n2 ::1\n7 ::1\n4 ::1\nVioleta ::2\nBranco ::1\nAmarelo ::1\nMagenta ::1\nGolfinho ::4\nLeão ::2\nTigre ::5\nCão ::2\nC ::2\n¨ ::2\n# ::2\n! ::1\n--v 5.1

@@ -1,7 +1,0 @@
-/image
-O ::1
-5 ::1 ::5
-Marrom ::1
-Hamster ::1
-# ::3
---v 5.1
