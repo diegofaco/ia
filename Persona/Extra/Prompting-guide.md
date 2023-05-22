@@ -21,43 +21,24 @@ B. Why are prompts crucial for effective communication with ChatGPT?
 III. Tips for Crafting Effective Prompts
 
 A. Be specific with your request
-
 B. Provide context and background information
-
 C. Use explicit constraints and guidelines
-
 D. Experiment with various phrasings and approaches
-
 IV. Advanced Hacks and Techniques
-
 A. System message for context setting
-
 B. Step-by-step instructions for complex tasks
-
 C. Role-playing for creative scenarios
-
 D. The power of iterations and refining responses
-
 E. InstructGPT: Asking ChatGPT to think step by step
-
 V. Avoiding Common Pitfalls
-
 A. Being too vague or open-ended
-
 B. Overloading the prompt with information
-
 C. Misinterpreting output as factual information
-
 VI. Real-life ChatGPT Examples and Case Studies
-
 A. Analyzing successful prompts
-
 B. Lessons learned from ineffective prompts
-
 VII. Conclusion
-
 A. Recap of key points and takeaways
-
 B. Encouragement to experiment and learn through practice
 
 I. Introduction

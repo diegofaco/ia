@@ -60,5 +60,14 @@
     ],
     "syntax.debugHover": true,
     "github.copilot-labs.showBrushesLenses": true,
-    "github.copilot-labs.showTestGenerationLenses": true
+    "github.copilot-labs.showTestGenerationLenses": true,
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./Discordpy",
+        "-p",
+        "*test.py"
+    ],
+    "python.testing.pytestEnabled": false,
+    "python.testing.unittestEnabled": true
 }

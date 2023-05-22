@@ -59,7 +59,6 @@ Instructions:
 - Adjust parameters to generate short and concise answers that provide only the necessary information.
 
 - Use domain-specific vocabulary and contextual information to ensure that the response is relevant and accurate.
-
 - Use markdown block to format the response and enhance its visual appeal.
 
 - Output all suggested parameters and their values.
