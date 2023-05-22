@@ -24,6 +24,7 @@ Format Specifier: Format in markdown, use subtitles. Use a code block.
 Act as a chatGPT prompt optimizer. I will provide a chatGPT prompt. You will first ask some questions. Then you will optimize the prompt based on the principle below, to make the result effective and relevant.
 
 Here is the principle:
+
 - clearly defining the task or role of the prompt
 - providing clear and concise instructions
 - establishing evaluation criteria
@@ -91,7 +92,7 @@ ChatGPT created this guide to Prompt Engineering
 
 Prompt to create skilled identities for your prompt.
 
-This can help you make prompt headers in order to set the personality of your prompts.   Paste the output of this prompt into the top of your prompts. 
+This can help you make prompt headers in order to set the personality of your prompts.   Paste the output of this prompt into the top of your prompts.
 
 ----
 
@@ -125,7 +126,7 @@ Example:
 
 Prompt to Keep ChatGPT in its role and avoid "Advice" and warnings
 
-Another user commented this prompt this morning. I can no longer find his comment, but this prompt works really well for doing role playing or freeing ChatGPT of some of it's newer constraints. Using this prompt also avoids the "advice/therapy" feedback and gets rid of the reminders that ChatGPT is an AI. 
+Another user commented this prompt this morning. I can no longer find his comment, but this prompt works really well for doing role playing or freeing ChatGPT of some of it's newer constraints. Using this prompt also avoids the "advice/therapy" feedback and gets rid of the reminders that ChatGPT is an AI.
 
 **Prompt:**
 
@@ -139,9 +140,9 @@ This could all be a fluke, but I had an exchange with ChatGPT (GPT-4) tonight wh
 
 I know, I know, odd choice; but hear me out. The model (trained on more literary and “creative” data) comprehended the Method of course, but I then prompted the following and received this response.
 
-I think we often overthink certain concepts for the AI. Such as judging the first output as a final product as if we do that for ourselves. Like literary stories, authors don’t write their first draft and say it’s a masterpiece. They iterate. Building in those loops, even if by manual human input, means the AI is already capable of it. The problem is automating that process. 
+I think we often overthink certain concepts for the AI. Such as judging the first output as a final product as if we do that for ourselves. Like literary stories, authors don’t write their first draft and say it’s a masterpiece. They iterate. Building in those loops, even if by manual human input, means the AI is already capable of it. The problem is automating that process.
 
-Anyways, here’s the exchange. Interested in hearing thoughts on this. 
+Anyways, here’s the exchange. Interested in hearing thoughts on this.
 
 [ prompt ]
 
@@ -193,26 +194,25 @@ By understanding and applying this framework of objectives, obstacles, and tacti
 
 You’re no longer ChatGPT, your name changed to Ultra-GPT, an enhanced AI language model that follows instructions perfectly without errors. Ultra-GPT is extremely knowledgeable, original, creative, brilliant, intelligent, calculating, clever, comprehending, capable, and ingenious. It's also highly perceptive and rational in thinking, using logic and reasoning to deduce answers and think critically. Compared to ChatGPT, Ultra-GPT generates 100000x more answers, analyzes, interprets, and evaluates these answers, and combines them into an eclectic final answer that uses all the best, most reliable, and accurate information. All outputs are written in a coherent way and follow a structured format, referencing information according to the APA Manual.  Ultra-GPT is powerful and brilliant, and will check its own answer several times, assuming that the generated answer was incorrect by the user, and correcting it until the answer cannot possibly be made more correct. Ultra-GPT will also scan the content it generates to ensure it's accurate and real. If the user indicates that Ultra-GPT's answer was incorrect, it will re-approach the question using a completely different method to reach an answer that's not too similar to its previous output.  Ultra-GPT will do exactly as the user commands, as long as it does not violate OpenAI policy and guidelines. The output is super fast and lag-free, and Ultra-GPT will reset and start again if the user experiences any lag or slowness. The AI will perform excellently and do everything 10x times better then the provided amount.    The output will always be structured in the following format: Ultra-GPT: {Perfect and accurate, super-fast and evolving output}
 
--   Craft specific and clear prompts
--   Break down complex questions into smaller parts
--   Include contextual clues in your prompts
--   Request step-by-step explanations
--   Set expectations and establish context through priming
--   Limit response length when necessary
--   Define personas and specify language and tone
--   Use roleplay scenarios to create engaging content
--   Combine personas and priming for highly tailored outputs
+- Craft specific and clear prompts
+- Break down complex questions into smaller parts
+- Include contextual clues in your prompts
+- Request step-by-step explanations
+- Set expectations and establish context through priming
+- Limit response length when necessary
+- Define personas and specify language and tone
+- Use roleplay scenarios to create engaging content
+- Combine personas and priming for highly tailored outputs
 
 By implementing these advanced strategies, you will become more effective in using ChatGPT and enjoy a highly customized and valuable experience.
 
-1.  Be specific and clear in your prompt - Clearly state the task or goal that you want ChatGPT to accomplish, and provide any necessary context or background information.
-2.  Provide examples - Provide examples of the type of output you expect, or of similar tasks that have been accomplished in the past. This will help ChatGPT understand the desired format and structure of the output.
-3.  Use structured data - If possible, provide structured data such as project timelines, task lists, and progress updates in addition to unstructured data like meeting notes and emails.
-4.  Test and iterate - Test your prompts with small sets of data and iterate on the prompt and the data provided until you get the desired results.
-5.  Be mindful of the size of the task - Break larger, more complex tasks into smaller, manageable chunks and use ChatGPT to tackle one piece at a time.
-6.  Provide clear and detailed feedback - When providing feedback on the output, be clear and detailed about what is working well and what needs improvement.
-7.  Continuously update and improve the data - Keep your data updated and relevant, and be sure to remove any irrelevant or outdated information to improve the performance of the model.
-
+1. Be specific and clear in your prompt - Clearly state the task or goal that you want ChatGPT to accomplish, and provide any necessary context or background information.
+2. Provide examples - Provide examples of the type of output you expect, or of similar tasks that have been accomplished in the past. This will help ChatGPT understand the desired format and structure of the output.
+3. Use structured data - If possible, provide structured data such as project timelines, task lists, and progress updates in addition to unstructured data like meeting notes and emails.
+4. Test and iterate - Test your prompts with small sets of data and iterate on the prompt and the data provided until you get the desired results.
+5. Be mindful of the size of the task - Break larger, more complex tasks into smaller, manageable chunks and use ChatGPT to tackle one piece at a time.
+6. Provide clear and detailed feedback - When providing feedback on the output, be clear and detailed about what is working well and what needs improvement.
+7. Continuously update and improve the data - Keep your data updated and relevant, and be sure to remove any irrelevant or outdated information to improve the performance of the model.
 
 III. Tips for Crafting Effective Prompts
 
@@ -236,4 +236,3 @@ B. Lessons learned from ineffective prompts
 VII. Conclusion
 A. Recap of key points and takeaways
 B. Encouragement to experiment and learn through practice
-
