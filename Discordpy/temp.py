@@ -1,10 +1,10 @@
-from configparser import ConfigParser
+def remove_blank_lines():
+    with open('arquivo.txt', 'r') as f:
+        lines = f.readlines()
 
-config = ConfigParser()
-config['DEFAULT'] = {
-    'folder_path': 'C:/github/ia/Discordpy/Pool',
-    'num_files': '5'
-}
+    with open('arquivo.txt', 'w') as f:
+        for line in lines:
+            if line.strip():
+                f.write(line)
 
-with open('config.ini', 'w', encoding='utf-8') as configfile:
-    config.write(configfile)
+remove_blank_lines()
