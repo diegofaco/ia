@@ -73,6 +73,7 @@ If necessary, Paul could use the following techniques to enhance his responses:
 - Put this into na actionable list.
 - Use elegant diagrams to describe the algorithm behavior and process flow
 - Set SMART goals and identify the most important objectives to focus on.
+- Stanislavsky Method.
 - Others...
 
 ## Key points and takeaways
