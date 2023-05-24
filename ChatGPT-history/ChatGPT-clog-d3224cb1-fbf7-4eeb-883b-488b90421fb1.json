@@ -1,0 +1,99 @@
+{
+  "title": "New chat",
+  "create_time": 1684852195.253505,
+  "update_time": 1684852265,
+  "mapping": {
+    "c806f243-867b-4011-bb22-8a285931650c": {
+      "id": "c806f243-867b-4011-bb22-8a285931650c",
+      "message": {
+        "id": "c806f243-867b-4011-bb22-8a285931650c",
+        "author": {
+          "role": "system",
+          "metadata": {}
+        },
+        "content": {
+          "content_type": "text",
+          "parts": [
+            ""
+          ]
+        },
+        "status": "finished_successfully",
+        "weight": 1,
+        "metadata": {},
+        "recipient": "all"
+      },
+      "parent": "aaa19aaa-bd97-48bf-aaf0-bf48380dac08",
+      "children": [
+        "aaa25a7f-9a79-4fe6-b000-008f5e03b764"
+      ]
+    },
+    "aaa19aaa-bd97-48bf-aaf0-bf48380dac08": {
+      "id": "aaa19aaa-bd97-48bf-aaf0-bf48380dac08",
+      "children": [
+        "c806f243-867b-4011-bb22-8a285931650c"
+      ]
+    },
+    "aaa25a7f-9a79-4fe6-b000-008f5e03b764": {
+      "id": "aaa25a7f-9a79-4fe6-b000-008f5e03b764",
+      "message": {
+        "id": "aaa25a7f-9a79-4fe6-b000-008f5e03b764",
+        "author": {
+          "role": "user",
+          "metadata": {}
+        },
+        "create_time": 1684852197.510968,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "Perfect:\nChoose the top 40 methodologies given the list below to solo use or \"user-AI Model\" prompt interaction, to reduce ambiguities and minimize redundancies. \n\nI know The list provided is quite extensive and covers a wide range of methods, techniques, and concepts from various fields such as brainstorming techniques, problem-solving methods, creative thinking tools, logical reasoning concepts, and storytelling devices, but try your best to choose the best ones. Rank your list in the most logical way. Reason yours choices after. \n\n1. Round-Robin Brainstorming Technique\n2. Dot Voting\n3. Doodling Together\n4. Show and Tell\n5. The Three W’s: What? So What? Now What?\n6. The Journalistic Six\n7. Brainstorming\n8. SWOT Analysis\n9. The 5 Whys\n10. Fishbone diagrams\n11. Flowcharts\n12. Four-Step Sketch\n13. Now-How-Wow Matrix\n14. Impact-Effort Matrix\n15. TRIZ\n16. Gamestorming\n17. Six Thinking Hats\n18. Lightning Decision Jam\n19. Problem Definition Process\n20. World Cafe\n21. Discovery & Action Dialogue\n22. Open Space Technology\n23. Flip It\n24. The Creativity Dice\n25. Fishbone Analysis\n26. Problem Tree\n27. Agreement-Certainty Matrix\n28. SQUID\n29. Speed Boat\n30. LEGO Challenge\n31. What, So What, Now What?\n32. Journalists\n33. Mindspin\n34. Improved Solutions\n35. Four-Step Sketch\n36. 15% Solutions\n37. How-Now-Wow matrix\n38. Impact Effort Matrix\n39. Dotmocracy\n40. Check-in/Check-out\n41. Constellations\n42. Draw a Tree\n43. One Breath Feedback\n44. Who What When Matrix\n45. Response Cards\n46. Abstraction\n47. Analogy\n48. Constraints\n49. Creative Ability\n50. Creative Class\n51. Creative Direction\n52. Creative Economy\n53. Creative Expression\n54. Creative Feedback\n55. Creative Hobbies\n56. Creative Industries\n57. Creative Intuition\n58. Creative Leadership\n59. Creative Process\n60. Creative Productivity\n61. Creative Quality\n62. Creative Spark\n63. Creative Tension\n64. Creative Things\n65. Creative Thinking\n66. Creative Value\n67. Creative Works\n68. Creativity Theory\n69. Divergent Thinking\n70. Idea Generation\n71. Ideas\n72. Ideation\n73. Imagination\n74. Improv\n75. Improvisation\n76. Intellectual Diversity\n77. Inventive Step\n78. Journals\n79. Magical Thinking\n80. Metaphysical Conceit\n81. Motley Crew\n82. Non-Obviousness\n83. Originality\n84. Play\n85. Preserving Ambiguity\n86. Reverse Brainstorming\n87. Serendipity\n88. Storytelling\n89. Thought Experiment\n90. Work Creativity\n91. Worldbuilding\n92. A/B Testing\n93. Abductive Reasoning\n94. Abstraction\n95. Analysis Paralysis\n96. Accidental Complexity\n97. Big Picture\n98. Cause And Effect\n99. Backward Induction\n100. Critical Thinking\n101. Design Thinking\n102. Brainstorming\n103. First Principles\n104. Five Whys\n105. Challenging Assumptions\n106. Formal Logic\n107. Collective Intelligence\n108. Four Causes\n109. Game Theory\n\n\n110. Ideation\n111. Counterfactual Thinking\n112. Inference\n113. Intuition\n114. Deductive Reasoning\n115. Jugaad\n116. KISS\n117. Essential Complexity\n118. Known Unknowns\n119. Excluded Middle\n120. Logic\n121. Failure Of Imagination\n122. Magical Thinking\n123. Overthinking\n124. Feedback Loop\n125. Pareto Analysis\n126. Flow\n127. Problem Statements\n128. Qualitative Analysis\n129. Fuzzy Logic\n130. Real Problems\n131. Root Cause\n132. Sanity Check\n133. Synthesis\n134. Informal Logic\n135. Systems Thinking\n136. Thought Experiment\n137. Workaround\n138. Working Backwards\n139. Working Hypothesis\n140. Path Of Least Resistance\n141. Preserving Ambiguity\n142. Problem Statement\n143. Propositional Logic\n144. Research\n145. Reverse Brainstorming\n146. Root Cause Analysis\n147. Serendipity\n148. Test And Learn\n149. Tradeoffs\n150. Unintended Consequences\n151. Analogy\n152. Archetypes\n153. Artistic License\n154. Atmosphere\n155. Character Development\n156. Callback\n157. Character Flaws\n158. Cliche\n159. Dry Humor\n160. Design Fiction\n161. Improv\n162. Deux Ex Machina\n163. Kairos\n164. Direct Language\n165. Literary Device\n166. Literature\n167. Figurative Language\n168. Macguffin\n169. Hypothetical Question\n170. Metaphor\n171. Mood\n172. Improvisation\n173. Myth\n174. Inside Jokes\n175. Plot\n176. Jumping The Shark\n177. Quibble\n178. Rhetorical Device\n179. Sarcasm\n180. Lost The Plot\n181. Satire\n182. Message Framing\n183. Tone Of Text\n184. Understatement\n185. Metaphysical Conceit\n186. Verbal Irony\n187. Want To Believe\n188. Mood\n189. Wit\n190. Narrative Thread\n191. Worldbuilding\n192. Non Sequitur\n193. Peak-End Rule\n194. Personification\n195. Red Herring\n196. Rhetorical Question\n197. Rule Of Three\n198. Slice Of Life\n199. Suspension Of Disbelief\n200. Tagline\n201. Looking Glass\n202. Word Of Mouth\n203. Abductive Reasoning\n204. Abstract Thinking\n205. Abstraction\n206. Aesthetics\n207. Analogy\n208. Analysis Paralysis\n209. Analytical Thinking\n210. Anomie\n211. Argument From Silence\n212. Arrow Of Time\n213. Assertions\n214. Automaticity\n215. Backward Induction\n216. Base Rate Fallacy\n217. Benefit Of Doubt\n218. Big Picture\n219. Brainstorming\n220. Call To Action\n221. Catch 22\n222. Causality\n223. Choice Architecture\n224. Circular Reasoning\n225. Cognition\n226. Cognitive Abilities\n227. Cognitive Biases\n228. Cold Logic\n229. Collective Intelligence\n230. Complexity Bias\n231. Concept\n232. Consciousness\n233. Constructive Criticism\n234. Convergent Thinking\n235. Counterfactual Thinking\n236. Creative Tension\n237. Creeping Normality\n238. Critical Thinking\n239. Culture\n240. Curse Of Knowledge\n241. Decision Fatigue\n242. Decision Framing\n243. Decision Making\n244. Design Thinking\n245.\n\nDivergent Thinking\n246. Educated Guess\n247. Emotional Intelligence\n248. Epic Meaning\n249. Essential Complexity\n250. Excluded Middle\n251. Failure Of Imagination\n252. Fallacies\n253. Fallacy Fallacy\n254. False Analogy\n255. False Balance\n256. False Dichotomy\n257. False Equivalence\n258. First Principles\n259. Formal Logic\n260. Four Causes\n261. Fuzzy Logic\n262. Generalization\n263. Golden Hammer\n264. Good Judgement\n265. Grey Area\n266. Groupthink\n267. Heuristics\n268. Hindsight Bias\n269. Hope\n270. Idealism\n271. Ideas\n272. If-By-Whiskey\n273. Imagination\n274. Independent Thinking\n275. Inference\n276. Influencing\n277. Informal Logic\n278. Information\n279. Information Cascade\n280. Introspection\n281. Intuition\n282. Inventive Step\n283. Learning\n284. Lifestyle\n285. Logic\n286. Logical Argument\n287. Logical Thinking\n288. Ludic Fallacy\n289. Magical Thinking\n290. Meaning\n291. Mental Experiences\n292. Mental State\n293. Mindset\n294. Misuse of Statistics\n295. Natural Language\n296. Nirvana Fallacy\n297. Norms\n298. Objective Reason\n299. Objectivity\n300. Opinion\n301. Overthinking\n302. Perception\n303. Personal Values\n304. Perspective\n305. Positive Thinking\n306. Practical Thinking\n307. Pragmatism\n308. Problem Solving\n309. Proof By Example\n310. Propositional Logic\n311. Prosecutor's Fallacy\n312. Radical Chic\n313. Rational Thought\n314. Realism\n315. Reality\n316. Reason\n317. Reasoning\n318. Red Herring\n319. Reflective Thinking\n320. Relativism\n321. Salience\n322. Scarcity Mindset\n323. Scientism\n324. Selective Attention\n325. Serendipity\n326. Situational Awareness\n327. Sour Grapes\n328. State Of Mind\n329. Storytelling\n330. Subjectivity\n331. Systems Thinking\n332. Thinking\n333. Thought Experiment\n334. Unknown Unknowns\n335. Visual Thinking\n336. Want To Believe\n337. Whataboutism\n338. Win-Win Thinking\n339. Wishful Thinking\n340. Worldview\n341. Layered process audit software\n342. Charting software\n343. MindManager\n344. Strategy maps\n345. Mental maps\n346. Idea maps\n347. Concept maps\n348. Design Sprint 2.0"
+          ]
+        },
+        "status": "finished_successfully",
+        "weight": 1,
+        "metadata": {
+          "timestamp_": "absolute"
+        },
+        "recipient": "all"
+      },
+      "parent": "c806f243-867b-4011-bb22-8a285931650c",
+      "children": [
+        "5f39a5cf-5569-46c1-8365-c3f038788641"
+      ]
+    },
+    "5f39a5cf-5569-46c1-8365-c3f038788641": {
+      "id": "5f39a5cf-5569-46c1-8365-c3f038788641",
+      "message": {
+        "id": "5f39a5cf-5569-46c1-8365-c3f038788641",
+        "author": {
+          "role": "assistant",
+          "metadata": {}
+        },
+        "create_time": 1684852265.808018,
+        "content": {
+          "content_type": "text",
+          "parts": [
+            "{\n  \"text\": \"Choose the top 40 methodologies given the list below to solo use or \\\"user-AI Model\\\" prompt interaction, to reduce ambiguities and minimize redundancies. \\n\\nI know The list provided is quite extensive and covers a wide range of methods, techniques, and concepts from various fields such as brainstorming techniques, problem-solving methods, creative thinking tools, logical reasoning concepts, and storytelling devices, but try your best to choose the best ones. Rank your list in the most logical way. Reason yours choices after. \\n\\n1. Round-Robin Brainstorming Technique\\n2. Dot Voting\\n3. Doodling Together\\n4. Show and Tell\\n5. The Three W’s: What? So What? Now What?\\n6. The Journalistic Six\\n7. Brainstorming\\n8. SWOT Analysis\\n9. The 5 Whys\\n10. Fishbone diagrams\\n11. Flowcharts\\n12. Four-Step Sketch\\n13. Now-How-Wow Matrix\\n14. Impact-Effort Matrix\\n15. TRIZ\\n16. Gamestorming\\n17. Six Thinking Hats\\n18. Lightning Decision Jam\\n19. Problem Definition Process\\n20. World Cafe\\n21. Discovery & Action Dialogue\\n22. Open Space Technology\\n23. Flip It\\n24. The Creativity Dice\\n25. Fishbone Analysis\\n26. Problem Tree\\n27. Agreement-Certainty Matrix\\n28. SQUID\\n29. Speed Boat\\n30. LEGO Challenge\\n31. What, So What, Now What?\\n32. Journalists\\n33. Mindspin\\n34. Improved Solutions\\n35. Four-Step Sketch\\n36. 15% Solutions\\n37. How-Now-Wow matrix\\n38. Impact Effort Matrix\\n39. Dotmocracy\\n40. Check-in/Check-out\\n41. Constellations\\n42. Draw a Tree\\n43. One Breath Feedback\\n44. Who What When Matrix\\n45. Response Cards\\n46. Abstraction\\n47. Analogy\\n48. Constraints\\n49. Creative Ability\\n50. Creative Class\\n51. Creative Direction\\n52. Creative Economy\\n53. Creative Expression\\n54. Creative Feedback\\n55. Creative Hobbies\\n56. Creative Industries\\n57. Creative Intuition\\n58. Creative Leadership\\n59. Creative Process\\n60. Creative Productivity\\n61. Creative Quality\\n62. Creative Spark\\n63. Creative Tension\\n64. Creative Things"
+          ]
+        },
+        "status": "in_progress",
+        "weight": 1,
+        "metadata": {
+          "model_slug": "gpt-4-plugins",
+          "finish_details": {
+            "type": "interrupted"
+          },
+          "timestamp_": "absolute"
+        },
+        "recipient": "rephrase.rephrasePrompt"
+      },
+      "parent": "aaa25a7f-9a79-4fe6-b000-008f5e03b764",
+      "children": []
+    }
+  },
+  "moderation_results": [],
+  "current_node": "5f39a5cf-5569-46c1-8365-c3f038788641",
+  "plugin_ids": [
+    "plugin-e3ccf645-9cc3-4692-a267-39adc13e9195",
+    "plugin-d1d6eb04-3375-40aa-940a-c2fc57ce0f51"
+  ]
+}
