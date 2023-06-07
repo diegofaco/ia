@@ -1,0 +1,2 @@
+Art_Style: Geometric
+Camera: Fujifilm X-T4 with Fujinon XF 16mm F1.4 R WR

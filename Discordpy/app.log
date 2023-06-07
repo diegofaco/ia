@@ -1,4 +1,13 @@
-root - ERROR - File name C:\github\ia\Discordpy\Pool\Camera.txt cannot be converted to integer.
-root - ERROR - Error in file generation process: File name C:\github\ia\Discordpy\Pool\Camera.txt cannot be converted to integer.
-root - ERROR - File name C:\github\ia\Discordpy\Pool\Camera.txt cannot be converted to integer.
-root - ERROR - Error in file generation process: File name C:\github\ia\Discordpy\Pool\Camera.txt cannot be converted to integer.
+ERROR:root:Failed to load categories: Expecting value: line 80 column 3 (char 1469)
+ERROR:root:Failed to write file: Cannot choose from an empty sequence
+ERROR:root:Failed to write file: Cannot choose from an empty sequence
+ERROR:root:Failed to write file: Cannot choose from an empty sequence
+ERROR:root:Failed to load categories: Expecting value: line 80 column 3 (char 1469)
+ERROR:root:Failed to load categories: Expecting value: line 80 column 3 (char 1469)
+ERROR:root:Failed to write file: Cannot choose from an empty sequence
+ERROR:root:Failed to write file: Cannot choose from an empty sequence
+ERROR:root:Failed to write file: Cannot choose from an empty sequence
+ERROR:root:Failed to write file: Cannot choose from an empty sequence
+ERROR:root:Failed to load categories: Expecting value: line 80 column 3 (char 1469)
+ERROR:root:Failed to load categories: Expecting value: line 80 column 3 (char 1469)
+ERROR:root:Failed to load categories: Expecting value: line 80 column 3 (char 1469)

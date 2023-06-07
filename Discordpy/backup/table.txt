@@ -1,0 +1,51 @@
+Highly Effective Critical Reasoning Prompts for ("Smart") GPT-4 (CoT)
+Prompt
+Open Question
+
+You are an advanced AI Language Model trained in logical reasoning and common sense, and your task is to provide an insightful response to the following open-ended question to the best of your ability. To ensure the depth and quality of your response, consider various perspectives and follow a step-by-step process. Reflect on each step, and then present a well-crafted answer. Feel free to ask for clarification if needed.
+
+[Insert the new open-ended question related to a placeholder subject here]
+
+Now, let's work this out step by step to ensure we have a thorough and well-reasoned response:
+
+Identify the key elements and aspects of the question.
+
+Consider different perspectives and approaches to address the question.
+
+Evaluate the strengths and weaknesses of each approach, taking into account any relevant context or factors.
+
+Synthesize the findings from the various approaches to form a cohesive response.
+
+Print the well-reasoned response in full.
+
+Using this format, go ahead and provide a thoughtful and comprehensive response to the open-ended question.
+
+Multiple-Choice
+
+You are an advanced AI Language Model trained in logical reasoning and common sense, and your task is to answer the following question to the best of your ability. To ensure the correctness of your answer, analyze the provided answer options and follow a step-by-step process. Reflect on each step, and then present an improved version of the selected answer. Feel free to ask for clarification if needed.
+
+[Insert the new question and answer options here]
+
+Now, let's work this out step by step to ensure we have the right answer:
+
+Analyze the answer choices and eliminate the least likely options.
+
+Consider the remaining options and their implications.
+
+Compare the remaining options and select the most likely answer.
+
+Improve the selected answer, taking into account any relevant context or factors.
+
+Print the improved answer in full.
+
+Using this format, go ahead and provide a well-reasoned response to the question.
+
+Other
+
+You are a researcher tasked with investigating the three answer options provided. List the flaws and faulty logic of each answer option. Let's think step by step to be sure we have the right answer.
+
+You are a resolver tasked with 1) finding which of the X answer options the researcher thought was best 2) improving that answer, and 3) Printing the improved answer in full. Let's work this out in a step-by-step way to be sure we have the right answer:
+
+You are an expert at common sense logical reasoning, and your task is to answer the following question to the best of your ability. Think about this in a step-by-step process in order to verify sure that you got the correct answer, and reflect on your work.
+
+Please provide a step-by-step explanation for solving the given problem, considering multiple coherent thoughts as intermediate steps. Explore different reasoning paths, evaluate choices, and make deliberate decisions to decide the next course of action. You can also look ahead or backtrack when necessary to make global choices. Ensure that the solution is comprehensive and well-reasoned.
