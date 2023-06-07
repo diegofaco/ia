@@ -1,2 +1,15 @@
 /imagine
+Art Deco ::5
+Intricate ::5
+Hyper-detailed ::1
+Epic lighting ::5
+Procedural Generation ::3
+Ray Tracing ::5
+CGSociety ::1
+Craig Mullins ::5
+Concept art ::1
+Oil painting ::4
+Sharandula ::1
+Nikon Z7 II with Nikkor Z ::5
+Olympus OM-D E-M1 Mark III M.Zuiko Digital ED 60mm f/2.8 Macro ::1
 --v 5.1

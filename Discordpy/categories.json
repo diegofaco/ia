@@ -76,7 +76,7 @@
     "Holographic",
     "Retro futuristic",
     "Metamodernism",
-    "Chiaroscuro",
+    "Chiaroscuro"
   ],
   "Lighting": [
     "Clear light complexion",
@@ -106,7 +106,7 @@
     "Backlighting",
     "Diffraction",
     "Refraction",
-    "Bounce lighting",    
+    "Bounce lighting"
   ],
   "3D": [
     "Octane Render",
@@ -133,7 +133,7 @@
     "Parallax Mapping",
     "Shaders",
     "Texture Baking",
-    "Light Probe",
+    "Light Probe"
   ],
   "Top": [
   "Cinematic",
@@ -289,8 +289,8 @@
   "Maximalist",
   "Flóra Borsi",
   "Desaturated",
-  "Cosmic energy by Kelly McKernan",  
-  ],
+  "Cosmic energy by Kelly McKernan"
+],
   "Camera": [
     "Sony a7R IV Sony FE 24-70mm f/2.8 GM",
     "Canon EOS 5D Mark IV Canon EF 50mm f/1.2L",

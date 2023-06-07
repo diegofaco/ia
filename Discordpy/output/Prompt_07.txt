@@ -1,2 +1,15 @@
 /imagine
+Expressionism ::5
+Depth-of-field ::1
+Depth-of-field ::5
+Backlighting ::5
+Golden Ratio ::5
+Unreal Engine ::3
+High Dynamic Range (HDR) ::1
+High resolution ::5
+Intricate ::2
+Blurry ::4
+DOF (Depth of Field) ::1
+Sony a7S III Sony FE 24mm f/1.4 GM ::5
+Nikon Z7 II with Nikkor Z ::1
 --v 5.1

@@ -1,13 +1,7 @@
-ERROR:root:Failed to load categories: Expecting value: line 80 column 3 (char 1469)
-ERROR:root:Failed to write file: Cannot choose from an empty sequence
-ERROR:root:Failed to write file: Cannot choose from an empty sequence
-ERROR:root:Failed to write file: Cannot choose from an empty sequence
-ERROR:root:Failed to load categories: Expecting value: line 80 column 3 (char 1469)
-ERROR:root:Failed to load categories: Expecting value: line 80 column 3 (char 1469)
-ERROR:root:Failed to write file: Cannot choose from an empty sequence
-ERROR:root:Failed to write file: Cannot choose from an empty sequence
-ERROR:root:Failed to write file: Cannot choose from an empty sequence
-ERROR:root:Failed to write file: Cannot choose from an empty sequence
-ERROR:root:Failed to load categories: Expecting value: line 80 column 3 (char 1469)
-ERROR:root:Failed to load categories: Expecting value: line 80 column 3 (char 1469)
-ERROR:root:Failed to load categories: Expecting value: line 80 column 3 (char 1469)
+
+ERROR:root:Failed to decode JSON from file: categories.json
+ERROR:root:Failed to decode JSON from file: categories.json
+ERROR:root:Failed to decode JSON from file: categories.json
+ERROR:root:Failed to decode JSON from file: categories.json. Error: Expecting value: line 80 column 3 (char 1469)
+ERROR:root:Failed to decode JSON from file: categories.json. Error: Expecting value: line 80 column 3 (char 1469)
+ERROR:root:Failed to decode JSON from file: categories.json. Error: Expecting value: line 80 column 3 (char 1469)

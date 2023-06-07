@@ -1,2 +1,15 @@
 /imagine
+Futurism ::5
+Holographic ::5
+Ray tracing ::1
+Moody lighting ::5
+Filmic ::2
+Procedural Generation ::5
+Hyperrealistic ::1
+Junji Murakami ::3
+Epic ::1
+Artgerm ::2
+Intricate ink illustration ::5
+Nikon D850 Nikon AF-S NIKKOR 70-200mm f/2.8E ::5
+Canon EOS M50 Canon EF-M 22mm f/2 STM ::1
 --v 5.1

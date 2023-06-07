@@ -1,2 +1,15 @@
 /imagine
+Precisionism ::5
+Ray tracing ::5
+Ultra high quality ::1
+Refraction ::5
+Texture Baking ::1
+Light Probe ::5
+Photorealistic ::3
+Realistic ::1
+Psychedelic ::4
+Insane details ::5
+8K detail post-processing ::3
+Nikon Z7 II with Nikkor Z ::5
+Nikon D850 Nikon AF-S NIKKOR 70-200mm f/2.8E ::1
 --v 5.1
