@@ -1,0 +1,7 @@
+/imagine
+Mural ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 0
+--tile
