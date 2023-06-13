@@ -315,6 +315,5 @@
     "Leica M10-R with Leica Summilux-M 35mm f/1.4 ASPH",
     "Canon EOS R5 with Canon RF 85mm F1.2L USM DS",
     "Nikon Z7 II with Nikkor Z"
-  ],
-  "input": "import json\n\n# CB: 1.1 - Load categories from JSON file\ndef load_categories(file):\n    with open(file, 'r') as f:\n        categories = json.load(f)\n    return categories"
+  ]
 }
