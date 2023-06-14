@@ -1,5 +1,5 @@
 # CB: 1.0 - Import necessary modules
-from random import choice, shuffle
+from random import choice, shuffle, randint
 import os
 import json
 import logging
@@ -40,8 +40,10 @@ def select_items(num_files, category_counts, categories, output_dir, progress_ba
             current_time = datetime.now().strftime("%Y%m%d%H%M%S")
             with open(f"{output_dir}/Prompt_{current_time}_{i+1:02d}.txt", "w") as file:
                 file.write("/imagine\n")
-                for category, count in category_counts.items():
+                for category, (count, is_range) in category_counts.items():
                     if count > 0: # Only generate items if count is greater than 0
+                        if is_range:
+                            count = randint(1, count)
                         parameters = generate_parameters(count)
                         for _ in range(count):
                             item = choice(categories[category])
@@ -56,4 +58,3 @@ def select_items(num_files, category_counts, categories, output_dir, progress_ba
             progress_bar.setValue((i+1) / num_files * 100)  # Update the progress bar
         except Exception as e:
             logging.error(f"Failed to write file: {e}")
-
