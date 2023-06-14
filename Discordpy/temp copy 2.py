@@ -1,6 +1,7 @@
 import random
 import nltk
 from nltk.corpus import words, stopwords
+from nltk.tokenize import word_tokenize
 from enum import Enum
 from tqdm import tqdm
 import tkinter as tk
@@ -97,7 +98,7 @@ def generate_sentence(template, words_by_pos, min_length=0, max_length=float('in
         sentence = []
         for pos in template:
             if words_by_pos[pos]:  # Check if the list is not empty
-                word = choose_word_based_on_frequency(words_by_pos[pos])
+                word = random.choice(words_by_pos[pos])
                 sentence.append(word)
         sentence_str = " ".join(sentence)
         print(f"Template: {template}, Sentence: {sentence_str}")  # Print the template and the sentence
@@ -106,34 +107,19 @@ def generate_sentence(template, words_by_pos, min_length=0, max_length=float('in
             return sentence_str
     return None  # Return None if no valid sentence could be generated after max_tries
 
-# CB: 6.1 - Define a function to choose a word based on frequency
-def choose_word_based_on_frequency(words):
-    # For now, just choose a random word
-    return random.choice(words)
-
 # CB: 7.0 - Define a function to generate sentences and display them in the GUI
 def generate_and_display_sentences(num_sentences_spinbox, text_area, progress_bar, templates, words_by_pos):
     num_sentences = int(num_sentences_spinbox.get())  # Get the number of sentences to generate
     progress_bar['value'] = 0
-    sentences = []
     for i in tqdm(range(num_sentences)):
         template = random.choice(templates)
         sentence = generate_sentence(template, words_by_pos)
         if sentence is not None:  # Only display the sentence if it's not None
             text_area.insert(tk.INSERT, sentence + '\n')
-            sentences.append(sentence)
         progress_bar['value'] += 100 / num_sentences  # Update the progress bar
     progress_bar['value'] = 100  # Set the progress bar to 100% when done
     if progress_bar['value'] == 100:
         messagebox.showinfo("Information", "Sentence generation completed!")
-        # Export the sentences to a file
-        export_sentences_to_file(sentences)
-
-# CB: 7.1 - Define a function to export sentences to a file
-def export_sentences_to_file(sentences):
-    with open('sentences.txt', 'w') as f:
-        for sentence in sentences:
-            f.write(sentence + '\n')
 
 # CB: 8.0 - Create the main window
 def create_main_window():
