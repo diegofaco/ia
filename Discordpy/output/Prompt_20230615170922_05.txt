@@ -1,0 +1,63 @@
+/imagine
+Luminism ::1
+Atmospheric ::1
+Silhouette lighting ::1
+3D ::1
+Weta Digital ::1
+Canon EOS R6 Canon RF 28-70mm f/2L USM ::1
+Colors ::1
+Rising ::1
+Medieval village ::5
+Giant monster ::1
+Famous sculpture ::1
+Neon Genesis ::3
+White House ::2
+Digital painting portrait ::4
+Wide-angle lens ::2
+Baby Yoda ::2
+Victorian era ::4
+Concept art landscape ::3
+Walt Disney ::3
+Justin Trudeau ::3
+Anton Fadeev ::4
+Jean Léon ::2
+John Bauer ::1
+Beautiful Goddess ::2
+Dark Tower ::1
+Sin City ::1
+Stardew Valley ::5
+Very Detailed ::1
+Surrealism ::2
+Oil painting ::5
+Watercolor ::1
+Chiaroscuro ::1
+Oil painting ::4
+Oil painting ::1
+Hyper-realistic ::3
+Realistic ::1
+Dark ::2
+Chiaroscuro ::2
+Patience ::1
+Burst ::3
+Burst ::4
+Picturesque and idyllic countryside ::2
+Dejected ::1
+Graceful and elegant swans on a tranquil lake ::2
+Breathtaking ::2
+Suspicious ::4
+Grand ::5
+Opulent palace ::3
+Quantum simulation ::1
+Shimmering mirage ::4
+Galactic fireworks ::4
+Whimsical ::5
+Ethereal haze ::3
+Silver moon ::1
+Thundering herd of wild horses ::2
+Mysterious ticking watch ::1
+Crystal symphony ::1
+Majestic ::2
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

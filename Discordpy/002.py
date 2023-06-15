@@ -1,23 +1,32 @@
 # CB: 1.0 - Import necessary libraries
 import random
-import time
 import nltk
 import spacy
-import tkinter as tk
-import sqlite3
 import language_tool_python
 from enum import Enum
-from tqdm import tqdm
+from wonderwords import RandomWord
+from gensim.models import KeyedVectors
 from nltk.corpus import words, stopwords
 from collections import defaultdict, Counter
-from tkinter import scrolledtext, ttk, messagebox
-from wonderwords import RandomWord
-from gensim.models import Word2Vec
-from gensim.models.keyedvectors import KeyedVectors
 from nltk.probability import FreqDist
 from random import choices
 
-# CB: 2.0 - Define an enumeration for the parts of speech
+# CB: 2.0 - Load GloVe vectors directly
+filename = 'glove.6B.50d.txt'
+glove_model = KeyedVectors.load_word2vec_format(filename, binary=False, no_header=True)
+
+# CB: 3.0 - Define a list of highly descriptive words
+descriptive_words = ['vibrant', 'luminous', 'dazzling', 'shadowy', 'radiant', 'gloomy', 'vivid', 'colorful', 
+                     'sparkling', 'glistening', 'picturesque', 'scenic', 'breathtaking', 'magnificent', 'tranquil', 
+                     'serene', 'spectacular', 'majestic', 'grand', 'stunning', 'charming', 'quaint', 'unique', 
+                     'mysterious', 'enchanted', 'magical', 'captivating', 'mesmerizing', 'exquisite', 'elegant', 
+                     'lavish', 'luxurious', 'opulent', 'rustic', 'ancient', 'historic', 'timeless', 'classic', 
+                     'modern', 'innovative', 'sleek', 'stylish', 'chic', 'sophisticated', 'ornate', 'extravagant', 
+                     'exotic', 'tropical', 'lush', 'wild', 'untamed', 'remote', 'secluded', 'idyllic', 'paradise', 
+                     'heavenly', 'utopia', 'dreamy', 'fantasy', 'fairy-tale', 'legendary', 'mythical', 'epic', 
+                     'adventure', 'journey', 'odyssey', 'quest', 'exploration', 'discovery', 'revelation', 'enlightenment']
+
+# CB: 4.0 - Define an enumeration for the parts of speech
 class PartOfSpeech(Enum):
     ADJECTIVE = 'JJ'
     NOUN = 'NN'
@@ -26,7 +35,7 @@ class PartOfSpeech(Enum):
     PREPOSITION = 'IN'
     CONJUNCTION = 'CC'
 
-# CB: 3.0 - Initialize the English words set
+# CB: 5.0 - Initialize the English words set
 class EnglishWords:
     def __init__(self):
         self.words = self.initialize()
@@ -46,7 +55,7 @@ class EnglishWords:
         print(f"Size of english_words set: {len(english_words)}")
         return english_words
 
-# CB: 4.0 - Load stopwords from NLTK
+# CB: 6.0 - Load stopwords from NLTK
 class StopWords:
     def __init__(self):
         self.words = self.load()
@@ -54,7 +63,7 @@ class StopWords:
     def load(self):
         return set(stopwords.words('english'))
 
-# CB: 5.0 - Categorize words by their part of speech
+# CB: 7.0 - Categorize words by their part of speech
 class WordsByPOS:
     def __init__(self, english_words, chunk_size):
         self.words = self.categorize(english_words, chunk_size)
@@ -76,7 +85,7 @@ class WordsByPOS:
             print(f"{pos}: {len(words_by_pos[pos])} words")
         return words_by_pos
 
-# CB: 6.0 - Define a larger set of templates
+# CB: 8.0 - Define a larger set of templates
 class Templates:
     def __init__(self):
         self.templates = self.define()
@@ -105,7 +114,7 @@ class Templates:
             [PartOfSpeech.ADVERB, PartOfSpeech.ADJECTIVE, PartOfSpeech.CONJUNCTION, PartOfSpeech.NOUN, PartOfSpeech.VERB]
         ]
 
-# CB: 7.0 - Define a function to generate a sentence
+# CB: 9.0 - Define a function to generate a sentence
 class SentenceGenerator:
     def __init__(self, template, words_by_pos, min_length=0, max_length=float('inf'), used_sentences=set(), timeout=5):
         self.template = template
@@ -130,13 +139,13 @@ class SentenceGenerator:
                 return sentence_str
         return None # Return None if no valid sentence could be generated after timeout
 
-    # CB: 7.1 - Define a function to choose a word based on frequency
+    # CB: 9.1 - Define a function to choose a word based on frequency
     def choose_word_based_on_frequency(self, words):
         word_counts = Counter(words)
         word = choices(list(word_counts.keys()), weights=list(word_counts.values()))[0]
         return word
 
-# CB: 7.2 - Add a post-processing step
+# CB: 9.2 - Add a post-processing step
 class SentencePostProcessor:
     def __init__(self, sentence):
         self.sentence = sentence
@@ -147,16 +156,7 @@ class SentencePostProcessor:
         corrected_sentence = language_tool_python.correct(self.sentence, matches)
         return corrected_sentence
 
-# CB: 8.0 - Load the Word2Vec model
-class WordEmbeddings:
-    def __init__(self):
-        self.model = self.load()
-
-    def load(self):
-        model = KeyedVectors.load_word2vec_format('GoogleNews-vectors-negative300.bin', binary=True)
-        return model
-
-# CB: 8.1 - Find semantically related words
+# CB: 10.0 - Find semantically related words
 class RelatedWordFinder:
     def __init__(self, word, model):
         self.word = word
@@ -167,7 +167,7 @@ class RelatedWordFinder:
         related_word = random.choice(related_words)[0]
         return related_word
 
-# CB: 8.2 - Use semantically related words in sentence generation
+# CB: 11.0 - Use semantically related words in sentence generation
 class SemanticSentenceGenerator(SentenceGenerator):
     def __init__(self, template, words_by_pos, model, min_length=0, max_length=float('inf'), used_sentences=set(), max_tries=1000):
         super().__init__(template, words_by_pos, min_length, max_length, used_sentences)
@@ -183,101 +183,28 @@ class SemanticSentenceGenerator(SentenceGenerator):
                     related_word = RelatedWordFinder(word, self.model).find()
                     sentence.append(related_word)
             sentence_str = " ".join(sentence)
-            if self.min_length <= len(sentence_str) <= self.max_length and sentence_str not in self.used_sentences:
+            if self.min_length <= len(sentence_str) <= self.max_length and
+            sentence_str not in self.used_sentences:
                 self.used_sentences.add(sentence_str)
                 return sentence_str
         return None
 
-# CB: 9.0 - Define a function to generate sentences and display them in the GUI
-class SentenceDisplay:
-    def __init__(self, num_sentences, templates, words_by_pos, progress_bar, text_area):
-        self.num_sentences = num_sentences
-        self.templates = templates
-        self.words_by_pos = words_by_pos
-        self.progress_bar = progress_bar
-        self.text_area = text_area
-        self.sentences = []
+# CB: 12.0 - Generate 50 sentences
+for _ in range(50):
+    # Select a seed word from the descriptive words
+    seed_word = random.choice([word for word in descriptive_words if word in glove_model.index_to_key])
 
-    def generate_and_display(self):
-        self.progress_bar['value'] = 0
-        word_embeddings = WordEmbeddings().model  # Load the Word2Vec model
-        for i in tqdm(range(self.num_sentences)):
-            template = random.choice(self.templates)
-            sentence = SemanticSentenceGenerator(template, self.words_by_pos, word_embeddings).generate()  # Pass the model to SemanticSentenceGenerator
-            if sentence is not None: # Only display the sentence if it's not None
-                self.text_area.insert(tk.INSERT, sentence + '\n')
-                self.sentences.append(sentence)
-            self.progress_bar['value'] += 100 / self.num_sentences # Update the progress bar
-        self.progress_bar['value'] = 100 # Set the progress bar to 100% when done
-        if self.progress_bar['value'] == 100:
-            messagebox.showinfo("Information", "Sentence generation completed!")
-        SentenceExporter(self.sentences).export_to_db()
+    # Find related words
+    related_words = [word for word, _ in glove_model.most_similar(seed_word, topn=100)]
 
-# CB: 9.1 - Define a function to export sentences to a★ Continuing from where we left off:
-class SentenceExporter:
-    def __init__(self, sentences):
-        self.sentences = sentences
+    # Separate related words by part of speech
+    adjectives = [word for word in related_words if get_wordnet_pos(word) == wordnet.ADJ]
+    nouns = [word for word in related_words if get_wordnet_pos(word) == wordnet.NOUN]
+    verbs = [word for word in related_words if get_wordnet_pos(word) == wordnet.VERB]
+    adverbs = [word for word in related_words if get_wordnet_pos(word) == wordnet.ADV]
 
-    def export_to_file(self):
-        with open('sentences.txt', 'w') as f:
-            for sentence in self.sentences:
-                f.write(sentence + '\n')
-
-    # CB: 9.2 - Define a function to export sentences to a database
-    def export_to_db(self):
-        conn = sqlite3.connect('sentences.db')
-        c = conn.cursor()
-        c.execute('''CREATE TABLE IF NOT EXISTS sentences
-                     (sentence text)''')
-        for sentence in self.sentences:
-            c.execute("INSERT INTO sentences VALUES (?)", (sentence,))
-        conn.commit()
-        conn.close()
-
-# CB: 10.0 - Create the main window
-class SentenceGeneratorGUI:
-    def __init__(self, templates, words_by_pos):
-        self.window = tk.Tk()
-        self.window.title("Sentence Generator")
-        self.window.configure(bg='lightgray')  # Change the background color
-        self.templates = templates
-        self.words_by_pos = words_by_pos
-
-        tk.Label(self.window, text="Number of sentences:").pack()
-        self.num_sentences_spinbox = tk.Spinbox(self.window, from_=1, to=20)
-        self.num_sentences_spinbox.pack()
-
-        self.generate_button = tk.Button(self.window, text="Generate Sentences", command=self.generate_and_display_sentences)
-        self.generate_button.pack()
-
-        self.progress_bar = ttk.Progressbar(self.window, length=100, mode='determinate')
-        self.progress_bar.pack()
-
-        tk.Label(self.window, text="Generated sentences:").pack()
-        self.text_area = scrolledtext.ScrolledText(self.window)
-        self.text_area.pack()
-
-    def generate_and_display_sentences(self):
-        num_sentences = int(self.num_sentences_spinbox.get()) # Get the number of sentences to generate
-        SentenceDisplay(num_sentences, self.templates, self.words_by_pos, self.progress_bar, self.text_area).generate_and_display()
-
-    def start_main_loop(self):
-        self.window.mainloop()
-
-    # CB: 10.1 - Add a function to add a new template
-    def add_template(self, template):
-        self.templates.append(template)
-
-    # CB: 10.2 - Add a function to choose a part of speech
-    def choose_pos(self, pos):
-        self.pos = pos
-
-if __name__ == "__main__":
-    chunk_size = 50000 # Configurable chunk size
-    english_words = EnglishWords().words
-    stop_words = StopWords().words
-    words_by_pos = WordsByPOS(english_words, chunk_size).words
-    templates = Templates().templates
-    gui = SentenceGeneratorGUI(templates, words_by_pos)
-    gui.start_main_loop()
-
+    # Generate a sentence
+    if adjectives and nouns and verbs and adverbs:
+        sentence = [random.choice(adjectives), random.choice(nouns), random.choice(verbs), random.choice(adverbs)]
+        sentence_str = " ".join(sentence)
+        print(f"Generated Sentence: {sentence_str}")

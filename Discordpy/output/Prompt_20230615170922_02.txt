@@ -1,0 +1,63 @@
+/imagine
+Futurism ::1
+Dystopian ::1
+Bounce lighting ::1
+Texture Baking ::1
+In the style of Charlie Bowater ::1
+Canon EOS 5D Mark IV Canon EF 50mm f/1.2L ::1
+Metal ::1
+Digital portrait painting ::1
+Japanese cherry blossom ::2
+North Korea ::3
+Mark Ryden ::4
+Digital glitch art ::3
+High school ::1
+Realistic watercolor ::1
+Space Odyssey ::1
+Hank Hill ::2
+Renaissance painting ::5
+White color ::1
+Tang Dynasty ::2
+Sci-fi soldier armor ::1
+Samurai warrior ::1
+Takato Yamamoto ::3
+Rebecca Guay ::1
+Sci-Fi Weapon ::3
+Nine Inch Nails ::5
+Orange Black ::2
+Léon Gérôme ::1
+Daido Moriyama ::4
+Unreal Engine ::4
+Golden ratio ::1
+Rule of thirds ::1
+Concept art ::2
+Rule of thirds ::3
+High resolution ::1
+Cinematic lighting ::2
+Cinematic ::1
+Chiaroscuro ::3
+Hyper-realistic ::5
+Modern and sleek architectural marvel ::3
+Serendipity ::2
+Spatter ::2
+Tormented ::1
+Authenticity ::3
+Ancient and mystical stone circle ::1
+Sparkling diamond ::5
+Tumble ::1
+Prismatic waterfall pool ::2
+Enormous towering skyscraper piercing the clouds ::4
+Enigmatic ::1
+Floating wishes ::4
+Whispers of yesteryears ::1
+Forgotten melodies ::3
+Magnetic resonance imaging ::4
+Hyperspace journey ::1
+Old-fashioned elegance ::2
+Chirping ::2
+Neural connection ::1
+Harmonious tides ::5
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

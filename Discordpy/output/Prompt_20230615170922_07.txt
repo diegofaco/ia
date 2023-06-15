@@ -1,0 +1,63 @@
+/imagine
+Neo-Impressionism ::1
+Intricate ::1
+Diffused lights ::1
+Texture Baking ::1
+Moody ::1
+Fujifilm GFX 50R Fujinon GF32-64mmF4 R LM WR ::1
+Skeleton ::1
+Victorian ::1
+Japanese anime landscape ::3
+Black and white street photography ::3
+Jurassic Park ::1
+Conceptual photography ::4
+Conceptual photography ::4
+Hyperrealistic painting ::1
+Digital glitch art ::1
+Peppa Pig ::2
+Abstract floral ::1
+Cyberpunk girl neon ::5
+Takayuki Takeya ::5
+Michael Scott ::4
+Abstract flower ::1
+Refik Anadol ::1
+Jacek Yerka ::1
+Pink Floyd ::2
+Modern Apartment ::3
+Futuristic Motorcycle ::4
+Fernando Botero ::1
+White Castle ::3
+Art Nouveau ::1
+Hyper-realism ::3
+Concept art ::4
+Moody lighting ::1
+Hyper-detailed ::1
+Rule of thirds ::4
+Shadows ::2
+Silhouette ::5
+Dramatic lighting ::2
+Tenebrism ::3
+Sparkling diamond ::5
+Burst ::4
+Remorseful ::1
+Boundless and awe-inspiring galaxy with countless stars ::3
+Simplicity ::1
+Modern and sleek architectural marvel ::2
+Sentimentality ::2
+Plunge ::3
+Cascading waterfall in a lush tropical rainforest ::1
+Cascade ::4
+Steaming coffee ::3
+Pristine ::3
+Dreamy flying island ::2
+Sparkling ::1
+Illuminated ::4
+Intricate labyrinth maze ::1
+Dazzling fireworks ::1
+Celestial tapestry ::4
+Emerald forest ::1
+Ancient castle ruins ::5
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

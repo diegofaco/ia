@@ -1,0 +1,63 @@
+/imagine
+Fauvism ::1
+Post-apocalyptic ::1
+Neon lights ::1
+Ambient Occlusion ::1
+Muted colors ::1
+Canon EOS 5D Mark IV Canon EF 50mm f/1.2L ::1
+Hypermaximalist ::1
+Surreal ::1
+Anime girl ::3
+Heavy rain ::2
+Abstract landscape ::1
+Dragon Ball ::3
+African American ::2
+Fenghua Zhong ::5
+Ghost in the Shell ::1
+Digital neon ::2
+Animated movie poster ::1
+Futuristic soldier concept art ::4
+Sci-fi space battle ::1
+Abstract Cityscape ::3
+Sci-Fi Mech ::2
+Crepuscular Ray ::2
+Abstract color ::1
+Anders Zorn ::5
+Space Needle ::1
+Virgil Abloh ::4
+Tai Chi ::4
+Medieval City ::3
+Photorealistic ::1
+Surrealism ::1
+Unreal Engine ::4
+Dark ::5
+Esoteric ::1
+Portrait lighting ::4
+Unreal Engine ::3
+Cinematic lighting ::2
+Bioluminescence ::2
+Dramatic lighting ::2
+Presence ::5
+Abstract ::3
+Colorful street art mural ::1
+Glistening snowflake ::2
+Quiver ::2
+Glide ::4
+Sparkling chandelier ::3
+Change ::4
+Ornate stained glass lampshade ::1
+Empowerment ::1
+Whimsical fog ::4
+Cozy fireplace ::4
+Belly ::5
+Neural connections ::2
+Peaceful meadow ::1
+Whispering giants ::3
+Majestic ::2
+Whirling golden compass ::1
+Infinite possibilities ::1
+Tranquil mountain lake ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

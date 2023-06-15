@@ -1,0 +1,63 @@
+/imagine
+Ukiyo-e ::1
+Painterly ::1
+Morning light ::1
+Displacement Mapping ::1
+Intricate details ::1
+Nikon Z7 Nikon Z 24-70mm f/2.8 S ::1
+Creepy ::1
+Alchemy ::1
+Japanese street art ::3
+Abstract fluid ::2
+Abstract nature ::1
+Event Horizon ::3
+Post-apocalyptic cityscape ::2
+Fantasy landscape painting ::1
+Anamorphic lens ::2
+Medieval fantasy castle ::4
+Realistic still life ::1
+Sci-fi illustration ::5
+Mechanical Armor ::4
+Sci-fi space station interior ::4
+V-Ray Unreal ::1
+Takato Yamamoto ::5
+Modern Bathroom ::2
+Modern dining room ::1
+Powerpuff Girls ::2
+Medieval Knight Armor ::1
+Tang Dynasty ::1
+Japanese bird ::2
+Character portrait ::4
+Oil painting ::2
+Golden ratio ::1
+High contrast ::1
+Atmospheric ::1
+Cinematic ::3
+Chiaroscuro ::2
+Concept art ::5
+Volumetric light ::4
+Futuristic ::1
+Harmony ::5
+Neon sign ::1
+Burst ::4
+Beam ::3
+Towering and majestic ancient sequoia trees in a serene forest ::4
+Cascading layers of a wedding cake ::1
+Expansive and captivating panoramic view from a mountaintop ::2
+Glorious ::3
+Solitude ::1
+Dejected ::1
+Majestic mountains ::1
+Crystal symphony ::2
+Crystal fog ::3
+Zebra ::1
+Celestial alignment ::4
+Vibrant mural ::1
+Twinkling stars ::1
+Breathtaking canyon ::2
+Vibrant coral ::2
+Fox ::5
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

@@ -1,0 +1,63 @@
+/imagine
+Luminism ::1
+Holographic ::1
+Morning light ::1
+Displacement Mapping ::1
+Hyperrealism ::1
+Canon EOS R6 Canon RF 28-70mm f/2L USM ::1
+World ::1
+Utopian ::1
+Michel Basquiat ::2
+Top Gun ::5
+Realistic landscape painting ::1
+Taco Bell ::2
+Sci-fi cityscape wallpaper ::3
+Abstract surrealism ::1
+Abstract still life ::3
+Medieval fantasy castle ::1
+Dark scary ::4
+Long exposure ::1
+Medieval Siege ::1
+Abstract Neon ::1
+Red Desert ::2
+Powerpuff Girls ::1
+Jakub Rozalski ::4
+Honoré Fragonard ::4
+Tom Waits ::1
+Abstract Design ::2
+Lucian Freud ::3
+Nic Cage ::5
+Hyper-realistic ::4
+Cinematic lighting ::1
+Unreal Engine ::2
+Bioluminescence ::4
+Hyper-realism ::1
+Reflections ::5
+Unreal Engine ::2
+Atmospheric ::3
+Rule of thirds ::3
+Volumetric light ::1
+Enchanting firefly-lit meadow ::1
+Fashionable ::2
+Discovery ::2
+Flatten ::3
+Opalescent seashell ::5
+Delicate butterfly wings ::1
+Flamboyant costume ::4
+Potential ::1
+Admiration ::4
+Warmth ::2
+Enchanting ::2
+Gossamer realm ::3
+Magnetic resonance ::4
+Dreamy ::1
+Melancholic rain ::1
+Serpentine magical serpent ::2
+Blossoming ::1
+Majestic dragon's lair ::1
+Bewitched flying broomstick ::5
+Blooming roses ::3
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

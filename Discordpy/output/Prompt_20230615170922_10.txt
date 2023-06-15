@@ -1,0 +1,63 @@
+/imagine
+Constructivism ::1
+Glitch art ::1
+Moody lighting ::1
+Ray Tracing ::1
+Photo realism ::1
+Nikon D5600 Nikon AF-S DX NIKKOR 35mm f/1.8G ::1
+Vintage-style ::1
+Blade Runner ::1
+Cubism style ::3
+Postmodern architecture ::5
+Metal Gear ::4
+White House ::2
+Substance Designer ::1
+Realistic pencil drawing ::2
+Low poly art ::1
+Realistic nature painting ::1
+Big Bird ::4
+Conceptual photography ::2
+Modern living room ::1
+Tang Dynasty ::5
+Arnold Böcklin ::1
+Medieval town ::4
+World Cup ::1
+Magic Realism ::3
+Twin Towers ::3
+Abstract neon ::2
+Abstract shapes ::1
+Model Unreal ::2
+Unreal Engine ::1
+Volumetric light ::3
+Character portrait ::2
+Moody lighting ::4
+Portrait ::1
+Esoteric ::5
+Dramatic ::4
+Luxury ::3
+Rule of thirds ::2
+Silhouette ::1
+Ancient pyramids ::4
+Irritation ::3
+Quiet and peaceful lakeside cabin ::2
+Rippling fabric of a flowing gown ::4
+Delightfulness ::1
+Adventure ::5
+Glittering ocean waves ::3
+Eerie ::1
+Vibrant city street ::2
+Glee ::1
+Dreamlike ::2
+Celestial radiance ::2
+Invisible melodies ::3
+Serene moonlit meadow ::1
+Majestic ::5
+Towering skyscraper ::3
+Sun-kissed meadow ::4
+Sublime transcendence ::1
+Ethereal ::1
+Blossoming cherry ::4
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

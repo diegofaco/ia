@@ -1,0 +1,63 @@
+/imagine
+Geometric ::1
+Elegant ::1
+Studio lighting ::1
+Volumetric Light ::1
+Structure ::1
+Olympus PEN-F M.Zuiko Digital 17mm f/1.8 ::1
+Contemporary ::1
+Comic art ::1
+Abstract fluid ::1
+Abstract line art ::2
+Japanese garden ::5
+Alien planet landscape ::3
+Jeff Koons ::1
+Beautiful nature ::1
+Japanese art wallpaper ::4
+Jamie Hewlett ::1
+Futuristic soldier ::2
+David Roberts ::3
+Melmoth Zdzislaw ::5
+Wall Art ::3
+Pink Floyd ::4
+Mies van ::1
+Lich King ::2
+Jeremy Geddes ::1
+Jim Henson ::1
+Teddy Bears ::2
+Mechanical Armor ::1
+Abstract Fire ::2
+Bioluminescence ::2
+Unreal Engine ::2
+Elegant ::1
+Avant-garde ::2
+Shadows ::3
+Dramatic lighting ::3
+Golden ratio ::1
+Portrait ::5
+Cinematic ::4
+Realistic ::1
+Appreciation ::1
+Massive crashing waves during a storm at sea ::4
+Historic cobblestone street ::1
+Colorful hot air balloon ::5
+Resilience ::3
+Chic ::3
+Furious ::2
+Abhorrent ::1
+Tension ::1
+Forsaken ::4
+Vintage soul ::2
+Whispering wind-swept moors ::2
+Vibrant butterfly garden ::2
+Bewitched talking mirror ::1
+Dusty heirlooms ::4
+Radiant golden crown ::3
+Melting mountains ::1
+Sublime transcendence ::4
+Dreamlike ::1
+Molecular precision ::5
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

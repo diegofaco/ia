@@ -1,0 +1,63 @@
+/imagine
+Minimalism ::1
+Volumetric lighting ::1
+Golden hour ::1
+Hyperrealistic ::1
+Watercolor ::1
+Nikon Z6 II Nikon Z 50mm f/1.8 S ::1
+Ethereal ::1
+Propaganda poster ::1
+Noah Bradley ::1
+Manga art style ::4
+Street art ::2
+Cyberpunk girl wallpaper ::5
+Victorian era ::1
+Modern architecture ::1
+Disco Elysium ::4
+Medieval city ::3
+Japanese street ::1
+Conceptual photography ::2
+Abstract color ::1
+Japanese cherry blossom tattoo ::3
+Anime Manga ::1
+Orange Hair ::2
+Sherlock Holmes ::4
+Breaking Bad ::3
+Medieval architecture ::2
+Abstract Neon ::4
+Abstract texture background ::1
+Futuristic robot ::5
+Surrealism ::1
+Volumetric light ::3
+Futuristic ::4
+Portrait ::3
+Futuristic ::4
+Photorealistic ::1
+Ethereal ::2
+Avant-garde ::2
+Character portrait ::1
+Luxury ::5
+Waterfall ::1
+Chic ::2
+Grief-stricken ::4
+Desolate ::1
+Frustrated ::3
+Vibrant autumn foliage ::2
+Flowing curtains of a theater stage ::1
+Growth ::1
+Exquisite artwork ::5
+Vibrant tapestry ::3
+Invisible pathways ::2
+Shimmering mirage ::1
+Opulent ::3
+Whispering winds ::5
+Quaint fishing village ::3
+Pristine snowfall ::2
+Hypnotic ::1
+Extraordinary ::4
+Colorful hot air balloon ::1
+Magical starlit pathway ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100
