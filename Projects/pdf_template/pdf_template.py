@@ -21,6 +21,18 @@ def create_header(c, text):
     # You can adjust these numbers to move the header around on the page.
     c.drawString(30, 750, text)
 
+def create_footer(c, text):
+    # Set the font and size for the footer
+    c.setFont("Helvetica", 10)
+    
+    # Set the color for the footer (in RGB)
+    c.setFillColorRGB(0, 0, 0)  # Black color
+    
+    # Draw the footer
+    # The numbers 30 and 30 here represent the x and y coordinates of where we want to place the footer.
+    # You can adjust these numbers to move the footer around on the page.
+    c.drawString(30, 30, text)
+
 def add_page_number(c, page_number):
     # Set the font and size for the page number
     c.setFont("Helvetica", 8)
@@ -131,7 +143,7 @@ def format_page_number(c, page_number, x, y, style):
     c.setFillColor(style.textColor)
     
     # Draw the page number
-    c.drawRightString(x, y, str(page_number))
+    c.drawCentredString(x, y, str(page_number))
     
 def add_table(c, data, x, y):
     # Check if data is None
@@ -154,11 +166,11 @@ def create_pdf(report):
         # Create the header
         create_header(c, report["header"])
         
-        # Check if the report has a page number for this page
-        if "page_number" in report and i < len(report["page_number"]):
-            # Format the page number
-            style = ParagraphStyle('PageNumber', parent=getSampleStyleSheet()['Normal'], fontName='Helvetica', fontSize=10, textColor=colors.black)
-            format_page_number(c, report["page_number"][i], 595.27 - 30, 30, style) # Place the page number at the right bottom of the page
+        # Create the footer
+        create_footer(c, report["footer"])
+        
+        # Add the page number
+        add_page_number(c, report["page_numbers"][i])
         
         # Format the heading
         format_heading(c, report["headings"][i])
