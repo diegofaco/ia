@@ -2,9 +2,6 @@
 from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 from reportlab.platypus import Table
-from reportlab.platypus import Table, TableStyle
-from reportlab.lib import colors
-from reportlab.platypus import SimpleDocTemplate, TableOfContents
 
 # CB: 2.0 - Define common elements
 def create_header(c, text):
@@ -18,25 +15,7 @@ def create_header(c, text):
     # The numbers 30 and 750 here represent the x and y coordinates of where we want to place the header.
     # You can adjust these numbers to move the header around on the page.
     c.drawString(30, 750, text)
-    
-def add_headings(c, headings, toc):
-    for heading in headings:
-        # Add the heading to the PDF
-        c.setFont("Helvetica-Bold", 14)
-        c.drawString(10, 800, heading["text"])
 
-        # Add an entry to the table of contents
-        toc.addEntry(1, heading["text"], c.getPageNumber())
-    
-def add_subheadings(c, subheadings, toc):
-    for subheading in subheadings:
-        # Add the subheading to the PDF
-        c.setFont("Helvetica-Bold", 12)
-        c.drawString(20, 780, subheading["text"])
-        
-        # Add an entry to the table of contents
-        toc.addEntry(2, subheading["text"], c.getPageNumber())
-        
 def create_footer(c, text):
     # Set the font and size for the footer
     c.setFont("Helvetica", 10)
@@ -124,93 +103,63 @@ def add_table(c, data, x, y):
     # Create the table
     table = Table(data)
     
-    # Create a table style
-    style = TableStyle([
-        ('BACKGROUND', (0, 0), (-1, 0), colors.grey),  # Set the background color of the first row to grey
-        ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),  # Set the text color of the first row to white
-
-        ('ALIGN', (0, 0), (-1, -1), 'CENTER'),  # Align all text to center
-        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),  # Use bold for the first row
-        ('FONTSIZE', (0, 0), (-1, -1), 12),  # Set the font size for all cells to 12
-
-        ('BOTTOMPADDING', (0, 0), (-1, 0), 12),  # Add extra space below the text of the first row
-        ('BACKGROUND', (0, 1), (-1, -1), colors.beige),  # Set the background color of all other rows to beige
-        ('GRID', (0, 0), (-1, -1), 1, colors.black)  # Add a grid around all cells
-    ])
-    
-    # Apply the table style
-    table.setStyle(style)
-    
     # Add the table
     table.wrapOn(c, x, y)
     table.drawOn(c, x, y)
     
 # CB: 4.10 - Main function
 def create_pdf(report):
-    # Create the PDF
-    c = canvas.Canvas("report.pdf")
+    c = canvas.Canvas("report.pdf", pagesize=letter)
     
-    # Create a SimpleDocTemplate
-    doc = SimpleDocTemplate(c)
+    # Loop over the data in the report
+    for i in range(len(report["headings"])):
+        # Create the header
+        create_header(c, report["header"])
+        
+        # Create the footer
+        create_footer(c, report["footer"])
+        
+        # Add the page number
+        add_page_number(c, report["page_numbers"][i])
+        
+        # Format the heading
+        format_heading(c, report["headings"][i])
+        
+        # Format the subheading
+        format_subheading(c, report["subheadings"][i])
+        
+        # Format the body text
+        format_body_text(c, report["body_text"][i])
+        
+        # Format the bullet points
+        format_bullet_points(c, report["bullet_points"][i], 640)  # Start the bullet points at y-coordinate 640
+        
+        # Add an image
+        add_image(c, report["images"][i], 30, 400)  # Replace with the path to your image file
+        
+        # Add a table
+        add_table(c, report["tables"][i], 30, 200)
+        
+        # Start a new page
+        c.showPage()
     
-    # Create a TableOfContents object
-    toc = TableOfContents()
-    
-    # Add the TableOfContents to the document
-    doc.add(toc)
-    
-    # Add the rest of the content
-    add_header(c, report["header"])
-    add_footer(c, report["footer"])
-    add_headings(c, report["headings"])
-    add_subheadings(c, report["subheadings"])
-    add_body_text(c, report["body_text"])
-    add_bullet_points(c, report["bullet_points"])
-    add_images(c, report["images"])
-    add_tables(c, report["tables"])
-    
-    # Save the PDF
     c.save()
 
-# CB: 5.11 - Test the template
+# CB: 5.10 - Test the template
 def test_template():
     report = {
-        "header": "My Report",
-        "footer": "Page %d",
-        "headings": [
-            {"text": "Introduction"},
-            {"text": "Main Section"},
-            {"text": "Conclusion"}
-        ],
-        "subheadings": [
-            {"text": "Subheading 1"},
-            {"text": "Subheading 2"},
-            {"text": "Subheading 3"}
-        ],
-        "body_text": [
-            {"text": "This is some body text."},
-            {"text": "This is some more body text."},
-            {"text": "This is even more body text."}
-        ],
-        "bullet_points": [
-            {"text": "Bullet point 1"},
-            {"text": "Bullet point 2"},
-            {"text": "Bullet point 3"}
-        ],
-        "images": [
-            {"path": "grafico01.jpg"},
-            {"path": "grafico01.jpg"},
-            {"path": "grafico01.jpg"}
-        ],
-        "tables": [
-            {"data": [["Cell 1", "Cell 2"], ["Cell 3", "Cell 4"]]},
-            {"data": [["Cell 5", "Cell 6"], ["Cell 7", "Cell 8"]]},
-            {"data": [["Cell 9", "Cell 10"], ["Cell 11", "Cell 12"]]}
-        ]
+        "header": "My Report Header",
+        "footer": "Page 1",
+        "headings": ["Main Heading", "Another Heading"],
+        "subheadings": ["Subheading", "Another Subheading"],
+        "body_text": ["This is some body text.", "This is some more body text."],
+        "bullet_points": [["Point 1", "Point 2", "Point 3"], ["Another Point 1", "Another Point 2"]],
+        "images": ["C:\github\ia\Projects\pdf_template\grafico01.jpg", "C:\github\ia\Projects\pdf_template\grafico01.jpg"],
+        "tables": [[["Header 1", "Header 2"], ["Row 1, Column 1", "Row 1, Column 2"], ["Row 2, Column 1", "Row 2, Column 2"]], None],
+        "page_numbers": [1, 2]
     }
-
     create_pdf(report)
+
 
 if __name__ == "__main__":
     test_template()
-    toc.generate(c)
