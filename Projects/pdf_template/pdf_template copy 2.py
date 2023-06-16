@@ -1,5 +1,5 @@
 # CB: 1.0 - Import necessary libraries
-from reportlab.lib.pagesizes import letter
+from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
 from reportlab.platypus import Table, TableStyle
 from reportlab.lib import colors
@@ -7,6 +7,89 @@ from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.platypus import Paragraph, ListFlowable, ListItem
 from reportlab.platypus import ListFlowable, ListItem
 from reportlab.lib.utils import ImageReader
+from reportlab.graphics.shapes import Drawing
+from reportlab.graphics.charts.barcharts import VerticalBarChart
+import io
+import requests
+from reportlab.lib.utils import ImageReader
+
+# CB: 1.1 - Add Bar Chart
+def format_bar_chart(c, data, x, y, width, height):
+    """
+    Add a bar chart to the canvas at the specified position.
+
+    Args:
+    c: The canvas object.
+    data: The data for the bar chart as a list of lists.
+    x: The x-coordinate for the bottom-left corner of the chart.
+    y: The y-coordinate for the bottom-left corner of the chart.
+    width: The width of the chart.
+    height: The height of the chart.
+    """
+    # Create a new drawing object and add the bar chart to it
+    d = Drawing(width, height)
+    chart = VerticalBarChart()
+    chart.x = 0
+    chart.y = 0
+    chart.width = width
+    chart.height = height
+    chart.data = data
+    d.add(chart)
+
+    # Add the drawing to the canvas
+    renderPDF.draw(d, c, x, y)
+    
+# CB: 1.2 - Add Line Chart
+def format_line_chart(c, data, x, y, width, height):
+    """
+    Add a line chart to the canvas at the specified position.
+
+    Args:
+    c: The canvas object.
+    data: The data for the line chart as a list of lists.
+    x: The x-coordinate for the bottom-left corner of the chart.
+    y: The y-coordinate for the bottom-left corner of the chart.
+    width: The width of the chart.
+    height: The height of the chart.
+    """
+    # Create a new drawing object and add the line chart to it
+    d = Drawing(width, height)
+    chart = HorizontalLineChart()
+    chart.x = 0
+    chart.y = 0
+    chart.width = width
+    chart.height = height
+    chart.data = data
+    d.add(chart)
+
+    # Add the drawing to the canvas
+    renderPDF.draw(d, c, x, y)
+
+# CB: 1.3 - Add Pie Chart
+def format_pie_chart(c, data, x, y, width, height):
+    """
+    Add a pie chart to the canvas at the specified position.
+
+    Args:
+    c: The canvas object.
+    data: The data for the pie chart as a list.
+    x: The x-coordinate for the center of the pie chart.
+    y: The y-coordinate for the center of the pie chart.
+    width: The width of the pie chart.
+    height: The height of the pie chart.
+    """
+    # Create a new drawing object and add the pie chart to it
+    d = Drawing(width, height)
+    chart = Pie()
+    chart.x = width / 2
+    chart.y = height / 2
+    chart.width = width
+    chart.height = height
+    chart.data = data
+    d.add(chart)
+
+    # Add the drawing to the canvas
+    renderPDF.draw(d, c, x, y)
 
 # CB: 2.0 - Define common elements
 def create_header(c, text):
@@ -124,18 +207,31 @@ def format_table(c, data, x, y, style):
     t.wrapOn(c, x, y)
     t.drawOn(c, x, y)
 
-def format_image(c, path, x, y, width):
-    # Create an ImageReader object
-    img = ImageReader(path)
-    
-    # Get the size of the image
-    img_width, img_height = img.getSize()
-    
-    # Calculate the height of the image when it's scaled to the specified width
-    height = width * img_height / img_width
-    
-    # Add the image to the canvas
-    c.drawImage(path, x, y-height, width, height)
+def format_image(c, image_path_or_url, x, y, width, height):
+    """
+    Add an image to the canvas at the specified position.
+
+    Args:
+    c: The canvas object.
+    image_path_or_url: The path or URL of the image.
+    x: The x-coordinate for the bottom-left corner of the image.
+    y: The y-coordinate for the bottom-left corner of the image.
+    width: The width of the image.
+    height: The height of the image.
+    """
+    # Check if the image_path_or_url is a URL
+    if image_path_or_url.startswith('http://') or image_path_or_url.startswith('https://'):
+        # Download the image data and create a file-like object
+        response = requests.get(image_path_or_url)
+        response.raise_for_status()
+        image_data = io.BytesIO(response.content)
+    else:
+        # Use the local file path
+        image_data = image_path_or_url
+
+    # Create an ImageReader object and add the image to the canvas
+    image = ImageReader(image_data)
+    c.drawImage(image, x, y, width, height)
 
 def format_page_number(c, page_number, x, y, style):
     # Set the font, size, and color for the page number
@@ -157,53 +253,63 @@ def add_table(c, data, x, y):
     table.wrapOn(c, x, y)
     table.drawOn(c, x, y)
     
-# CB: 4.10 - Main function
+# CB: 2.4 - Dynamic Element Placement in Full Function
 def create_pdf(report):
-    c = canvas.Canvas("report.pdf", pagesize=letter)
+    c = canvas.Canvas("report.pdf", pagesize=A4)
     
+    # Start the y-coordinate at the top of the page (A4 size is 842 points high)
+    y = 842
+
     # Loop over the data in the report
     for i in range(len(report["headings"])):
-        # Create the header
+        # Create the header and subtract its height from y
         create_header(c, report["header"])
-        
-        # Create the footer
+        y -= 50  # Assume a height of 50 for the header
+
+        # Create the footer and subtract its height from y
         create_footer(c, report["footer"])
-        
-        # Add the page number
+        y -= 50  # Assume a height of 50 for the footer
+
+        # Add the page number and subtract its height from y
         add_page_number(c, report["page_numbers"][i])
-        
-        # Format the heading
+        y -= 20  # Assume a height of 20 for the page number
+
+        # Format the heading and subtract its height from y
         format_heading(c, report["headings"][i])
-        
-        # Format the subheading
+        y -= 30  # Assume a height of 30 for the heading
+
+        # Format the subheading and subtract its height from y
         format_subheading(c, report["subheadings"][i])
-        
-        # Format the body text
+        y -= 20  # Assume a height of 20 for the subheading
+
+        # Format the body text and subtract its height from y
         style = ParagraphStyle('BodyText', parent=getSampleStyleSheet()['BodyText'], fontName='Helvetica', fontSize=10, textColor=colors.black)
-        format_paragraph(c, report["body_text"][i], 30, 700, 500, style)
-        
-        # Format the bullet points
+        format_paragraph(c, report["body_text"][i], 30, y, 500, style)
+        y -= 100  # Assume a height of 100 for the body text
+
+        # Format the bullet points and subtract its height from y
         style = ParagraphStyle('BulletPoints', parent=getSampleStyleSheet()['BodyText'], fontName='Courier', fontSize=10, textColor=colors.black, leftIndent=20, leading=12)
-        format_bullet_points(c, report["bullet_points"][i], 30, 640, 500, style) # Start the bullet points at y-coordinate 640
-        
-        # Add an image
-        format_image(c, report["images"][i], 30, 600, 200) # Start the image at y-coordinate 600 and scale it to a width of 200
-        
-        # Add a table
+        format_bullet_points(c, report["bullet_points"][i], 30, y, 500, style)
+        y -= 100  # Assume a height of 100 for the bullet points
+
+        # Add an image and subtract its height from y
+        format_image(c, report["images"][i], 30, y, 200, 200)
+        y -= 200  # The height of the image is 200
+
+        # Add a table and subtract its height from y
         style = TableStyle([
             ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
             ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
-
             ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
             ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
             ('FONTSIZE', (0, 0), (-1, 0), 14),
-
             ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
             ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
             ('GRID', (0,0), (-1,-1), 1, colors.black)
         ])
-        format_table(c, report["tables"][i], 30, 200, style)
-        
+        format_table(c, report["tables"][i], 30, y, style)
+        y -= 200  # Assume a height of 200 for the table
+
         # Start a new page
         c.showPage()
     
