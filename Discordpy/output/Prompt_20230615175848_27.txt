@@ -1,0 +1,20 @@
+/imagine
+Organic ::2
+Mural ::1
+Serene island beach ::1
+Bewildering time vortex ::1
+Futuristic holographic display ::1
+Ornate ::1
+Dr. Phil ::1
+Transparent ::1
+Detailed hyper ::2
+Spotlight ::1
+Hiroshi Yoshida ::3
+Beautiful landscape ::1
+Intricate ::2
+Prop design ::1
+Whirling windmill ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

@@ -1,0 +1,9 @@
+/imagine
+Dismal ::4
+Luxurious yacht ::3
+Trust ::1
+Serendipity ::2
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

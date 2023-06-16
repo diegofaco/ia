@@ -1,0 +1,19 @@
+/imagine
+Invisible realm ::1
+Abstract Expressionist ::1
+Pop Art ::2
+Whispering galaxies ::3
+Soft light ::1
+Levitating feathers ::1
+Cyborg ::1
+Cinematic color grading ::1
+Red eyes ::1
+Akiko Hatsu ::1
+Colorful hot air balloon ::1
+Abstract Expressionism ::1
+Overhead light ::1
+Renaissance Italian ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

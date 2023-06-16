@@ -1,0 +1,23 @@
+/imagine
+Beautifully lit ::1
+Abandoned ::2
+Expressionism ::1
+Moody lighting ::1
+Foggy ::1
+8K ::1
+Silhouette lighting ::1
+Rugged and rocky coastline ::1
+Bear ::1
+Glittering tiara ::1
+Dan Seagrave ::1
+Rubber ::1
+Futuristic soldier ::1
+Frozen dreams ::1
+Elite ::4
+Rule of thirds ::5
+Craig Mullins ::1
+Trust ::3
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

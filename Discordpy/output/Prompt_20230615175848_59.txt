@@ -1,0 +1,23 @@
+/imagine
+Peter Mohrbacher ::1
+Moody lighting ::1
+Ominous ::3
+Hazy-style ::1
+Spectacular ::1
+Disappear ::3
+Ambient lighting ::2
+Dynamic lighting ::1
+Japanese Shrine ::1
+Italian Renaissance ::1
+Cozy fireplace ::1
+Shimmering golden snitch ::2
+Serene ::1
+Oval Office ::2
+Mural ::1
+Dadaism ::1
+Haunting ::2
+Mike Mignola ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

@@ -1,0 +1,24 @@
+/imagine
+Exquisite painting ::2
+Crashing waves ::1
+Atmospheric ::4
+Japanese cherry blossom tattoo ::1
+Sorrow ::1
+Baroque ::1
+Hyper real ::1
+8K ::1
+Glowing surprises ::1
+Blur ::3
+Manga art style ::2
+Jacek Yerka ::1
+Black paper ::1
+Garbage ::1
+Abstract portrait painting ::1
+Regret ::3
+Volumetric lighting ::1
+Plastic ::2
+Super ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

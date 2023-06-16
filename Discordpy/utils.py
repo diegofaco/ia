@@ -40,21 +40,28 @@ def select_items(num_files, category_counts, categories, output_dir, progress_ba
             current_time = datetime.now().strftime("%Y%m%d%H%M%S")
             with open(f"{output_dir}/Prompt_{current_time}_{i+1:02d}.txt", "w") as file:
                 file.write("/imagine\n")
+                items = []  # List to hold the items
                 for category, (count, is_range) in category_counts.items():
-                    if count > 0: # Only generate items if count is greater than 0
+                    if count > 0:  # Only generate items if count is greater than 0
                         if is_range:
-                            count = randint(1, count)
+                            count = randint(1, count)  # Generate a random count if is_range is True
                         parameters = generate_parameters(count)
                         for _ in range(count):
                             item = choice(categories[category])
                             parameter = parameters[_]
-                            file.write(f"{item} ::{parameter}\n")
+                            items.append(f"{item} ::{parameter}")  # Add item to the list
+                shuffle(items)  # Shuffle the items
+                for item in items:  # Write the shuffled items to the file
+                    file.write(f"{item}\n")
                 file.write("--v 5.1\n")
                 file.write(f"{aspect_ratio}\n")
                 file.write(f"{chaos}\n")
                 file.write(f"{stylize}\n")
                 if tile:
-                    file.write(f"{tile}\n")
+                   file.write(f"{tile}\n")
             progress_bar.setValue((i+1) / num_files * 100)  # Update the progress bar
         except Exception as e:
             logging.error(f"Failed to write file: {e}")
+
+
+

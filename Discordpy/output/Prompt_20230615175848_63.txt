@@ -1,0 +1,19 @@
+/imagine
+Geometric ::2
+Broken promises ::1
+Atmospheric lighting ::2
+Despairing ::2
+Japanese Fan ::2
+Desaturated ::1
+Couch ::1
+Vector art ::1
+Surrealism ::1
+Ford Mustang ::1
+Heavy metal band ::1
+Vividly painted carousel ::1
+Floating ::1
+Ambient lighting ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

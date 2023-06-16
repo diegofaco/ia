@@ -1,0 +1,11 @@
+report = {
+    "header": "My Report Header",
+    "footer": "Page 1",
+    "headings": ["Main Heading", "Another Heading"],
+    "subheadings": ["Subheading", "Another Subheading"],
+    "body_text": ["This is some body text.", "This is some more body text."],
+    "bullet_points": [["Point 1", "Point 2", "Point 3"], ["Another Point 1", "Another Point 2"]],
+    "images": ["/path/to/your/image.jpg", "/path/to/another/image.jpg"],
+    "tables": [[["Header 1", "Header 2"], ["Row 1, Column 1", "Row 1, Column 2"], ["Row 2, Column 1", "Row 2, Column 2"]]],
+    "page_numbers": [1, 2]
+}

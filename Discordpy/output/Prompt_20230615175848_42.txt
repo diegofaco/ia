@@ -1,0 +1,23 @@
+/imagine
+Spotlight ::1
+Photorealism Octane ::1
+Whirling leaves ::2
+Quantum encryption ::1
+Grim ::1
+Blonde hair ::1
+Imposing and formidable thunderstorm with dark swirling clouds ::1
+Cyberpunk girl illustration ::1
+Sin City ::1
+Glorious ::3
+Dark lighting ::2
+Grete Stern ::1
+Creepy ::1
+Black ::1
+Pointillism ::2
+Art Deco ::1
+Sparkling chandelier ::2
+Aspect ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

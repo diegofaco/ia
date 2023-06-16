@@ -1,0 +1,24 @@
+/imagine
+8K post-processing highly detailed ::1
+City street ::1
+Buenos Aires ::1
+Fish ::1
+Ultra detailed ::1
+Neon lights ::2
+Cross section ::2
+Crashing waves ::3
+Dadaism ::1
+Space Odyssey ::1
+Serendipitous moments ::2
+Silken starlight ::1
+Ethereal ::1
+Watercolors ::1
+Spotlight ::1
+Psychedelic ::4
+Utagawa Kuniyoshi ::1
+Realistic ::5
+Sophisticated ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

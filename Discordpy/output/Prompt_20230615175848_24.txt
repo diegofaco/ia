@@ -1,0 +1,18 @@
+/imagine
+Toy design ::1
+Cosmic horror ::2
+Detailed hyper ::1
+Epic composition ::1
+Texture ::1
+Soft light ::1
+Majestic lion in the wild ::1
+Abstract Expressionism ::1
+Golden hour ::2
+Wonder ::1
+Art Deco ::1
+Whistling ::1
+Cubism ::2
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

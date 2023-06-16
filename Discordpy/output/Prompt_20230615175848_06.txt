@@ -1,0 +1,17 @@
+/imagine
+Statue ::1
+Surreal ::1
+Intriguing ::1
+Mountain View ::2
+Massive and ancient stone monolith standing tall in a remote landscape ::1
+Dark lighting ::1
+Polar bear ::1
+Hilma af ::1
+Architectural masterpiece ::1
+Big Lebowski ::1
+Renaissance ::1
+Intricate details ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

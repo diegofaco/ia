@@ -1,0 +1,22 @@
+/imagine
+Leonid Afremov ::1
+Knife ::1
+Abstract Expressionism ::1
+Yoji Shinkawa ::1
+Dr. Phil ::2
+Dramatic lighting ::2
+Peter Mohrbacher ::1
+Digital abstract ::1
+Shatter ::1
+High fantasy ::1
+Whispering winds ::1
+Intricate snowflake ::2
+Forgotten melodies ::2
+Sheet ::1
+Dynamic lighting ::1
+Intricate ink illustration ::2
+Comic art ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

@@ -1,0 +1,17 @@
+/imagine
+Time-worn streets ::1
+Eye ::1
+3D sculpture ::1
+Non-Euclidean ::1
+In the style of Charlie Bowater ::2
+Abundance ::1
+Futuristic Vehicle ::2
+Cyberpunk cityscape ::1
+Rim lighting ::1
+Tonalism ::1
+Intricate complexity ::1
+Futuristic ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

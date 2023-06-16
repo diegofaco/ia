@@ -1,0 +1,33 @@
+/imagine
+Plague doctor ::1
+Luxury ::3
+Subsurface Scattering ::1
+Hypermaximalist ::1
+Rim lighting ::2
+Underground-themed ::1
+Hyper-realism ::1
+Peaceful meadow ::1
+Vividness ::1
+Zdzisław Beksiński ::1
+Watercolors ::1
+Watercolor-style ::3
+Art Nouveau ::4
+Olympus OM-D E-M1 Mark III M.Zuiko Digital ED 60mm f/2.8 Macro ::1
+Abstract neon ::1
+Dynamic ::1
+Tim Burton ::1
+Craig Mullins ::4
+Idyllic and picturesque vineyard at sunset ::1
+Breath of The Wild ::5
+Minimalist ::5
+In the style of Charlie Bowater ::1
+Dramatic lighting ::1
+Dreamy fairy glen ::1
+Spotlight ::1
+Post-apocalyptic ::1
+Movie ::5
+Futuristic ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

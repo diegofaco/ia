@@ -1,0 +1,17 @@
+/imagine
+Ukiyo-e ::1
+Covered ::1
+Moebius ::1
+Sci-Fi City ::1
+Neon lights ::1
+Metamorphic rebirth ::1
+James Gurney ::1
+Break ::1
+Edward Gorey ::1
+Dark lighting ::2
+Headroom ::1
+Forgotten corners ::2
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

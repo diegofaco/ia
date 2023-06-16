@@ -1,0 +1,23 @@
+/imagine
+Otomo Katsuhiro ::1
+Horse ::1
+Geometric ::1
+Black paper ::3
+Fantasy character illustration ::1
+Clear light complexion ::1
+Crystal-clear icicles hanging from a roof ::2
+Minion ::1
+Historic cobblestone street ::1
+Global illumination ::1
+Epic composition ::1
+Crisp ::2
+Lean face ::1
+Epic composition ::5
+West ::1
+Symbolism ::2
+Concept art environment ::1
+Richard Scarry ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

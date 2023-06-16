@@ -1,0 +1,8 @@
+/imagine
+Saturation ::2
+Solitude ::1
+Melancholy ::3
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

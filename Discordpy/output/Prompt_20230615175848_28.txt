@@ -1,0 +1,18 @@
+/imagine
+Symmetry ::1
+Gossamer moonlight ::1
+Dark Lord ::1
+Futuristic soldier ::1
+Ambient lighting ::1
+Vibrant autumn foliage ::1
+Purple ::1
+Honeycomb ::2
+Constructivism ::1
+Medieval castle ::2
+Wonderment ::1
+Romanticism ::1
+Animals ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

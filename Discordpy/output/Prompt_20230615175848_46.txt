@@ -1,0 +1,24 @@
+/imagine
+Wide angle ::1
+Medieval Sword ::1
+Interactive art ::1
+Blurry ::5
+Levitating sparks ::1
+Central ::2
+Psychedelic ::3
+Sculpted ice sculpture ::2
+Sci-Fi Cityscape Art ::1
+Flickering memories ::2
+Thunder ::1
+Cubism style ::1
+Plane ::2
+Atmospheric lighting ::1
+Matte painting ::2
+De Stijl ::1
+Japanese art style ::2
+Atmospheric ::1
+Zdzisław Beksiński ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

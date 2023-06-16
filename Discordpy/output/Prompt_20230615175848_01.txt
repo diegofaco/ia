@@ -1,0 +1,19 @@
+/imagine
+Levitating stones ::1
+Luminous ripples ::3
+Hyperdetailed ::1
+Victorian ::1
+Sci-Fi Robot ::1
+Imagine prompt ::1
+Bounce lighting ::1
+Astonishment ::1
+Studio lighting ::1
+Enveloping ::1
+Art Deco ::1
+Watercolors ::2
+Cyberpunk character ::1
+Dark Lord ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

@@ -1,0 +1,21 @@
+/imagine
+Dramatic lighting ::1
+Tropical-themed ::1
+Wide angle ::3
+Japanese cherry blossom tattoo ::1
+Mural ::1
+Sparkling diamond ::1
+Blue color ::1
+Bewitched flying broomstick ::2
+8K post-processing highly detailed ::1
+Expansive and captivating panoramic view from a mountaintop ::1
+Street art ::1
+Muted colors ::1
+Romantic seaside sunset ::1
+Dungeons Dragons ::1
+Sun-kissed ::1
+Cyberpunk girl illustration ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

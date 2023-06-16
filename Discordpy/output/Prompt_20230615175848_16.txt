@@ -1,0 +1,21 @@
+/imagine
+Innovation ::2
+Blue sky ::1
+Hiroshi Yoshida ::1
+Illusion ::3
+Japanese Street ::2
+Matte ::1
+Tumble ::1
+Comic book style ::1
+Hazy-style ::2
+Sits ::2
+Cubism ::1
+Futuristic vehicle design ::1
+Sunny ::1
+Sparkling mermaid's tail ::1
+Studio lighting ::1
+Diffused lights ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

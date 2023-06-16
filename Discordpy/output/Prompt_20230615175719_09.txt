@@ -1,0 +1,8 @@
+/imagine
+Inspiration ::1
+Envy ::2
+Kaleidoscope ::3
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

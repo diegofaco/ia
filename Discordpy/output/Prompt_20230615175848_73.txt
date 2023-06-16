@@ -1,0 +1,16 @@
+/imagine
+Renaissance ::1
+Mural ::1
+Neoclassicism ::1
+Intricate ::1
+Ambient lighting ::1
+Abstract metal ::1
+Awe-inspiring ::1
+Daido Moriyama ::1
+In the style of Charlie Bowater ::1
+Majestic bald eagle in flight ::1
+Floating universe ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

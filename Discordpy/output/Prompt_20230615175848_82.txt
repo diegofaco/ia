@@ -1,0 +1,25 @@
+/imagine
+Neon Genesis ::1
+Daniel Gerhartz ::3
+Full frame ::1
+Volumetric light ::1
+Hyperdetailed ::2
+Spotlight ::1
+Interior ::1
+Hiroshi Yoshida ::1
+Intriguing ::2
+Ukiyo-e ::1
+Samurai warrior ::1
+Psychedelic ::1
+Op Art ::2
+Ornamental peacock tail feathers ::1
+Social Realism ::1
+Chocolate Factory ::1
+Astral dance ::1
+Mysterious secret passage ::1
+Dappled light ::2
+Ecstasy ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

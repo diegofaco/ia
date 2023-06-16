@@ -1,0 +1,10 @@
+/imagine
+Resilience ::4
+Captivating ::1
+Resentment ::1
+Gross ::5
+Trust ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

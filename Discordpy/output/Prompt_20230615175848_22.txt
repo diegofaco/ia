@@ -1,0 +1,20 @@
+/imagine
+Epic composition ::3
+Rippling pond surface ::1
+Bigfoot ::1
+Bright pastel colors ::4
+Expressionism ::1
+Dynamic lighting ::1
+Medieval Dragon ::1
+Rococo ::2
+Abstract Painting Texture ::1
+Luxury ::2
+Silken caress ::1
+Blur ::1
+Flat design ::1
+Bird ::1
+Striking ::2
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

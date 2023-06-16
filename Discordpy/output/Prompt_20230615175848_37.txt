@@ -1,0 +1,21 @@
+/imagine
+Dariusz Zawadzki ::1
+Refraction ::2
+Character design ::1
+Luminism ::1
+Wood ::1
+Seemingly infinite and breathtakingly beautiful tulip fields in bloom ::3
+Trending on ArtStation ::4
+Time-worn streets ::1
+Soft light ::1
+Epic composition ::2
+Ominous ::3
+Rule of thirds ::1
+Expansive desert dunes ::1
+Very Detailed ::1
+Plague doctor ::1
+Vividness ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

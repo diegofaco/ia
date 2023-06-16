@@ -1,0 +1,23 @@
+/imagine
+Harmony ::1
+Neo-Impressionism ::1
+Hands ::1
+Artgerm ::5
+Transparent ::1
+Peter Mohrbacher ::4
+Sinister cursed artifact ::3
+Sunny ::1
+Backlighting ::1
+Wonder ::2
+Peter Mohrbacher ::1
+Towering skyscraper ::2
+By Renato Muccillo and Andreas Rocha ::3
+Steve Jobs ::1
+Mechanical Armor ::1
+Portrait ::1
+Ocean waves ::1
+Intricate ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

@@ -1,0 +1,20 @@
+/imagine
+Conceptual photography ::1
+Fauvism ::1
+Angelina Jolie ::1
+Detailed hyper ::1
+Spotlight ::1
+Rainbow dreams ::2
+Tarot card ::1
+Fairytale ::1
+Monkey ::3
+Drip ::1
+Soft light ::1
+Daniel Gerhartz ::2
+Prismatic ::1
+Mural ::1
+Dancing ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

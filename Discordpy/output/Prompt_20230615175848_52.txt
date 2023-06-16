@@ -1,0 +1,23 @@
+/imagine
+Technological revolution ::1
+Balance ::1
+Digital illustration ::1
+Fantasy art landscape ::1
+Ethereal vistas ::1
+Abstract Space ::2
+Dark lighting ::2
+Highly detailed ::1
+Melancholy ::1
+Pristine snowscape ::2
+Steve Jobs ::1
+Minimalism ::1
+Unreal Engine ::2
+Empathy ::3
+Mucha Craig ::1
+Arachnid ::2
+Zombie ::1
+Overhead light ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

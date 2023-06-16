@@ -1,0 +1,19 @@
+/imagine
+Photorealistic ::1
+Golden ratio ::1
+Medieval siege ::1
+Neon lights ::1
+Aid Man ::1
+Medieval castle ::1
+Epic lighting ::1
+Graffiti ::1
+Pointillism ::2
+Vibrant street art mural ::1
+Shadowy haunted mansion ::2
+Thousands ::1
+Awe-inspiring ::1
+Art Nouveau ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

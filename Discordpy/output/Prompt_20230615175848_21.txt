@@ -1,0 +1,22 @@
+/imagine
+Impressionism ::1
+Lugubrious ::1
+Character concept art ::2
+Very Detailed ::1
+Dimensional ::1
+Majestic ::1
+Post apocalyptic ::1
+Brian Froud ::1
+Elegant ballroom ::1
+Pink Floyd ::1
+Heavy metal band ::1
+Neon lights ::1
+Pixel ::1
+Beautifully lit ::3
+Pierre-Auguste Renoir ::4
+Massive and captivating waterfall with a thunderous roar ::2
+Rippling pond surface ::3
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

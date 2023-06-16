@@ -1,0 +1,8 @@
+/imagine
+Sway ::1
+Rainbow ::3
+Adventure ::2
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

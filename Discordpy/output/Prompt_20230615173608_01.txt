@@ -1,0 +1,35 @@
+/imagine
+Insanely ::2
+Chaotic ::1
+Sci-fi space station interior ::1
+Sparkling diamond ::1
+Futuristic ::2
+Hyper-realistic ::1
+Oil painting ::1
+Twinkling starry night sky ::4
+Shimmering sequin gown ::2
+Art Nouveau ::1
+Bio ::1
+Fujifilm X-T4 Fujinon XF16mm F1.4 R WR ::1
+Light Probe ::1
+Comic book style ::1
+Ink painting ::3
+Corona ::1
+Photorealistic ::5
+Dappled light ::1
+Embarrassment ::5
+Japanese art wallpaper ::1
+Rustling ::1
+Intricate ::1
+Watercolors ::1
+Headshot photograph ::5
+Breath of The Wild ::2
+Studio Ghibli ::1
+Muscles ::2
+Blender ::1
+Daniel Gerhartz ::4
+Environment concept ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

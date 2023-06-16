@@ -1,0 +1,22 @@
+/imagine
+CGSociety ::3
+Glowing embers in a crackling bonfire ::2
+Photorealistic ::5
+Abstract waves ::1
+Green nature ::1
+Pieces ::1
+Character concept art ::1
+Freedom ::1
+Sci-fi spaceship ::1
+Mike Mignola ::1
+Fauvism ::2
+Portrait ::1
+Art Deco ::1
+Low key lighting ::1
+Hotdog ::1
+Quaint country cottage ::1
+Light behind waves ::2
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

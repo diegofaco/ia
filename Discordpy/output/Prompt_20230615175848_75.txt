@@ -1,0 +1,25 @@
+/imagine
+Rendered in Octane ::1
+Character concept art ::3
+Crashing waves ::1
+Abstract ::1
+Airplane-themed ::1
+Lost Souls ::2
+Refraction ::1
+Dada ::1
+Change ::2
+Surrealism ::2
+Daft Punk ::1
+Opulent palace ::3
+Dreamy fairy glen ::3
+Trending on ArtStation ::1
+Lucian Freud ::1
+Sparkling ::1
+Craig Mullins ::1
+Neo-Impressionism ::1
+Studio lighting ::1
+Beautiful ::5
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

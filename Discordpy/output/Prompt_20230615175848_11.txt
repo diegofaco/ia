@@ -1,0 +1,23 @@
+/imagine
+Neo-Impressionism ::1
+Flatten ::1
+Concept design ::1
+Rolling ::1
+Studio Ghibli ::1
+Toulouse Lautrec ::2
+Sparkling gemstone ::1
+Druid ::1
+Miyazaki Hayao ::2
+Energetic vortex ::2
+By Renato Muccillo and Andreas Rocha ::1
+Bounce lighting ::1
+Japanese fan ::1
+Vibrant sunset ::1
+Girl ::1
+Neo-Impressionism ::2
+Cinematic composition ::2
+Conceptual installation ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

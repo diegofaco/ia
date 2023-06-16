@@ -1,0 +1,19 @@
+/imagine
+Hyper-detailed ::1
+Ethereal ::1
+Conceptual portrait ::1
+Run ::1
+Peter Mohrbacher ::5
+Realism ::1
+Luminism ::2
+Lustrous ::1
+The Lion King ::1
+Oil painting ::1
+Trending on ArtStation ::4
+Futuristic cityscape ::1
+Intricate ::1
+Silhouette lighting ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

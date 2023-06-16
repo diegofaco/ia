@@ -1,0 +1,20 @@
+/imagine
+Rococo ::1
+Sinister cursed artifact ::3
+Neon lights ::1
+Realistic tree drawing ::1
+Old friendships ::1
+Trending on ArtStation ::1
+Renaissance Italian ::1
+Constructivism ::1
+Rain ::1
+Dadaism ::2
+Crashing ::2
+Triumph ::1
+Comic book style ::1
+Johannes Vermeer ::1
+Oval Office ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

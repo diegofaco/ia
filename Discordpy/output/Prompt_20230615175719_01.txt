@@ -1,0 +1,8 @@
+/imagine
+Trust ::1
+Gloss ::3
+Colorful street art mural ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

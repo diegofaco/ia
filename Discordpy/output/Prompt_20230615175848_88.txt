@@ -1,0 +1,23 @@
+/imagine
+Pastel colors ::1
+Cosmic energy by Kelly McKernan ::1
+8K resolution ::1
+Rolling ::1
+Secret ::1
+Art Nouveau ::1
+Vibrant coral ::2
+Dynamic lighting ::1
+Low poly background ::1
+Ukiyo-e ::1
+Enchanting fairy lights ::1
+Minimalistic ::1
+Art Deco ::1
+Unfathomable and mysterious abyss in the depths of the ocean ::1
+Sci-Fi Space Station Interior ::1
+Hiroshi Yoshida ::5
+Wings ::2
+Hypermaximalist ::3
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

@@ -1,0 +1,19 @@
+/imagine
+John Martin ::1
+Japanese Demon Mask ::1
+CGSociety ::2
+Trend ::1
+Exquisite ::1
+Depth of field ::1
+Neon lights ::1
+Sophisticated ::2
+Dynamic lighting ::2
+Atmospheric ::1
+Melt ::1
+Wide angle ::1
+Romanticism ::1
+Hiroshi Yoshida ::3
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

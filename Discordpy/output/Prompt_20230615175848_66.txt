@@ -1,0 +1,21 @@
+/imagine
+Elegant ::1
+Micro details ::1
+Tonalism ::1
+Harmony ::1
+Low key lighting ::1
+Mike Mignola ::5
+Artificial intelligence technology ::1
+Vintage record player ::1
+Fuji ::2
+Tranquil seashore ::1
+Elegant ::1
+Uncanny Valley ::1
+Mickey Mouse ::1
+Love ::1
+Depth of field ::3
+Soldier ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

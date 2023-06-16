@@ -1,0 +1,22 @@
+/imagine
+Satan ::1
+Sparkle ::1
+Romanticism ::2
+Unreal Engine ::1
+Hyperrealism ::1
+Family Photo ::1
+Peppa Pig ::1
+Overhead light ::1
+Golden beach ::1
+Beautifully lit ::3
+Flame-themed ::1
+Abstract swirls ::1
+John Williams ::1
+Diffraction ::2
+Pigment ::1
+Cartoon ::2
+Expressionism ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

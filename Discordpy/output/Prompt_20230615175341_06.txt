@@ -1,0 +1,8 @@
+/imagine
+Exuberance ::2
+Unity ::1
+Vibrant coral reef teeming with marine life ::3
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

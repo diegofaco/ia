@@ -1,0 +1,25 @@
+/imagine
+Fantasy environment ::1
+3D rendering ::1
+Colorful underwater coral garden ::1
+Horror ::1
+Golden ::1
+Bob Dylan ::1
+Baroque ::2
+Still Life ::1
+Expansive desert dunes ::1
+Opulent palace interior ::2
+Fantasy portrait painting ::2
+Moody lighting ::1
+Cinematic composition ::1
+Epic composition ::5
+Resplendent ::3
+Neon lights ::1
+Glowing moon ::2
+Single face ::4
+Artgerm ::1
+Cinematic ::2
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

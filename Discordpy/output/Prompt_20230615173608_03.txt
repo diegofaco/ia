@@ -1,0 +1,36 @@
+/imagine
+Golden ratio ::1
+Giant ::1
+Loish ::1
+Zdzisław Beksiński ::1
+Baby Yoda ::3
+Bright pastel colors ::1
+Crystal-clear waterfall ::1
+Footprint ::1
+Dandelion ::3
+Luxury ::4
+Robotic ::1
+Mullins Trending ::1
+Natural lighting ::1
+Rustling leaves ::1
+In-focus ::1
+Illustration ::4
+Beautiful ::5
+Celestial alignment ::5
+Pearlescent ::1
+Traditional Chinese painting ::1
+Fantasy ::5
+Engine high ::1
+Leica M10-R with Leica Summilux-M 35mm f/1.4 ASPH ::1
+Ancient ruins ::1
+Symbolism ::1
+Carnival-themed ::3
+Hyper-detailed ::1
+Concept Art ::1
+Ancient ::1
+Purple ::4
+Oil painting ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

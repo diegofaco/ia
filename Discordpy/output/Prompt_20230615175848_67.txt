@@ -1,0 +1,21 @@
+/imagine
+Concept art monster ::1
+Vile ::1
+Dusty memories ::2
+Diffraction ::1
+Mobile Suit ::1
+Futuristic ::1
+Insanely detailed and intricate ::1
+Tarot card ::3
+Cinematic ::4
+Pop Art ::1
+Soaring eagle ::1
+God Light ::2
+Overlooking ::1
+High detail ::1
+Constructivism ::2
+Toy design ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

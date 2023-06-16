@@ -1,0 +1,22 @@
+/imagine
+Spectacular lightning storm ::1
+Mystical forest waterfall ::2
+Grainy ::1
+Ethereal glow ::1
+Futuristic city ::1
+Faded landscapes ::1
+Art Nouveau ::1
+3D ::1
+Sunset ::1
+World Cup ::1
+Detailed realistic ::2
+Tarot card ::4
+De Stijl ::1
+By Renato Muccillo and Andreas Rocha ::2
+Studio lighting ::1
+Digital fractal ::1
+Joshua Tree ::2
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

@@ -1,0 +1,18 @@
+/imagine
+Scintillate ::1
+Japanese pagoda ::1
+Mural ::1
+Souls Boss ::1
+Spaceship ::1
+Celestial convergence ::1
+Rippling pond surface ::1
+Cracked porcelain ::1
+Bounce lighting ::1
+Prop design ::1
+Enigmatic enchanted mirror ::3
+Bright pastel colors ::1
+Pond ::2
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

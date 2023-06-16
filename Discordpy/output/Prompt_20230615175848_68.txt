@@ -1,0 +1,19 @@
+/imagine
+Hopefulness ::1
+Street Fighter ::1
+Ivan Aivazovsky ::1
+Neoclassicism ::2
+Moody lighting ::1
+Medieval dragon ::1
+Tonalism ::1
+Walking ::2
+Grete Stern ::2
+Colors ::1
+Magical atmosphere ::1
+Psychedelic ::2
+Crisp morning ::1
+By Miyazaki ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

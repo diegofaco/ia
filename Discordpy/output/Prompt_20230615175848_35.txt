@@ -1,0 +1,21 @@
+/imagine
+Hiking-themed ::1
+Moody lighting ::1
+Medieval Fantasy Castle ::1
+Neoclassicism ::1
+Super Mario ::1
+Solar eclipse ::1
+Dancing butterflies ::1
+Wide angle ::3
+Cartier-Bresson ::1
+Backlighting ::1
+Character concept ::4
+Constructivism ::1
+Low poly character ::1
+Ornate ::1
+Restlessness ::1
+Renaissance Italian ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

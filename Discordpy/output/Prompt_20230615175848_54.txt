@@ -1,0 +1,21 @@
+/imagine
+Jump ::1
+Person ::1
+Machinery ::2
+Bounce lighting ::1
+Enigmatic ::3
+Wave-themed ::2
+White color ::1
+Serenity ::1
+Dazzling ::1
+Surrealism ::1
+Cloaked ::1
+Modern house interior ::1
+William Blake ::1
+Glittering tiara ::3
+Singing raindrops ::2
+Watercolor ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

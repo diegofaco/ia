@@ -13,7 +13,7 @@ import utils
 logging.basicConfig(filename='app.log', level=logging.INFO)
 
 # CB: 1.2 - Define constants
-NUM_OPTIONS = [str(i) for i in range(1, 100)]  # Max files set to 99
+NUM_OPTIONS = ["0"] + [str(i) for i in range(1, 100)]  # Max files set to 99
 ASPECT_RATIO_OPTIONS = ["--ar 16:9", "--ar 4:5", "--ar 1:1", "--ar 3:4", "--ar 4:3", "--ar 5:4", "--ar 3:4", "--ar 4:7", "--ar 7:4", "--ar 2:1", "--ar 1:2", "--ar 3:1", "--ar 1:3", "--ar 9:16"]
 CHAOS_OPTIONS = ["--c 0", "--c 5", "--c 10", "--c 20", "--c 25", "--c 35", "--c 40", "--c 50", "--c 60", "--c 75", "--c 90", "--c 95", "--c 100"]
 STYLIZE_OPTIONS = ["--s 0", "--s 10", "--s 50", "--s 100", "--s 200", "--s 300", "--s 500", "--s 700", "--s 800", "--s 900", "--s 950", "--s 990", "--s 1000"]

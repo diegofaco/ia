@@ -1,0 +1,25 @@
+/imagine
+Smoke ::1
+Ambient lighting ::1
+Art Nouveau ::1
+Sparkling gem ::3
+Slide ::1
+Rushing ::1
+Caspar ::1
+Detailed Octane ::1
+In the style of Charlie Bowater ::1
+Pierre-Auguste Renoir ::2
+Tear ::1
+Cinematic composition ::3
+Vast and rugged mountain range stretching into the horizon ::2
+Luxury ::5
+Dark horror ::1
+Insane details ::1
+Bobby Hill ::1
+Fenghua Zhong ::1
+Moon Landing ::1
+Crispy ::2
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

@@ -1,0 +1,18 @@
+/imagine
+Blooming ::1
+Feudal Japan ::2
+Tattoo ::1
+Kayaking ::1
+Dark city ::1
+Ethereal ::3
+Blurry ::1
+Overhead light ::1
+Epic ::1
+Crush ::1
+Bright pastel colors ::4
+Bruce Pennington ::1
+Still Life ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100

@@ -1,0 +1,19 @@
+/imagine
+Volumetric lighting ::1
+Kobe Bryant ::1
+Nausicaa Ghibli ::1
+Cyberpunk style ::1
+Misty mountains ::1
+Breath of The Wild ::2
+Golden ratio ::3
+Pixel art ::2
+Futurism ::1
+Artstyle ::1
+Charming and cozy café on a cobblestone street ::1
+Abstract Expressionism ::1
+David Bowie ::2
+David Roberts ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100
