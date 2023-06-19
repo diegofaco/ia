@@ -52,15 +52,13 @@ def create_table(table_data):
     table.setStyle(style)
     return table
 
-# CB: 2.0 - Create the PDF
+# CB: 3.0 - Define the function to create the PDF
 def create_pdf(report):
-    # CB: 2.1 - Get the current date and time
     now = datetime.datetime.now()
     timestamp = now.strftime("%Y%m%d%H%M%S")
     filename = f"report_{timestamp}.pdf"
     doc = SimpleDocTemplate(filename, pagesize=A4)
     elements = []
-
     styles = getSampleStyleSheet()
     styles.add(ParagraphStyle(name='Header', parent=styles['Normal'], fontSize=16, textColor=colors.gray, alignment=1))
     styles.add(ParagraphStyle(name='Footer', parent=styles['Normal'], fontSize=10, textColor=colors.gray))
@@ -68,20 +66,6 @@ def create_pdf(report):
     styles.add(ParagraphStyle(name='Heading2', parent=styles['Normal'], fontSize=12, textColor=colors.black, spaceBefore=12, spaceAfter=6))
     styles.add(ParagraphStyle(name='BodyText', parent=styles['Normal'], fontSize=10, textColor=colors.black))
     styles.add(ParagraphStyle(name='Bullet', parent=styles['BodyText'], firstLineIndent=0, spaceBefore=20))
-
-    for section in report:
-        elements.extend(create_section(section, styles))
-
-    doc.build(elements)
-
-# CB: 4.0 - Define the function to create the PDF
-def create_pdf(report):
-    now = datetime.datetime.now()
-    timestamp = now.strftime("%Y%m%d%H%M%S")
-    filename = f"report_{timestamp}.pdf"
-    doc = SimpleDocTemplate(filename, pagesize=A4)
-    elements = []
-
     for section in report:
         header = create_header(section["header"], styles)
         footer = create_footer(section["footer"], styles)
@@ -92,12 +76,10 @@ def create_pdf(report):
         table = create_table(section["table"], styles)
         image = create_image(section["image"], styles)
         page_number = create_page_number(section["page_number"], styles)
-
         elements.extend([header, footer, heading, subheading, body_text, bullet_points, table, image, page_number])
-
     doc.build(elements)
 
-# CB: 5.0 - Test the template
+# CB: 4.0 - Test the template
 def test_template():
     report = [
         {
