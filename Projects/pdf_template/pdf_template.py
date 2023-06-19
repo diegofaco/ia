@@ -53,19 +53,28 @@ def create_table(table_data):
     return table
 
 # CB: 3.0 - Define the function to create the PDF
-def create_pdf(report):
+def create_pdf(report, style_config=None):
     now = datetime.datetime.now()
     timestamp = now.strftime("%Y%m%d%H%M%S")
     filename = f"report_{timestamp}.pdf"
     doc = SimpleDocTemplate(filename, pagesize=A4)
     elements = []
     styles = getSampleStyleSheet()
-    styles.add(ParagraphStyle(name='Header', parent=styles['Normal'], fontSize=16, textColor=colors.gray, alignment=1))
-    styles.add(ParagraphStyle(name='Footer', parent=styles['Normal'], fontSize=10, textColor=colors.gray))
-    styles.add(ParagraphStyle(name='Heading1', parent=styles['Normal'], fontSize=14, textColor=colors.black, spaceAfter=12))
-    styles.add(ParagraphStyle(name='Heading2', parent=styles['Normal'], fontSize=12, textColor=colors.black, spaceBefore=12, spaceAfter=6))
-    styles.add(ParagraphStyle(name='BodyText', parent=styles['Normal'], fontSize=10, textColor=colors.black))
-    styles.add(ParagraphStyle(name='Bullet', parent=styles['BodyText'], firstLineIndent=0, spaceBefore=20))
+    
+    # CB: 1.1.1 - Check if style configuration is provided
+    if style_config is None:
+        # Default styles
+        styles.add(ParagraphStyle(name='Header', parent=styles['Normal'], fontSize=16, textColor=colors.gray, alignment=1))
+        styles.add(ParagraphStyle(name='Footer', parent=styles['Normal'], fontSize=10, textColor=colors.gray))
+        styles.add(ParagraphStyle(name='Heading1', parent=styles['Normal'], fontSize=14, textColor=colors.black, spaceAfter=12))
+        styles.add(ParagraphStyle(name='Heading2', parent=styles['Normal'], fontSize=12, textColor=colors.black, spaceBefore=12, spaceAfter=6))
+        styles.add(ParagraphStyle(name='BodyText', parent=styles['Normal'], fontSize=10, textColor=colors.black))
+        styles.add(ParagraphStyle(name='Bullet', parent=styles['BodyText'], firstLineIndent=0, spaceBefore=20))
+    else:
+        # User-provided styles
+        for style_name, attributes in style_config.items():
+            styles.add(ParagraphStyle(name=style_name, parent=styles['Normal'], **attributes))
+            
     for section in report:
         header = create_header(section["header"], styles)
         footer = create_footer(section["footer"], styles)
@@ -77,10 +86,20 @@ def create_pdf(report):
         image = create_image(section["image"], styles)
         page_number = create_page_number(section["page_number"], styles)
         elements.extend([header, footer, heading, subheading, body_text, bullet_points, table, image, page_number])
-    doc.build(elements)
+
+    style_config = {
+        'Header': {'fontSize': 20, 'textColor': colors.darkgray, 'alignment': 1},
+        'Footer': {'fontSize': 12, 'textColor': colors.darkgray},
+        'Heading1': {'fontSize': 16, 'textColor': colors.black, 'spaceAfter': 12},
+        'Heading2': {'fontSize': 14, 'textColor': colors.black, 'spaceBefore': 12, 'spaceAfter': 6},
+        'BodyText': {'fontSize': 12, 'textColor': colors.black},
+        'Bullet': {'parent': 'BodyText', 'firstLineIndent': 0, 'spaceBefore': 20}
+    }
+
+    test_template(style_config=style_config)
 
 # CB: 4.0 - Test the template
-def test_template():
+def test_template(style_config=None):
     report = [
         {
             "header": "My Report Header",
@@ -93,7 +112,7 @@ def test_template():
             "image": "Grafico01.jpg"
         }
     ]
-    create_pdf(report)
+    create_pdf(report, style_config)
 
 # CB: 6.0 - Main entry point
 if __name__ == "__main__":
