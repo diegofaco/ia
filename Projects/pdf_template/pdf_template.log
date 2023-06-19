@@ -1,2 +1,9 @@
+
+ERROR:root:Error creating footer: "Style 'Footer' not found in stylesheet"
 ERROR:root:Error creating bullet_points: "Style 'CustomBullet' not found in stylesheet"
-ERROR:root:Failed to create element of type bullet_points
+ERROR:root:Error creating table: 'Report' object has no attribute 'create_table'
+INFO:root:Building report...
+ERROR:root:Error building report: 'str' object has no attribute 'canv'
+ERROR:root:Error creating image: Image file not found: path_to_image.jpg
+INFO:root:Building report...
+ERROR:root:Error building report: 'list' object has no attribute 'getKeepWithNext'
