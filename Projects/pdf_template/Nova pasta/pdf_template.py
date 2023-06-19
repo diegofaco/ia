@@ -96,7 +96,7 @@ def create_pdf(report, style_config=None):
         'Bullet': {'parent': 'BodyText', 'firstLineIndent': 0, 'spaceBefore': 20}
     }
 
-    test_template(style_config=style_config)
+    test_template(style_config, style_config)
 
 # CB: 4.0 - Test the template
 def test_template(style_config=None):
