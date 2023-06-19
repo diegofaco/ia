@@ -4,99 +4,89 @@ from reportlab.lib.pagesizes import A4
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
 from reportlab.lib import colors
 import datetime
+import logging
 
-# CB: 2.0 - Define functions for creating each element
-def create_header(header_text, stylesheet):
-    header = Paragraph(header_text, stylesheet['Heading1'])
-    return header
+# CB: 2.0 - Set up logging
+logging.basicConfig(filename='pdf_template.log', level=logging.INFO)
 
-def create_footer(footer_text, stylesheet):
-    footer = Paragraph(footer_text, stylesheet['Footer'])
-    return footer
+# CB: 3.0 - Define the Report class
+class Report:
+    def __init__(self, style_config=None):
+        self.styles = getSampleStyleSheet()
+        self.style_config = style_config if style_config else {}
+        self.elements = []
 
-def create_heading(heading_text, stylesheet):
-    heading = Paragraph(heading_text, stylesheet['Heading2'])
-    return heading
+    # CB: 3.1 - Define functions for creating each element
+    def create_element(self, element_type, content):
+        try:
+            if element_type == "header":
+                return Paragraph(content, self.styles['Heading1'])
+            elif element_type == "footer":
+                return Paragraph(content, self.styles['Footer'])
+            elif element_type == "heading":
+                return Paragraph(content, self.styles['Heading2'])
+            elif element_type == "subheading":
+                return Paragraph(content, self.styles['Heading3'])
+            elif element_type == "body_text":
+                return Paragraph(content, self.styles['BodyText'])
+            elif element_type == "bullet_points":
+                return [Paragraph(bullet, self.styles['CustomBullet']) for bullet in content]
+            elif element_type == "image":
+                return Image(content, width=200)
+            elif element_type == "table":
+                return self.create_table(content)
+            else:
+                logging.error(f"Unknown element type: {element_type}")
+                return None
+        except Exception as e:
+            logging.error(f"Error creating {element_type}: {e}")
+            return None
 
-def create_subheading(subheading_text, stylesheet):
-    subheading = Paragraph(subheading_text, stylesheet['Heading3'])
-    return subheading
+    def create_table(self, table_data):
+        style = TableStyle([
+            ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
+            ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
+            ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
+            ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
+            ('FONTSIZE', (0, 0), (-1, 0), 14),
+            ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
+            ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
+            ('GRID', (0,0), (-1,-1), 1, colors.black)
+        ])
+        table = Table(table_data)
+        table.setStyle(style)
+        return table
 
-def create_body_text(body_text, stylesheet):
-    body = Paragraph(body_text, stylesheet['BodyText'])
-    return body
+    # CB: 3.2 - Define the function to create the PDF
+    def create_pdf(self, report):
+        now = datetime.datetime.now()
+        timestamp = now.strftime("%Y%m%d%H%M%S")
+        filename = f"report_{timestamp}.pdf"
+        doc = SimpleDocTemplate(filename, pagesize=A4)
 
-def create_bullet_points(bullet_points, stylesheet):
-    bullets = [Paragraph(bullet, stylesheet['CustomBullet']) for bullet in bullet_points]
-    return bullets
+        # CB: 3.2.1 - Apply style configuration
+        for style_name, attributes in self.style_config.items():
+            if style_name in self.styles:
+                # Update existing style
+                self.styles[style_name].__dict__.update(attributes)
+            else:
+                # Add new style
+                self.styles.add(ParagraphStyle(name=style_name, parent=self.styles['Normal'], **attributes))
 
-def create_image(image_path):
-    image = Image(image_path, width=200)
-    return image
+        # CB: 3.2.2 - Create elements
+        for section in report:
+            for element_type, content in section.items():
+                element = self.create_element(element_type, content)
+                if element:
+                    self.elements.append(element)
+                else:
+                    logging.error(f"Failed to create element of type {element_type}")
 
-def create_table(table_data):
-    style = TableStyle([
-        ('BACKGROUND', (0, 0), (-1, 0), colors.grey),
-        ('TEXTCOLOR', (0, 0), (-1, 0), colors.whitesmoke),
-
-        ('ALIGN', (0, 0), (-1, -1), 'CENTER'),
-        ('FONTNAME', (0, 0), (-1, 0), 'Helvetica-Bold'),
-        ('FONTSIZE', (0, 0), (-1, 0), 14),
-
-        ('BOTTOMPADDING', (0, 0), (-1, 0), 12),
-        ('BACKGROUND', (0, 1), (-1, -1), colors.beige),
-        ('GRID', (0,0), (-1,-1), 1, colors.black)
-    ])
-
-    table = Table(table_data)
-    table.setStyle(style)
-    return table
-
-# CB: 3.0 - Define the function to create the PDF
-def create_pdf(report, style_config=None):
-    now = datetime.datetime.now()
-    timestamp = now.strftime("%Y%m%d%H%M%S")
-    filename = f"report_{timestamp}.pdf"
-    doc = SimpleDocTemplate(filename, pagesize=A4)
-    elements = []
-    styles = getSampleStyleSheet()
-    
-    # CB: 1.1.1 - Check if style configuration is provided
-    if style_config is None:
-        # Default styles
-        styles.add(ParagraphStyle(name='Header', parent=styles['Normal'], fontSize=16, textColor=colors.gray, alignment=1))
-        styles.add(ParagraphStyle(name='Footer', parent=styles['Normal'], fontSize=10, textColor=colors.gray))
-        styles.add(ParagraphStyle(name='Heading1', parent=styles['Normal'], fontSize=14, textColor=colors.black, spaceAfter=12))
-        styles.add(ParagraphStyle(name='Heading2', parent=styles['Normal'], fontSize=12, textColor=colors.black, spaceBefore=12, spaceAfter=6))
-        styles.add(ParagraphStyle(name='BodyText', parent=styles['Normal'], fontSize=10, textColor=colors.black))
-        styles.add(ParagraphStyle(name='Bullet', parent=styles['BodyText'], firstLineIndent=0, spaceBefore=20))
-    else:
-        # User-provided styles
-        for style_name, attributes in style_config.items():
-            styles.add(ParagraphStyle(name=style_name, parent=styles['Normal'], **attributes))
-            
-    for section in report:
-        header = create_header(section["header"], styles)
-        footer = create_footer(section["footer"], styles)
-        heading = create_heading(section["heading"], styles)
-        subheading = create_subheading(section["subheading"], styles)
-        body_text = create_body_text(section["body_text"], styles)
-        bullet_points = create_bullet_points(section["bullet_points"], styles)
-        table = create_table(section["table"], styles)
-        image = create_image(section["image"], styles)
-        page_number = create_page_number(section["page_number"], styles)
-        elements.extend([header, footer, heading, subheading, body_text, bullet_points, table, image, page_number])
-
-    style_config = {
-        'Header': {'fontSize': 20, 'textColor': colors.darkgray, 'alignment': 1},
-        'Footer': {'fontSize': 12, 'textColor': colors.darkgray},
-        'Heading1': {'fontSize': 16, 'textColor': colors.black, 'spaceAfter': 12},
-        'Heading2': {'fontSize': 14, 'textColor': colors.black, 'spaceBefore': 12, 'spaceAfter': 6},
-        'BodyText': {'fontSize': 12, 'textColor': colors.black},
-        'Bullet': {'parent': 'BodyText', 'firstLineIndent': 0, 'spaceBefore': 20}
-    }
-
-    test_template(style_config, style_config)
+        # CB: 3.2.3 - Build the PDF
+        try:
+            doc.build(self.elements)
+        except Exception as e:
+            logging.error(f"Error building PDF: {e}")
 
 # CB: 4.0 - Test the template
 def test_template(style_config=None):
@@ -112,8 +102,17 @@ def test_template(style_config=None):
             "image": "Grafico01.jpg"
         }
     ]
-    create_pdf(report, style_config)
+    r = Report(style_config)
+    r.create_pdf(report)
 
-# CB: 6.0 - Main entry point
+# CB: 5.0 - Main entry point
 if __name__ == "__main__":
-    test_template()
+    style_config = {
+        'Header': {'fontSize': 20, 'textColor': colors.darkgray, 'alignment': 1},
+        'Footer': {'fontSize': 12, 'textColor': colors.darkgray},
+        'Heading1': {'fontSize': 16, 'textColor': colors.black, 'spaceAfter': 12},
+        'Heading2': {'fontSize': 14, 'textColor': colors.black, 'spaceBefore': 12, 'spaceAfter': 6},
+        'BodyText': {'fontSize': 12, 'textColor': colors.black},
+        'Bullet': {'parent': 'BodyText', 'firstLineIndent': 0, 'spaceBefore': 20}
+    }
+    test_template(style_config)
