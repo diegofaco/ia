@@ -1,6 +1,10 @@
 # CB: 1.0 - Import necessary libraries
-from reportlab.platypus import Paragraph, Image, Table
+from reportlab.lib.pagesizes import letter
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Image, Table
+from reportlab.platypus.tables import TableStyle  # Add this line
 from reportlab.lib import colors
+import os
+import logging
 
 # CB: 2.0 - Define functions for creating each element
 def create_header(header_text, stylesheet):
@@ -28,8 +32,11 @@ def create_bullet_points(bullet_points, stylesheet):
     return bullets
 
 def create_image(image_path):
-    image = Image(image_path, width=200)
-    return image
+    try:
+        img = Image(image_path)
+        return img
+    except Exception as e:
+        raise Exception(f"Cannot open resource {image_path}")
 
 def create_table(table_data):
     style = TableStyle([
