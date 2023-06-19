@@ -1,50 +1,98 @@
 # CB: 1.0 - Import necessary libraries
-from reportlab.lib.pagesizes import letter
+from reportlab.lib.pagesizes import A4
 from reportlab.pdfgen import canvas
-from reportlab.platypus import Table, TableStyle
+from reportlab.platypus import Table, TableStyle, Paragraph, ListFlowable, ListItem, SimpleDocTemplate
 from reportlab.lib import colors
 from reportlab.lib.styles import getSampleStyleSheet, ParagraphStyle
-from reportlab.platypus import Paragraph, ListFlowable, ListItem
-from reportlab.platypus import ListFlowable, ListItem
 from reportlab.lib.utils import ImageReader
+from reportlab.lib.enums import TA_JUSTIFY
+import datetime
+from reportlab.graphics.shapes import Drawing
+from reportlab.graphics.charts.lineplots import LinePlot
+from reportlab.graphics import renderPDF
+
 
 # CB: 2.0 - Define common elements
 def create_header(c, text):
-    # Set the font and size for the header
+    # CB: 2.1.1 - Set the font and size for the header
     c.setFont("Helvetica-Bold", 24)
-    
-    # Set the color for the header (in RGB)
-    c.setFillColorRGB(0, 0, 0)  # Black color
-    
-    # Draw the header
-    # The numbers 30 and 750 here represent the x and y coordinates of where we want to place the header.
-    # You can adjust these numbers to move the header around on the page.
-    c.drawString(30, 750, text)
+
+    # CB: 2.1.2 - Set the color for the header (in RGB)
+    c.setFillColorRGB(0, 0, 0) # Black color
+
+    # CB: 2.1.3 - Set the x-coordinate for the text
+    text_x = 30  # 50 units from the left edge of the page
+
+    # CB: 2.1.4 - Draw the header
+    c.drawString(text_x, 750, text)
 
 def create_footer(c, text):
-    # Set the font and size for the footer
+    # CB: 2.2.1 - Set the font and size for the footer
     c.setFont("Helvetica", 10)
-    
-    # Set the color for the footer (in RGB)
-    c.setFillColorRGB(0, 0, 0)  # Black color
-    
-    # Draw the footer
-    # The numbers 30 and 30 here represent the x and y coordinates of where we want to place the footer.
-    # You can adjust these numbers to move the footer around on the page.
-    c.drawString(30, 30, text)
+
+    # CB: 2.2.2 - Set the color for the footer (in RGB)
+    c.setFillColorRGB(0, 0, 0) # Black color
+
+    # CB: 2.2.3 - Set the x-coordinate for the text
+    text_x = 50  # 50 units from the left edge of the page
+
+    # CB: 2.2.4 - Draw the footer
+    c.drawString(text_x, 30, text)
 
 def add_page_number(c, page_number):
-    # Set the font and size for the page number
+    # CB: 2.3.1 - Set the font and size for the page number
     c.setFont("Helvetica", 8)
+
+    # CB: 2.3.2 - Set the color for the page number (in RGB)
+    c.setFillColorRGB(0, 0, 0) # Black color
+
+    # CB: 2.3.3 - Calculate the width of the page number
+    page_number_width = c.stringWidth(str(page_number), "Helvetica", 8)
+
+    # CB: 2.3.4 - Calculate the x-coordinate for the page number
+    page_number_x = A4[0] - 50 - page_number_width  # 50 units from the right edge of the page
+
+    # CB: 2.3.5 - Draw the page number
+    c.drawString(page_number_x, 30, str(page_number))
     
-    # Set the color for the page number (in RGB)
-    c.setFillColorRGB(0, 0, 0)  # Black color
-    
-    # Draw the page number
-    # The numbers 550 and 30 here represent the x and y coordinates of where we want to place the page number.
-    # You can adjust these numbers to move the page number around on the page.
-    c.drawString(550, 30, str(page_number))
-    
+def add_body_text(c, text, y):
+    # CB: 2.4.1 - Set the font and size for the body text
+    c.setFont("Helvetica", 12)
+
+    # CB: 2.4.2 - Set the color for the body text (in RGB)
+    c.setFillColorRGB(0, 0, 0) # Black color
+
+    # CB: 2.4.3 - Calculate the height of the text
+    text_height = 12  # This is a rough estimate, you might need to adjust it
+
+    # CB: 2.4.4 - Check if the text will fit on the page
+    if y - text_height < 50:  # Leave a 50 unit margin at the bottom
+        # The text won't fit on the page, start a new page
+        c.showPage()
+        y = 750  # Reset the y-coordinate to the top of the page
+
+    # CB: 2.4.5 - Draw the text
+    c.drawString(50, y, text)
+
+    # CB: 2.4.6 - Return the new y-coordinate
+    return y - text_height
+
+def get_stylesheet():
+    # CB: 3.1 - Get the sample stylesheet
+    stylesheet = getSampleStyleSheet()
+
+    # CB: 3.2 - Customize the default (Normal) style
+    stylesheet["Normal"].fontName = "Helvetica"
+    stylesheet["Normal"].fontSize = 24
+    stylesheet["Normal"].leading = 18
+    stylesheet["Normal"].alignment = TA_JUSTIFY  # Add this line
+
+    # CB: 3.3 - Add custom styles
+    stylesheet.add(ParagraphStyle(name="Header", parent=stylesheet["Normal"], fontSize=24, leading=28, spaceAfter=12))
+    stylesheet.add(ParagraphStyle(name="Footer", parent=stylesheet["Normal"], fontSize=10, leading=12, spaceBefore=12))
+
+    return stylesheet
+
 # CB: 3.4 - Define text formatting
 def format_heading(c, text):
     # Set the font and size for the heading
@@ -159,7 +207,17 @@ def add_table(c, data, x, y):
     
 # CB: 4.10 - Main function
 def create_pdf(report):
-    c = canvas.Canvas("report.pdf", pagesize=letter)
+    # CB: 4.1 - Get the current date and time
+    now = datetime.datetime.now()
+
+    # CB: 4.2 - Format the date and time as a string
+    timestamp = now.strftime("%Y%m%d%H%M%S")
+
+    # CB: 4.3 - Create a unique filename by appending the timestamp to the base filename
+    filename = f"report_{timestamp}.pdf"
+
+    # CB: 4.4 - Create the canvas with the unique filename
+    c = canvas.Canvas(filename, pagesize=A4)
     
     # Loop over the data in the report
     for i in range(len(report["headings"])):
