@@ -106,7 +106,7 @@ def test_template(style_config=None):
             "footer": "Page 1",
             "heading": "Main Heading",
             "subheading": "Subheading",
-            "body_text": "This is some more body text that can be elaborated upon to provide additional information and context. As we delve further into the topic, it becomes apparent that there are various aspects to consider and explore. By expanding upon this body text, we can delve into the intricacies, nuances, and related subject matter, shedding light on the matter at hand.",
+            "body_text": "This is some more body text that can be elaborated upon to provide additional information and context. As we delve further into the topic, it becomes apparent that there are various aspects to consider and explore.",
             "bullet_points": ["Point 1", "Point 2", "Point 3"],
             "table": [["Header 1", "Header 2"], ["Row 1, Column 1", "Row 1, Column 2"], ["Row 2, Column 1", "Row 2, Column 2"]],
             "image": "Grafico01.jpg"
