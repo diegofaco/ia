@@ -7,6 +7,7 @@ from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg
 from prettytable import PrettyTable
 import seaborn as sns
 import matplotlib.ticker as ticker
+from scipy.signal import savgol_filter
 
 sns.set(style="whitegrid", font='Arial', palette='pastel', font_scale=1.2)
 
@@ -59,23 +60,30 @@ class AnomalyVisualizer:
         fig.patch.set_facecolor('white')
 
         # Cumulative Cashflow Plot
-        axs[0].plot(self.df['Date'], self.df['Cumulative Cashflow'], color='steelblue', label='Cumulative Cashflow')
-        axs[0].scatter(self.anomalies['Date'], self.anomalies['Cumulative Cashflow'], color='firebrick', label='Anomalies')
-        axs[0].legend(loc='upper right')
+        y_smooth = savgol_filter(self.df['Cumulative Cashflow'], 51, 3)
+        axs[0].plot(self.df['Date'], y_smooth, color='steelblue', label='Cumulative Cashflow')
+        axs[0].scatter(self.anomalies['Date'], self.anomalies['Cumulative Cashflow'], color='firebrick', s=100, label='Anomalies', edgecolor='black', zorder=5)
+        axs[0].legend(loc='upper right', fontsize='small')
+        axs[0].grid(False)
+        axs[0].set_ylabel('Cumulative Cashflow', fontsize=14)
         self.format_axes(axs[0], 'Cumulative Cashflow Over Time')
 
         # Daily Value Plot
         axs[1].bar(self.df['Date'], self.df['Value'], color='skyblue', label='Daily Value')
-        axs[1].scatter(self.anomalies['Date'], self.anomalies['Value'], color='firebrick', label='Anomalies')
-        axs[1].legend(loc='upper right')
+        axs[1].scatter(self.anomalies['Date'], self.anomalies['Value'], color='firebrick', s=100, label='Anomalies', edgecolor='black', zorder=5)
+        axs[1].legend(loc='upper right', fontsize='small')
+        axs[1].grid(False)
+        axs[1].set_ylabel('Daily Value', fontsize=14)
         self.format_axes(axs[1], 'Daily Value Over Time')
 
         # Debit Credit Value Plot
-        axs[2].plot(self.df['Date'], self.df['Cumulative Debit'], color='steelblue', label='Cumulative Debit')
-        axs[2].plot(self.df['Date'], self.df['Cumulative Credit'], color='seagreen', label='Cumulative Credit')
-        axs[2].scatter(self.anomalies['Date'], self.anomalies['Cumulative Debit'], color='firebrick', label='Debit Anomalies')
-        axs[2].scatter(self.anomalies['Date'], self.anomalies['Cumulative Credit'], color='darkorange', label='Credit Anomalies')
-        axs[2].legend(loc='upper right')
+        axs[2].plot(self.df['Date'], self.df['Cumulative Debit'], color='steelblue', linewidth=2, label='Cumulative Debit')
+        axs[2].plot(self.df['Date'], self.df['Cumulative Credit'], color='seagreen', linewidth=2, label='Cumulative Credit')
+        axs[2].scatter(self.anomalies['Date'], self.anomalies['Cumulative Debit'], color='firebrick', s=100, label='Debit Anomalies', edgecolor='black', zorder=5)
+        axs[2].scatter(self.anomalies['Date'], self.anomalies['Cumulative Credit'], color='darkorange', s=100, label='Credit Anomalies', edgecolor='black', zorder=5)
+        axs[2].legend(loc='upper right', fontsize='large')
+        axs[2].grid(False)
+        axs[2].set_ylabel('Cumulative Debit and Credit', fontsize=14)
         self.format_axes(axs[2], 'Cumulative Debit and Credit Over Time')
 
         plt.tight_layout(pad=5.0)
