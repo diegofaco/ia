@@ -1,9 +1,0 @@
-/imagine
-Adventure ::4
-Shatter ::3
-Cascading waterfall in a lush tropical rainforest ::1
-Disturbing ::1
---v 5.1
---ar 16:9
---c 0
---s 100

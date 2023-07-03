@@ -1,1 +1,6 @@
-
+ERROR:root:Error creating image: Image file not found: path_to_image.jpg
+ERROR:root:Error creating table: 'Report' object has no attribute 'create_table'
+ERROR:root:Error testing template: 'Report' object has no attribute 'build'
+ERROR:root:Error creating image: Image file not found: path_to_image.jpg
+INFO:root:Building report...
+ERROR:root:Error building report: 'list' object has no attribute 'getKeepWithNext'

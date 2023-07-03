@@ -1,0 +1,21 @@
+/imagine
+Microcosmic wonders ::1
+Majestic wizard's robe ::1
+Hairy ::2
+Talking shadows ::4
+Crystal symphony ::1
+Delightful ::5
+Dynamic lighting ::1
+Joe Biden ::3
+Pointillism ::2
+Concept art ::1
+Comic-book ::1
+Black and white ::4
+Colorfoul ::3
+Impressionism ::1
+Magic realism ::1
+Intricate ::1
+--v 5.1
+--ar 16:9
+--c 0
+--s 100
