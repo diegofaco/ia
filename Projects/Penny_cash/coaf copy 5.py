@@ -8,6 +8,7 @@ from prettytable import PrettyTable
 import seaborn as sns
 import matplotlib.ticker as ticker
 from scipy.signal import savgol_filter
+import re
 
 sns.set(style="whitegrid", font='Arial', palette='pastel', font_scale=1.2)
 
