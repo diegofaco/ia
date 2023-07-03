@@ -9,10 +9,9 @@ import seaborn as sns
 import matplotlib.ticker as ticker
 
 # test
-from wordcloud import WordCloud
-import networkx as nx
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
+from mpl_toolkits.mplot3d import Axes3D
+from scipy.interpolate import make_interp_spline, BSpline
+import numpy as np
 # end test
 
 sns.set(style="whitegrid", font='Arial', palette='pastel', font_scale=1.2)
@@ -44,8 +43,10 @@ class AnomalyDetector:
 
 class AnomalyVisualizer:
     def __init__(self, df, anomalies):
-        self.df = df.sort_values('Date')
-        self.anomalies = anomalies.sort_values('Date')
+        self.df = df.groupby('Date').sum().reset_index()
+        self.anomalies = anomalies.groupby('Date').sum().reset_index()
+        self.df['Date_ordinal'] = self.df['Date'].apply(lambda date: date.toordinal())
+        self.anomalies['Date_ordinal'] = self.anomalies['Date'].apply(lambda date: date.toordinal())
 
     def format_axes(self, ax, title):
         ax.set_title(title, fontsize=18, pad=10, loc='left', color='darkslategray')
@@ -54,32 +55,36 @@ class AnomalyVisualizer:
         ax.spines['top'].set_visible(False)
         ax.spines['right'].set_visible(False)
         ax.tick_params(colors='darkslategray', width=0.5, length=0)
-
-    def accounting_format(self, num):
-        if num < 0:
-            return f'({abs(num):,.2f})'.replace(",", "X").replace(".", ",").replace("X", ".")
-        else:
-            return f'{num:,.2f}'.replace(",", "X").replace(".", ",").replace("X", ".")
+        ax.grid(False)
 
     def plot_anomalies(self):
         fig, axs = plt.subplots(3, 1, figsize=(20, 30))
         fig.patch.set_facecolor('white')
 
         # Cumulative Cashflow Plot
-        axs[0].plot(self.df['Date'], self.df['Cumulative Cashflow'], color='steelblue', label='Cumulative Cashflow')
+        xnew = np.linspace(self.df['Date_ordinal'].min(), self.df['Date_ordinal'].max(), 500)
+        spl = make_interp_spline(self.df['Date_ordinal'], self.df['Cumulative Cashflow'], k=3)
+        cashflow_smooth = spl(xnew)
+        axs[0].plot_date(xnew, cashflow_smooth, color='steelblue', label='Cumulative Cashflow')
         axs[0].scatter(self.anomalies['Date'], self.anomalies['Cumulative Cashflow'], color='firebrick', label='Anomalies')
         axs[0].legend(loc='upper right')
         self.format_axes(axs[0], 'Cumulative Cashflow Over Time')
 
         # Daily Value Plot
-        axs[1].bar(self.df['Date'], self.df['Value'], color='skyblue', label='Daily Value')
+        spl = make_interp_spline(self.df['Date_ordinal'], self.df['Value'], k=3)
+        value_smooth = spl(xnew)
+        axs[1].plot_date(xnew, value_smooth, color='skyblue', label='Daily Value')
         axs[1].scatter(self.anomalies['Date'], self.anomalies['Value'], color='firebrick', label='Anomalies')
         axs[1].legend(loc='upper right')
         self.format_axes(axs[1], 'Daily Value Over Time')
 
         # Debit Credit Value Plot
-        axs[2].plot(self.df['Date'], self.df['Cumulative Debit'], color='steelblue', label='Cumulative Debit')
-        axs[2].plot(self.df['Date'], self.df['Cumulative Credit'], color='seagreen', label='Cumulative Credit')
+        spl_debit = make_interp_spline(self.df['Date_ordinal'], self.df['Cumulative Debit'], k=3)
+        spl_credit = make_interp_spline(self.df['Date_ordinal'], self.df['Cumulative Credit'], k=3)
+        debit_smooth = spl_debit(xnew)
+        credit_smooth = spl_credit(xnew)
+        axs[2].plot_date(xnew, debit_smooth, color='steelblue', label='Cumulative Debit')
+        axs[2].plot_date(xnew, credit_smooth, color='seagreen', label='Cumulative Credit')
         axs[2].scatter(self.anomalies['Date'], self.anomalies['Cumulative Debit'], color='firebrick', label='Debit Anomalies')
         axs[2].scatter(self.anomalies['Date'], self.anomalies['Cumulative Credit'], color='darkorange', label='Credit Anomalies')
         axs[2].legend(loc='upper right')
@@ -87,7 +92,24 @@ class AnomalyVisualizer:
 
         plt.tight_layout(pad=5.0)
         return fig
+    
+# text
+class AdditionalVisualizer:
+    def __init__(self, df):
+        self.df = df
 
+    def plot_transaction_volume(self):
+        fig = plt.figure(figsize=(10, 6))
+        ax = fig.add_subplot(111, projection='3d')
+        x = self.df['Date'].dt.date.unique()
+        y1 = self.df.groupby(self.df['Date'].dt.date)['Value'].count()
+        y2 = self.df.groupby(self.df['Date'].dt.date)['Value'].sum()
+        ax.bar(x, y1, zs=0, zdir='y', color='skyblue', alpha=0.8)
+        ax.plot(x, y2, zs=0, zdir='y', color='steelblue')
+        ax.set_ylabel('Transaction Volume')
+        ax.set_zlabel('Transaction Amount')
+        return fig
+# end text
 
 class Application:
     def __init__(self, root):
@@ -131,6 +153,15 @@ class Application:
         canvas.get_tk_widget().pack()
 
         anomalies.to_excel('anomalies.xlsx')
+
+        additional_visualizer = AdditionalVisualizer(detector.df)
+        new_window = Toplevel(self.root)
+        new_window.geometry('800x600')
+
+        fig_transaction_volume = additional_visualizer.plot_transaction_volume()
+        canvas_transaction_volume = FigureCanvasTkAgg(fig_transaction_volume, master=new_window)
+        canvas_transaction_volume.draw()
+        canvas_transaction_volume.get_tk_widget().pack()
 
     def preview_anomalies(self):
         detector = AnomalyDetector(self.file_path.get())
