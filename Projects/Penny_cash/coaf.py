@@ -8,13 +8,6 @@ from prettytable import PrettyTable
 import seaborn as sns
 import matplotlib.ticker as ticker
 
-# test
-from wordcloud import WordCloud
-import networkx as nx
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import cosine_similarity
-# end test
-
 sns.set(style="whitegrid", font='Arial', palette='pastel', font_scale=1.2)
 
 KEYWORDS = ['Fraude', 'Erro', 'Estorno', 'Fraud']
@@ -87,7 +80,6 @@ class AnomalyVisualizer:
 
         plt.tight_layout(pad=5.0)
         return fig
-
 
 class Application:
     def __init__(self, root):
