@@ -11,7 +11,7 @@ from tkinter import Label
 import os
 import xlsxwriter
 import numpy as np
-
+from tkinter import Checkbutton, BooleanVar
 
 KEYWORDS = ['Fraude', 'Erro', 'Estorno', 'Fraud']
 THRESHOLD = 50000
@@ -70,10 +70,6 @@ class AnomalyVisualizer:
     def plot_anomalies(self):
         fig, axs = plt.subplots(3, 1, figsize=(20, 30))
         fig.patch.set_facecolor('white')
-
-        # Adjust the layout of the subplots
-        fig.subplots_adjust(hspace=0.5)  # Adjust the horizontal space between the subplots
-
         self.plot_cumulative_cashflow(axs[0])
         self.plot_daily_value(axs[1])
         self.plot_debit_credit(axs[2])
@@ -124,19 +120,19 @@ class Application:
         self.file_path = StringVar()
         self._create_widgets()
 
-        config_info = f'Threshold: {THRESHOLD}\nKeywords: {", ".join(KEYWORDS)}'
+        config_info = f'Limite: {THRESHOLD}\nPalavras-chave: {", ".join(KEYWORDS)}'
         Label(self.root, text=config_info, justify=LEFT).pack(side=TOP, anchor='nw')
         
-        self.view_excel_button = Button(self.root, text="View Anomalies in Excel", command=self._view_anomalies_in_excel, state='disabled')
+        self.view_excel_button = Button(self.root, text="Ver Anomalias no Excel", command=self._view_anomalies_in_excel, state='disabled')
         self.view_excel_button.pack(side=TOP, anchor='nw')
 
     def _create_widgets(self):
-        Button(self.root, text="Select Excel File", command=self._select_file).pack(side=TOP, anchor='nw')
-        self.start_analysis_button = Button(self.root, text="Start Analysis", command=self._start_analysis, state='disabled')
+        Button(self.root, text="Selecionar Arquivo Excel", command=self._select_file).pack(side=TOP, anchor='nw')
+        self.start_analysis_button = Button(self.root, text="Iniciar Análise", command=self._start_analysis, state='disabled')
         self.start_analysis_button.pack(side=TOP, anchor='nw')
-        self.clear_analysis_button = Button(self.root, text="Clear Analysis", command=self._clear_analysis, state='disabled')
+        self.clear_analysis_button = Button(self.root, text="Limpar Análise", command=self._clear_analysis, state='disabled')
         self.clear_analysis_button.pack(side=TOP, anchor='nw')
-        self.toggle_annotations_button = Button(self.root, text="Toggle Annotations", command=self._toggle_annotations, state='disabled')
+        self.toggle_annotations_button = Button(self.root, text="Alternar Anotações", command=self._toggle_annotations, state='disabled')
         self.toggle_annotations_button.pack(side=TOP, anchor='nw')
 
     def _select_file(self):
@@ -153,10 +149,16 @@ class Application:
     def _run_analysis(self):
         self.detector = AnomalyDetector(self.file_path.get())
         self.visualizer = AnomalyVisualizer(self.detector)
-        fig = self.visualizer.plot_anomalies()
+        fig, axs = plt.subplots(3, 1, figsize=(20, 13))  # reduce the height here
+        fig.patch.set_facecolor('white')
+        self.visualizer.plot_cumulative_cashflow(axs[0])
+        self.visualizer.plot_daily_value(axs[1])
+        self.visualizer.plot_debit_credit(axs[2])
+        plt.tight_layout(pad=5.0)
         self.canvas = FigureCanvasTkAgg(fig, master=self.root)
         self.canvas.draw()
-        self.canvas.get_tk_widget().pack()
+        self.canvas.get_tk_widget().pack(fill='both', expand=True)
+        self.root.bind('<Configure>', self._on_resize)
         self.toggle_annotations_button['state'] = 'normal'
         self.view_excel_button['state'] = 'normal'
 
@@ -166,7 +168,7 @@ class Application:
 
     def _save_plots_and_create_excel(self):
         fig = self.visualizer.plot_anomalies()
-        fig.set_size_inches(10, 15)
+        fig.set_size_inches(10, 10)
         fig.savefig('anomalies.png')
 
         workbook = xlsxwriter.Workbook('anomalies.xlsx')
@@ -218,7 +220,14 @@ class Application:
 
         os.startfile('anomalies.xlsx')
 
-
+    def _on_resize(self, event):
+        # get the size of the window
+        width, height = event.width, event.height
+        # adjust the size of the figure
+        self.visualizer.fig.set_size_inches(width / self.visualizer.fig.dpi, height / self.visualizer.fig.dpi)
+        # redraw the canvas
+        self.canvas.draw()
+        
     def _update_gui(self, fig):
         self.canvas = FigureCanvasTkAgg(fig, master=self.root)
         self.canvas.draw()
