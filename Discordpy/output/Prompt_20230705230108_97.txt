@@ -1,0 +1,14 @@
+Cyberpunk ::1
+Ukiyo-e ::1
+Hope ::1
+Dancing whispers ::2
+Greyscale Color Grading with some Color Edits ::1
+Neoclassicism ::2
+Soft light ::1
+Rolling fog ::1
+Portrait lighting ::2
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

@@ -1,0 +1,15 @@
+Art Nouveau ::2
+Concept Art ::1
+Geometric ::2
+Magnificent erupting volcano spewing molten lava ::1
+Concept art ::1
+Realism ::1
+Spotlight ::1
+Dark lighting ::2
+Cosmic birth ::1
+Quiver ::2
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

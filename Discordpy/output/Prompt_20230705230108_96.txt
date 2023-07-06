@@ -1,0 +1,14 @@
+Moss ::2
+Surrealism ::1
+Ray Tracing ::1
+Esoteric ::2
+Celestial spheres ::1
+Revolting ::1
+Soft light ::1
+Still Life ::2
+High resolution ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

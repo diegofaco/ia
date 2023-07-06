@@ -1,0 +1,12 @@
+Picturesque ::1
+Shine ::2
+Rainbow crystals ::1
+Golden hour ::1
+Cinematic ::1
+De Stijl ::1
+Esoteric ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

@@ -1,0 +1,13 @@
+Glowing wonders ::1
+Still Life ::1
+Imposing and colossal ancient ruins of a lost civilization ::2
+Diffraction ::2
+Watercolor ::1
+Subsurface Scattering ::1
+Neon lights ::1
+Frustration ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

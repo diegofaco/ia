@@ -1,0 +1,13 @@
+ZBrush ::1
+Cellular transformation ::1
+Luxurious yacht ::1
+Tenebrism ::1
+Diffused lights ::1
+Atmospheric ::2
+Hyperrealistic ::2
+Pop Art ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

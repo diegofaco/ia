@@ -1,0 +1,14 @@
+Luxurious and opulent hotel lobby ::2
+Volumetric Light ::2
+Morning light ::2
+Volumetric Light ::1
+Esoteric ::1
+Shimmer ::1
+Clear light complexion ::1
+Dazzling mirage ::1
+Constructivism ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

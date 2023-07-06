@@ -1,0 +1,14 @@
+Hyper-realistic ::2
+Reflective glass skyscraper ::2
+Diffraction ::2
+Crystal fog ::1
+Dismal ::1
+Procedural Generation ::1
+Overhead light ::1
+Art Nouveau ::1
+Dadaism ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

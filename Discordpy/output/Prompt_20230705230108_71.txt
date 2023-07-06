@@ -1,0 +1,15 @@
+Electric storm ::2
+Colossal and breathtakingly beautiful ice caves formed within glaciers ::1
+Sun-kissed ::1
+Low key lighting ::1
+Portrait lighting ::2
+Greyscale Color Grading with some Color Edits ::1
+Neo-Impressionism ::2
+Subsurface Scattering ::2
+Atmospheric ::1
+Ukiyo-e ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

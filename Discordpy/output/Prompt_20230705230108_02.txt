@@ -1,0 +1,16 @@
+Neon lights ::2
+Golden ratio ::2
+Art Nouveau ::2
+Dismal ::2
+Whirling galaxies ::1
+Fantasy ::1
+Constructivism ::1
+Ornamental stained glass clock ::1
+Volumetric lighting ::1
+Cinematic ::1
+Celestial radiance ::2
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

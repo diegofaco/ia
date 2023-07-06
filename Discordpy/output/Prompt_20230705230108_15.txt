@@ -1,0 +1,11 @@
+Baroque ::1
+Volumetric lighting ::1
+Forgiveness ::1
+Graceful ::1
+High Dynamic Range (HDR) ::1
+Rule of thirds ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

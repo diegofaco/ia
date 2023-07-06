@@ -1,0 +1,16 @@
+Romantic and intimate candlelit room ::1
+Atmospheric ::1
+Expressionism ::2
+Dramatic ::2
+Crashing ocean ::1
+Neural network ::2
+Cinematic ::2
+ZBrush ::1
+Pop Art ::1
+Studio lighting ::1
+Diffraction ::2
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

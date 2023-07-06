@@ -1,0 +1,15 @@
+Character portrait ::1
+Greyscale Color Grading with some Color Edits ::2
+Rushing ::1
+Wretched ::2
+Bloom ::1
+Silhouette lighting ::2
+Rim lighting ::1
+Concept Art ::1
+Fauvism ::1
+Dramatic ::2
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

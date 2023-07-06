@@ -1,0 +1,15 @@
+Beam ::2
+3D ::1
+Luxury ::2
+Clear light complexion ::2
+Portrait ::1
+Backlighting ::1
+Awe-inspiring ::2
+Twinkling stars ::1
+Vulnerability ::1
+Pointillism ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

@@ -1,0 +1,14 @@
+Whirling cosmos ::2
+Ray Tracing ::1
+Joy ::1
+Photorealism ::1
+Fauvism ::2
+Art Nouveau ::1
+Parallax Mapping ::2
+Neural connections ::1
+Bounce lighting ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

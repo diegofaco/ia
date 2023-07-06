@@ -1,0 +1,14 @@
+Concept art ::2
+Light behind waves ::1
+Ambient Occlusion ::1
+Baroque ::1
+Whispering ::1
+Shoulders ::2
+Vexel art ::1
+Swirling galaxy ::1
+Pointillism ::2
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

@@ -1,0 +1,15 @@
+Empowerment ::2
+Bounce lighting ::2
+Procedural Generation ::2
+Digital illustration ::1
+Rim lighting ::1
+Ethereal ::1
+Expressionism ::1
+Realism ::2
+Volumetric Light ::1
+Spellbinding enchanted mask ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

@@ -1,0 +1,12 @@
+Cinematic lighting ::1
+Empowerment ::1
+Shaders ::1
+Majestic talking lion ::1
+Impressionism ::2
+Suprematism ::1
+Esoteric ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

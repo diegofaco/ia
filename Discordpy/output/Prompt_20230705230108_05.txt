@@ -1,0 +1,15 @@
+Photorealistic ::1
+Massive crashing waves during a storm at sea ::1
+Watercolors ::2
+ZBrush ::1
+Radiant ::2
+Unreal Engine ::2
+Radiant ::1
+Luminism ::1
+Rainbow-colored coral reef ::2
+Dark lighting ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

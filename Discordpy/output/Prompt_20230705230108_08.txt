@@ -1,0 +1,14 @@
+Parallax Mapping ::2
+De Stijl ::1
+Spinning Ferris wheel against a night sky ::2
+Spin ::1
+Celestial alignment ::1
+Light Probe ::1
+Dappled light ::1
+Portrait lighting ::1
+Futurism ::2
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

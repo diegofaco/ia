@@ -1,0 +1,15 @@
+Moody lighting ::1
+Dramatic lighting ::1
+Constructivism ::2
+Whispering galaxies ::2
+ZBrush ::1
+Serene beach ::1
+Displacement Mapping ::2
+Pointillism ::1
+Sublime creation ::1
+Hyper-realism ::2
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

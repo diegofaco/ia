@@ -1,0 +1,12 @@
+Octane Render ::1
+Rococo ::1
+Dappled light ::1
+Towering ancient trees ::1
+Cozy fireplace ::2
+Transformation ::1
+Digital illustration ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

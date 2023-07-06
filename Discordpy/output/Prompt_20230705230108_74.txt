@@ -1,0 +1,15 @@
+Rainbow whispers ::2
+Octane Render ::1
+Serenity ::1
+Volumetric Light ::2
+Transdimensional portal ::1
+Cinematic ::1
+Chiaroscuro ::2
+Ambient lighting ::1
+Dadaism ::1
+Malicious ::2
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

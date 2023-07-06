@@ -1,0 +1,16 @@
+Cinematic ::2
+Cosmic expansion ::1
+Hair ::2
+Dadaism ::1
+Sprawling vineyard ::2
+Change ::1
+Oil painting ::1
+Light behind waves ::2
+Hyper-realism ::2
+Clear light complexion ::1
+Golden Ratio ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

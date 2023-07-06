@@ -1,0 +1,13 @@
+Hyperrealistic ::2
+Golden hour ::1
+Whispering sunsets ::1
+Ambient Occlusion ::1
+Studio lighting ::2
+Resplendent ::1
+Pointillism ::1
+Cinematic lighting ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

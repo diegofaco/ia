@@ -1,0 +1,15 @@
+Cubism ::2
+Vulnerability ::1
+Futurism ::1
+Golden Ratio ::1
+Studio lighting ::2
+Overhead light ::1
+Radiant sunrise ::2
+Quaint country cottage ::1
+Shadows ::1
+Glistening snowflake ::2
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

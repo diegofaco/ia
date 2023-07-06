@@ -1,0 +1,14 @@
+Concept Art ::1
+Resilience ::1
+Rule of thirds ::1
+Epic lighting ::2
+Slide ::2
+Filmic ::2
+Neon lights ::1
+Worn-out roads ::1
+De Stijl ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

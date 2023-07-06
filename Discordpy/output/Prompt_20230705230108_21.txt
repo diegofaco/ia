@@ -1,0 +1,15 @@
+Soft light ::1
+ZBrush ::2
+Suprematism ::1
+Realistic ::1
+Watercolor ::2
+Metamorphic synthesis ::1
+Fear ::1
+Hyperrealistic ::1
+Golden hour ::2
+Phosphorescence ::2
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

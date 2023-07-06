@@ -1,0 +1,11 @@
+Mystical ::1
+Hyperrealistic ::1
+Dramatic lighting ::1
+Desolation ::1
+Diffused lights ::1
+Watercolors ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

@@ -24,9 +24,10 @@ def generate_parameters(num_items, is_range=False):
 
 def write_file(file_path, items, aspect_ratio, chaos, stylize, tile, weird):
     with open(file_path, "w") as file:
+        file.write("/imagine\n")
         for item in items:
             file.write(f"{item}\n")
-        file.write("--no woman --v 5.2\n")
+        file.write("--v 5.1\n")
         file.write(f"{aspect_ratio}\n")
         file.write(f"{chaos}\n")
         file.write(f"{stylize}\n")

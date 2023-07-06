@@ -1,0 +1,12 @@
+Rendered in Cinema4D ::1
+Crystal symphony ::2
+Epic lighting ::1
+Glowing surprises ::1
+Realistic ::1
+Creativity ::1
+Futurism ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

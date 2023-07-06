@@ -1,0 +1,14 @@
+Realism ::1
+Golden Ratio ::1
+Sparkling diamond ::1
+Dramatic lighting ::2
+Tenebrism ::1
+Chirping songbirds ::2
+Rainbow mist ::1
+Futurism ::2
+Epic lighting ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

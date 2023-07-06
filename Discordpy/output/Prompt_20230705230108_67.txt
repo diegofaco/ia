@@ -1,0 +1,15 @@
+Climb ::1
+Reflections ::1
+Epic lighting ::2
+ZBrush ::1
+Surrealism ::1
+Delicate snowflake ::2
+Concept Art ::2
+Bewildering rabbit hole ::2
+Rim lighting ::1
+Misty mountains ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

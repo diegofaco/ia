@@ -1,0 +1,14 @@
+Shaders ::1
+Futuristic ::1
+Whispering zephyrs ::2
+High contrast ::2
+Expressionism ::1
+Neon lights ::1
+Ray Tracing ::2
+Wonder ::1
+Transcendent expansion ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

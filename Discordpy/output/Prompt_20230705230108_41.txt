@@ -1,0 +1,14 @@
+Oil painting ::1
+Romanticism ::1
+Ominous ::2
+Clear light complexion ::1
+Mystical moonlight ::1
+Mirrored ::1
+Greyscale Color Grading with some Color Edits ::1
+Celestial alignment ::2
+3D ::2
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

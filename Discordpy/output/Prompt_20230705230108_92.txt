@@ -1,0 +1,13 @@
+Cinematic ::1
+Fauvism ::1
+Backlighting ::1
+Emerge ::1
+Frozen desert ::1
+CGSociety ::2
+Octane Render ::1
+Morning light ::2
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

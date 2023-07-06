@@ -1,0 +1,13 @@
+Photorealistic ::1
+Rendered in Cinema4D ::1
+Thundering herd of wild horses ::1
+Minimalism ::1
+Sunflower ::2
+Silhouette lighting ::2
+Rim lighting ::1
+Elegant ice sculptures at a winter festival ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

@@ -1,0 +1,14 @@
+Portrait lighting ::1
+Dutch Golden Age ::1
+Overhead light ::2
+Wonderment ::1
+Impressionism ::2
+Hyperrealistic ::1
+Bustling cityscape ::1
+Glowing and enchanting fireflies in a summer night ::2
+Epic lighting ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

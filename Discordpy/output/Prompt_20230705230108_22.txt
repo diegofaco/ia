@@ -1,0 +1,14 @@
+Daisy ::1
+Parallax Mapping ::1
+Precisionism ::1
+Light behind waves ::2
+Natural lighting ::1
+Glimmer ::1
+Character portrait ::1
+Art Nouveau ::2
+Invisible ink ::2
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

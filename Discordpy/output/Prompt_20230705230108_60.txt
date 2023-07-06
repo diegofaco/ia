@@ -1,0 +1,11 @@
+Cinematic lighting ::1
+Parallax Mapping ::1
+Still Life ::1
+Light behind waves ::1
+Blossoming paradise ::1
+Simplicity ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

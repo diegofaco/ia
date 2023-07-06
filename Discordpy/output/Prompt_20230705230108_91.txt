@@ -1,0 +1,15 @@
+Whimsical ::1
+Pop Art ::1
+Volumetric light ::1
+Foreboding ::2
+Refraction ::2
+Crystal whispers ::2
+Studio lighting ::1
+Glistening icicle ::1
+Cinematic ::2
+Octane Render ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

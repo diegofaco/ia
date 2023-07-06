@@ -1,0 +1,15 @@
+Surrealism ::1
+Astral serenity ::1
+Cinematic ::1
+Micro Details ::2
+Chiaroscuro ::2
+De Stijl ::2
+Rule of thirds ::1
+Cruel ::1
+Refraction ::1
+Golden hour ::2
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

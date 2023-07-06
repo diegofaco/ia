@@ -1,0 +1,14 @@
+Art Deco ::1
+Golden Ratio ::1
+Watercolor ::2
+Cinematic ::2
+Intricacy ::1
+Hyper-realism ::1
+Soft light ::1
+Floating island ::1
+Surrealism ::2
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

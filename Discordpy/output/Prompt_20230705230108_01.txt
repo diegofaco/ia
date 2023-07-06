@@ -1,0 +1,15 @@
+Koala ::2
+Bloom ::1
+Cosmic expansion ::1
+Geometric ::1
+Silhouette lighting ::1
+Ray Tracing ::1
+Vibrant autumn foliage ::2
+Expressionism ::2
+Dark ::1
+Character portrait ::2
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

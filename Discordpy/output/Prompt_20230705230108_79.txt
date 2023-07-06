@@ -1,0 +1,16 @@
+Digital illustration ::2
+Rococo ::1
+Golden hour ::1
+Shaders ::2
+Dadaism ::2
+Photorealistic ::1
+Crystal waves ::2
+Dynamic lighting ::2
+Whirling golden compass ::1
+Playful splashes of paint on a canvas ::1
+Ambient Occlusion ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

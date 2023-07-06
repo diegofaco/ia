@@ -1,0 +1,15 @@
+Parallax Mapping ::1
+Cinematic ::1
+Dramatic lighting ::1
+Graceful ::1
+Seemingly infinite desert dunes stretching as far as the eye can see ::1
+Pointillism ::2
+Light Probe ::2
+Excitement ::2
+Awe-inspiring ::2
+Neoclassicism ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

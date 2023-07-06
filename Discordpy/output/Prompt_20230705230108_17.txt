@@ -1,0 +1,14 @@
+Ambient lighting ::2
+Diffused lights ::1
+Serpentine hidden chamber ::1
+Watercolor ::2
+Picturesque waterfall ::2
+Quiver ::1
+Unreal Engine ::1
+Futuristic ::1
+De Stijl ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0

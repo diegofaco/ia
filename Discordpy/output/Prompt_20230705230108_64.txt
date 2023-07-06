@@ -1,0 +1,15 @@
+Backlighting ::2
+Expressionism ::1
+Surrealism ::2
+Tumble ::2
+Cinematic lighting ::1
+Greyscale Color Grading with some Color Edits ::2
+Tenebrism ::1
+Dancing reflections ::1
+Rendered in Cinema4D ::1
+Glow ::1
+--no woman --v 5.2
+--ar 16:9
+
+
+--weird 0
