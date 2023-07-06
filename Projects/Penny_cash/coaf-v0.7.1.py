@@ -1,4 +1,4 @@
-# TESTE_COAF-v0.7
+# TESTE_COAF-v0.7.1
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -149,7 +149,7 @@ class Application:
     def _run_analysis(self):
         self.detector = AnomalyDetector(self.file_path.get())
         self.visualizer = AnomalyVisualizer(self.detector)
-        fig, axs = plt.subplots(3, 1, figsize=(20, 13))  # reduce the height here
+        fig, axs = plt.subplots(3, 1, figsize=(20, 13))
         fig.patch.set_facecolor('white')
         self.visualizer.plot_cumulative_cashflow(axs[0])
         self.visualizer.plot_daily_value(axs[1])
@@ -189,7 +189,7 @@ class Application:
             data_worksheet.write(0, i, column, header_format)
             for j, value in enumerate(self.detector.df[column] if i > 0 else self.detector.df.index):
                 if isinstance(value, float):
-                    if not pd.isnull(value) and np.isfinite(value):  # Check if the value is not NaN or INF
+                    if not pd.isnull(value) and np.isfinite(value):
                         data_worksheet.write(j + 1, i, value, number_format)
                     else:
                         data_worksheet.write(j + 1, i, '')
@@ -204,7 +204,7 @@ class Application:
             anomalies_worksheet.write(0, i, column, header_format)
             for j, value in enumerate(self.detector.anomalies[column] if i > 0 else self.detector.anomalies.index):
                 if isinstance(value, float):
-                    if not pd.isnull(value) and np.isfinite(value):  # Check if the value is not NaN or INF
+                    if not pd.isnull(value) and np.isfinite(value):
                         anomalies_worksheet.write(j + 1, i, value, number_format)
                     else:
                         anomalies_worksheet.write(j + 1, i, '')
@@ -221,11 +221,8 @@ class Application:
         os.startfile('anomalies.xlsx')
 
     def _on_resize(self, event):
-        # get the size of the window
         width, height = event.width, event.height
-        # adjust the size of the figure
         self.visualizer.fig.set_size_inches(width / self.visualizer.fig.dpi, height / self.visualizer.fig.dpi)
-        # redraw the canvas
         self.canvas.draw()
         
     def _update_gui(self, fig):
